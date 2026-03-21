@@ -2,40 +2,75 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Magazine Design Showcase</title>
+    <title>Magazine Component Showcase</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Bebas+Neue&family=Abril+Fatface&family=IBM+Plex+Serif&display=swap" rel="stylesheet">
     <style>
-        body { font-family: 'Arial', sans-serif; }
-        h1, h2, h3 { color: #333; }
-        .article-header { border-bottom: 2px solid #aaa; margin-bottom: 20px; padding-bottom: 10px; }
-        .image-text-layout { display: flex; align-items: center; margin-bottom: 20px; }
-        .image-text-layout img { margin-right: 20px; max-width: 150px; }
-        .pull-quote { font-style: italic; color: #555; border-left: 3px solid #aaa; padding-left: 10px; margin: 20px 0; }
-        .multi-column { column-count: 2; column-gap: 30px; }
-        .article-template { background-color: #f0f0f0; padding: 20px; margin: 20px 0; border-radius: 5px; }
+        body {
+            font-family: 'IBM Plex Serif', serif;
+            color: #333;
+            background-color: #f4f4f4;
+        }
+        h1, h2, h3 {
+            font-family: 'Playfair Display', serif;
+            color: #A52A2A; /* Vintage Red */
+        }
+        .section {
+            margin: 20px 0;
+            padding: 20px;
+            background-color: #FFEBCD; /* Vintage Gold */
+            border-radius: 8px;
+        }
+        .pull-quote {
+            font-style: italic;
+            background-color: #E0FFFF; /* Vintage Teal */
+            border-left: 4px solid #A52A2A;
+            padding: 10px;
+            margin: 20px 0;
+        }
+        .multi-column {
+            column-count: 2;
+            column-gap: 40px;
+        }
+        .divider {
+            border-bottom: 2px solid #A52A2A;
+            margin: 20px 0;
+        }
+        .color-swatch {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            margin: 2px;
+        }
     </style>
 </head>
 <body>
-    <div class="article-header">
-        <h1>Article Title</h1>
-        <h2>By Author Name</h2>
-        <h3>Published on YYYY-MM-DD</h3>
-    </div>
-    <div class="image-text-layout">
-        <img src="image-url.jpg" alt="Image description">
-        <p>This is a text paragraph that describes the image alongside it. The text should complement the image and give context to the readers.</p>
-    </div>
-    <div class="pull-quote">
-        “This is a sample pull quote that stands out from the rest of the text. It should capture the essence of the article.”
-    </div>
-    <div class="multi-column">
-        <p>Column 1 text goes here. This is where you might share interesting facts or insights that are relevant to the article topic. It flows naturally down the column.</p>
-        <p>Column 2 text goes here. Use this space to elaborate on additional points or provide further details about the subject. Engaging content keeps the readers interested.</p>
-    </div>
-    <div class="article-template">
-        <h2>Full Article Template</h2>
-        <p>This is a placeholder for a full article. Make sure to include an engaging introduction, several body paragraphs, and a conclusion that ties everything together.</p>
-    </div>
+    <section class="section">
+        <h1>Article Headers</h1>
+        <p>Introduction of the article goes here.</p>
+    </section>
+    <section class="section">
+        <h2>Image-Text Layouts</h2>
+        <p>Combine an image alongside text for a cohesive layout.</p>
+        <img src="example-image.jpg" alt="Example Image" style="width:100%;">
+    </section>
+    <section class="divider"></section>
+    <section class="section">
+        <blockquote class="pull-quote">An inspirational quote goes here.</blockquote>
+    </section>
+    <section class="section multi-column">
+        <h2>Multi-Column Text</h2>
+        <p>This is a sample paragraph that spans multiple columns to enhance readability.</p>
+    </section>
+    <section class="section">
+        <h2>Color Swatches</h2>
+        <div class="color-swatch" style="background-color:#A52A2A;"></div>
+        <div class="color-swatch" style="background-color:#FFD700;"></div>
+        <div class="color-swatch" style="background-color:#008080;"></div>
+    </section>
+    <section class="section">
+        <h2>Complete Article Template</h2>
+        <p>This section serves as a template for new articles.</p>
+    </section>
 </body>
 </html>
