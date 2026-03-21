@@ -1,27 +1,168 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Courier+Prime:wght@400;700&family=Bebas+Neue&family=Roboto:wght@400;500;700&family=Abril+Fatface&family=IBM+Plex+Serif:wght@400;600&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* Custom Component Utilities */
-
+/* Pull Quote Styles */
 .pullquote {
   font-style: italic;
-  margin: 1em 0;
-  padding: 0.5em 1em;
-  border-left: 5px solid #ccc;
+  margin: 2rem 0;
+  padding: 1.5rem;
+  border-left: 5px solid;
   color: #555;
+  font-size: 1.25rem;
+  font-weight: 600;
 }
 
-.article-section {
-  margin-bottom: 2em;
+.pullquote-classic {
+  @apply border-l-black text-black bg-gray-50;
 }
 
-.multi-column {
-  column-count: 2;
-  column-gap: 2em;
+.pullquote-vibrant {
+  @apply border-l-pink-600 text-pink-600 bg-pink-50;
 }
 
-.multi-column > * {
-  break-inside: avoid;
+.pullquote-inverted {
+  @apply border-l-white text-white bg-black;
+}
+
+/* ARTICLE STYLE 1: BOLD GEOMETRIC */
+.article-style-geometric {
+  @apply bg-red-600 text-white p-12;
+}
+
+.article-style-geometric__header {
+  @apply font-bebas text-5xl font-black mb-4 leading-tight;
+}
+
+.article-style-geometric__subheader {
+  @apply text-xl font-serif mb-8 font-light;
+}
+
+.article-style-geometric__content {
+  @apply grid grid-cols-2 gap-12 items-start;
+}
+
+.article-style-geometric__text {
+  @apply font-serif text-lg leading-relaxed;
+}
+
+.article-style-geometric__text p {
+  @apply mb-4;
+}
+
+.article-style-geometric__image-box {
+  @apply bg-gray-900 aspect-square flex items-center justify-center text-gray-500 font-bebas text-2xl;
+}
+
+/* ARTICLE STYLE 2: TYPOGRAPHIC STUDY */
+.article-style-typographic {
+  @apply bg-yellow-300 text-gray-900 p-12 relative overflow-hidden;
+}
+
+.article-style-typographic__header {
+  @apply font-abril text-6xl mb-6 leading-tight;
+  letter-spacing: -0.05em;
+}
+
+.article-style-typographic__subtitle {
+  @apply font-mono text-sm uppercase tracking-widest mb-12 font-bold;
+}
+
+.article-style-typographic__grid {
+  @apply grid grid-cols-4 gap-4 mb-8;
+}
+
+.article-style-typographic__grid-item {
+  @apply bg-white p-4 text-center font-mono text-sm font-bold;
+  aspect-ratio: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.article-style-typographic__content {
+  @apply max-w-3xl;
+}
+
+.article-style-typographic__section-title {
+  @apply font-bebas text-3xl mt-12 mb-4;
+}
+
+.article-style-typographic__text {
+  @apply text-base leading-relaxed font-serif mb-4;
+}
+
+.article-style-typographic__highlight {
+  @apply font-bold underline;
+}
+
+/* ARTICLE STYLE 3: EDITORIAL COLLAGE */
+.article-style-collage {
+  @apply bg-gradient-to-br from-lime-100 to-green-50 p-12 relative;
+}
+
+.article-style-collage__header {
+  @apply font-display text-5xl font-black mb-2 text-green-900;
+}
+
+.article-style-collage__byline {
+  @apply font-serif text-lg text-gray-700 mb-12 font-light italic;
+}
+
+.article-style-collage__main-grid {
+  @apply grid grid-cols-3 gap-8 items-start mb-12;
+}
+
+.article-style-collage__text-col {
+  @apply col-span-2;
+}
+
+.article-style-collage__image-col {
+  @apply col-span-1;
+}
+
+.article-style-collage__image {
+  @apply bg-green-900 aspect-square mb-4;
+}
+
+.article-style-collage__body {
+  @apply font-serif text-base leading-relaxed mb-6;
+}
+
+.article-style-collage__pullquote-box {
+  @apply bg-white border-l-4 border-green-900 p-6 my-8 shadow-lg;
+}
+
+.article-style-collage__pullquote-text {
+  @apply font-display text-2xl font-bold text-green-900 italic;
+}
+
+.article-style-collage__pullquote-attribution {
+  @apply font-serif text-sm text-gray-600 mt-3;
+}
+
+.article-style-collage__section-break {
+  @apply border-t-2 border-green-900 my-12 py-12;
+}
+
+.article-style-collage__two-column {
+  @apply grid grid-cols-2 gap-8;
+}
+
+.article-style-collage__sidebar {
+  @apply bg-white p-6 border-t-4 border-green-900;
+}
+
+.article-style-collage__sidebar-title {
+  @apply font-bebas text-xl text-green-900 mb-4;
+}
+
+.article-style-collage__sidebar-text {
+  @apply text-sm leading-relaxed;
+}
+
+.article-style-collage__sidebar-text strong {
+  @apply block mt-3 mb-1;
 }
