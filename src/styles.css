@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom Component Utilities */
+
+.pullquote {
+  font-style: italic;
+  margin: 1em 0;
+  padding: 0.5em 1em;
+  border-left: 5px solid #ccc;
+  color: #555;
+}
+
+.article-section {
+  margin-bottom: 2em;
+}
+
+.multi-column {
+  column-count: 2;
+  column-gap: 2em;
+}
+
+.multi-column > * {
+  break-inside: avoid;
+}
