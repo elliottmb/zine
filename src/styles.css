@@ -4,7 +4,10 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Pull Quote Styles */
+/* ============================================
+   PULL QUOTE VARIATIONS
+   ============================================ */
+
 .pullquote {
   font-style: italic;
   margin: 2rem 0;
@@ -27,13 +30,18 @@
   @apply border-l-white text-white bg-black;
 }
 
-/* ARTICLE STYLE 1: BOLD GEOMETRIC */
+/* ============================================
+   ARTICLE STYLE 1: BOLD GEOMETRIC
+   Red background, stark white text, geometric layout
+   ============================================ */
+
 .article-style-geometric {
   @apply bg-red-600 text-white p-12;
 }
 
 .article-style-geometric__header {
-  @apply font-bebas text-5xl font-black mb-4 leading-tight;
+  @apply font-bebas text-6xl font-black mb-4 leading-tight;
+  letter-spacing: 0.02em;
 }
 
 .article-style-geometric__subheader {
@@ -53,25 +61,30 @@
 }
 
 .article-style-geometric__image-box {
-  @apply bg-gray-900 aspect-square flex items-center justify-center text-gray-500 font-bebas text-2xl;
+  @apply bg-gray-900 flex items-center justify-center text-gray-500 font-bebas text-2xl;
+  aspect-ratio: 1;
 }
 
-/* ARTICLE STYLE 2: TYPOGRAPHIC STUDY */
+/* ============================================
+   ARTICLE STYLE 2: TYPOGRAPHIC STUDY
+   Yellow background, experimental typography, kerning grid
+   ============================================ */
+
 .article-style-typographic {
-  @apply bg-yellow-300 text-gray-900 p-12 relative overflow-hidden;
+  @apply bg-yellow-300 text-gray-900 p-12;
 }
 
 .article-style-typographic__header {
-  @apply font-abril text-6xl mb-6 leading-tight;
+  @apply font-abril text-7xl mb-2 leading-tight;
   letter-spacing: -0.05em;
 }
 
 .article-style-typographic__subtitle {
-  @apply font-mono text-sm uppercase tracking-widest mb-12 font-bold;
+  @apply font-mono text-xs uppercase tracking-widest mb-12 font-bold;
 }
 
 .article-style-typographic__grid {
-  @apply grid grid-cols-4 gap-4 mb-8;
+  @apply grid grid-cols-4 gap-4 mb-12;
 }
 
 .article-style-typographic__grid-item {
@@ -83,11 +96,12 @@
 }
 
 .article-style-typographic__content {
-  @apply max-w-3xl;
+  @apply max-w-4xl;
 }
 
 .article-style-typographic__section-title {
-  @apply font-bebas text-3xl mt-12 mb-4;
+  @apply font-bebas text-3xl uppercase mt-10 mb-4;
+  letter-spacing: 0.05em;
 }
 
 .article-style-typographic__text {
@@ -98,17 +112,21 @@
   @apply font-bold underline;
 }
 
-/* ARTICLE STYLE 3: EDITORIAL COLLAGE */
+/* ============================================
+   ARTICLE STYLE 3: EDITORIAL COLLAGE
+   Green gradient, asymmetrical, layered pullquotes, organic mix
+   ============================================ */
+
 .article-style-collage {
-  @apply bg-gradient-to-br from-lime-100 to-green-50 p-12 relative;
+  @apply bg-gradient-to-br from-lime-100 to-green-50 p-12;
 }
 
 .article-style-collage__header {
-  @apply font-display text-5xl font-black mb-2 text-green-900;
+  @apply font-display text-6xl font-black mb-1 text-green-900;
 }
 
 .article-style-collage__byline {
-  @apply font-serif text-lg text-gray-700 mb-12 font-light italic;
+  @apply font-serif text-base text-gray-600 mb-12 font-light italic;
 }
 
 .article-style-collage__main-grid {
@@ -124,7 +142,12 @@
 }
 
 .article-style-collage__image {
-  @apply bg-green-900 aspect-square mb-4;
+  @apply bg-green-900;
+  aspect-ratio: 1;
+}
+
+.article-style-collage__image-caption {
+  @apply text-xs text-center text-gray-600 mt-2;
 }
 
 .article-style-collage__body {
@@ -132,15 +155,15 @@
 }
 
 .article-style-collage__pullquote-box {
-  @apply bg-white border-l-4 border-green-900 p-6 my-8 shadow-lg;
+  @apply bg-white border-l-4 border-green-900 p-6 my-8 shadow-md;
 }
 
 .article-style-collage__pullquote-text {
-  @apply font-display text-2xl font-bold text-green-900 italic;
+  @apply font-display text-xl font-bold text-green-900 italic;
 }
 
 .article-style-collage__pullquote-attribution {
-  @apply font-serif text-sm text-gray-600 mt-3;
+  @apply font-serif text-xs text-gray-600 mt-3;
 }
 
 .article-style-collage__section-break {
@@ -156,7 +179,8 @@
 }
 
 .article-style-collage__sidebar-title {
-  @apply font-bebas text-xl text-green-900 mb-4;
+  @apply font-bebas text-lg text-green-900 mb-4 uppercase;
+  letter-spacing: 0.05em;
 }
 
 .article-style-collage__sidebar-text {
@@ -164,5 +188,5 @@
 }
 
 .article-style-collage__sidebar-text strong {
-  @apply block mt-3 mb-1;
+  @apply block mt-3 mb-1 text-green-900;
 }
