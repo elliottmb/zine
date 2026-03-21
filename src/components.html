@@ -3,74 +3,107 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Magazine Component Showcase</title>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Bebas+Neue&family=Abril+Fatface&family=IBM+Plex+Serif&display=swap" rel="stylesheet">
+    <title>Zine Article Styles</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Courier+Prime:wght@400;700&family=Bebas+Neue&family=Roboto:wght@400;500;700&family=Abril+Fatface&family=IBM+Plex+Serif:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
     <style>
-        body {
-            font-family: 'IBM Plex Serif', serif;
-            color: #333;
-            background-color: #f4f4f4;
-        }
-        h1, h2, h3 {
-            font-family: 'Playfair Display', serif;
-            color: #A52A2A; /* Vintage Red */
-        }
-        .section {
-            margin: 20px 0;
-            padding: 20px;
-            background-color: #FFEBCD; /* Vintage Gold */
-            border-radius: 8px;
-        }
-        .pull-quote {
-            font-style: italic;
-            background-color: #E0FFFF; /* Vintage Teal */
-            border-left: 4px solid #A52A2A;
-            padding: 10px;
-            margin: 20px 0;
-        }
-        .multi-column {
-            column-count: 2;
-            column-gap: 40px;
-        }
-        .divider {
-            border-bottom: 2px solid #A52A2A;
-            margin: 20px 0;
-        }
-        .color-swatch {
-            display: inline-block;
-            width: 20px;
-            height: 20px;
-            margin: 2px;
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'IBM Plex Serif', serif; background: #f5f3f0; }
+        .page-intro { background: white; padding: 60px 40px; text-align: center; border-bottom: 3px solid #333; }
+        .page-intro h1 { font-family: 'Playfair Display', serif; font-size: 3.5rem; margin-bottom: 15px; }
+        .page-intro p { font-size: 1.1rem; color: #666; max-width: 600px; margin: 0 auto; line-height: 1.6; }
     </style>
 </head>
 <body>
-    <section class="section">
-        <h1>Article Headers</h1>
-        <p>Introduction of the article goes here.</p>
-    </section>
-    <section class="section">
-        <h2>Image-Text Layouts</h2>
-        <p>Combine an image alongside text for a cohesive layout.</p>
-        <img src="example-image.jpg" alt="Example Image" style="width:100%;">
-    </section>
-    <section class="divider"></section>
-    <section class="section">
-        <blockquote class="pull-quote">An inspirational quote goes here.</blockquote>
-    </section>
-    <section class="section multi-column">
-        <h2>Multi-Column Text</h2>
-        <p>This is a sample paragraph that spans multiple columns to enhance readability.</p>
-    </section>
-    <section class="section">
-        <h2>Color Swatches</h2>
-        <div class="color-swatch" style="background-color:#A52A2A;"></div>
-        <div class="color-swatch" style="background-color:#FFD700;"></div>
-        <div class="color-swatch" style="background-color:#008080;"></div>
-    </section>
-    <section class="section">
-        <h2>Complete Article Template</h2>
-        <p>This section serves as a template for new articles.</p>
-    </section>
+    <div class="page-intro">
+        <h1>Three Article Styles</h1>
+        <p>Inspired by vintage magazine design. Each style uses custom Tailwind classes for clean, reusable components.</p>
+    </div>
+
+    <!-- STYLE 1: BOLD GEOMETRIC -->
+    <article class="article-style-geometric">
+        <div class="article-style-geometric__header">NEW WORLD</div>
+        <div class="article-style-geometric__subheader">Exploring Tomorrow's Design</div>
+        <div class="article-style-geometric__content">
+            <div class="article-style-geometric__text">
+                <p>The future of design isn't just about aesthetics—it's about creating systems that work seamlessly. By limiting our palette and embracing stark contrasts, we create visual impact that commands attention.</p>
+                <p>This modernist approach continues to inspire designers seeking clarity and power in their work.</p>
+                <div class="pullquote pullquote-inverted" style="margin: 2rem 0; font-family: 'Bebas Neue', sans-serif; letter-spacing: 0.05em;">
+                    "Design is the intermediary between information and understanding." — Wolf Olins
+                </div>
+                <p>As we move forward, the principle remains: simplicity speaks louder than complexity. Every element serves a purpose.</p>
+            </div>
+            <div class="article-style-geometric__image-box">[IMAGE]</div>
+        </div>
+    </article>
+
+    <!-- STYLE 2: TYPOGRAPHIC STUDY -->
+    <article class="article-style-typographic">
+        <div class="article-style-typographic__header">kerning & type</div>
+        <div class="article-style-typographic__subtitle">Understanding Letter Spacing</div>
+        <div class="article-style-typographic__grid">
+            <div class="article-style-typographic__grid-item">AV</div>
+            <div class="article-style-typographic__grid-item">AT</div>
+            <div class="article-style-typographic__grid-item">WA</div>
+            <div class="article-style-typographic__grid-item">VA</div>
+            <div class="article-style-typographic__grid-item">To</div>
+            <div class="article-style-typographic__grid-item">Ta</div>
+            <div class="article-style-typographic__grid-item">Ty</div>
+            <div class="article-style-typographic__grid-item">Tr</div>
+            <div class="article-style-typographic__grid-item">LY</div>
+            <div class="article-style-typographic__grid-item">LW</div>
+            <div class="article-style-typographic__grid-item">PA</div>
+            <div class="article-style-typographic__grid-item">Po</div>
+            <div class="article-style-typographic__grid-item">Yo</div>
+            <div class="article-style-typographic__grid-item">Yi</div>
+            <div class="article-style-typographic__grid-item">WY</div>
+            <div class="article-style-typographic__grid-item">Wa</div>
+        </div>
+        <div class="article-style-typographic__content">
+            <div class="article-style-typographic__section-title">What is Kerning?</div>
+            <p class="article-style-typographic__text">Kerning concerns the spacing between two specific characters. It's essential for optically balanced letterforms and readability.</p>
+            <div class="article-style-typographic__section-title">Why It Matters</div>
+            <p class="article-style-typographic__text">The difference between <span class="article-style-typographic__highlight">good kerning</span> and poor kerning dramatically affects typography's visual impact.</p>
+            <div class="article-style-typographic__section-title">Modern Design</div>
+            <p class="article-style-typographic__text">Professional designers spend considerable time fine-tuning letter spacing to achieve optical balance. This attention to detail elevates design from amateur to polished.</p>
+        </div>
+    </article>
+
+    <!-- STYLE 3: EDITORIAL COLLAGE -->
+    <article class="article-style-collage">
+        <div class="article-style-collage__header">The Future of Magazine Design</div>
+        <div class="article-style-collage__byline">By Creative Director • March 21, 2026</div>
+        <div class="article-style-collage__main-grid">
+            <div class="article-style-collage__text-col">
+                <div class="article-style-collage__body">Magazines have been a cornerstone of visual communication for centuries. Yet there's something timeless about the printed magazine—the tactile quality, the carefully composed spreads.</div>
+                <div class="article-style-collage__body">Today's zines are reclaiming that spirit of experimental design. They blend retro aesthetics with modern sensibilities, creating publications that feel nostalgic yet contemporary.</div>
+                <div class="article-style-collage__pullquote-box">
+                    <div class="article-style-collage__pullquote-text">"The grid system is an aid, not a guarantee. It permits possible uses and each designer can find a solution appropriate to their style."</div>
+                    <div class="article-style-collage__pullquote-attribution">— Josef Müller-Brockmann, 1961</div>
+                </div>
+            </div>
+            <div class="article-style-collage__image-col">
+                <div class="article-style-collage__image"></div>
+                <p class="article-style-collage__image-caption">Magazine spread from the archive</p>
+            </div>
+        </div>
+        <div class="article-style-collage__section-break">
+            <div class="article-style-collage__two-column">
+                <div>
+                    <h3 style="font-family: 'Bebas Neue', sans-serif; font-size: 1.5rem; text-transform: uppercase; margin-bottom: 1rem; letter-spacing: 0.05em;">Design Principles</h3>
+                    <p class="article-style-collage__body">The most successful designs follow core principles: clear hierarchy, generous whitespace, purposeful color, and typographic restraint.</p>
+                </div>
+                <div class="article-style-collage__sidebar">
+                    <div class="article-style-collage__sidebar-title">Quick Facts</div>
+                    <div class="article-style-collage__sidebar-text">
+                        <strong>Hierarchy:</strong> Guide the reader's eye through intentional sizing.<br><br>
+                        <strong>Color:</strong> Use expressively to reinforce mood.<br><br>
+                        <strong>Typography:</strong> Limit fonts to 2-3 families.<br><br>
+                        <strong>Whitespace:</strong> Give content breathing room.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </article>
 </body>
 </html>
