@@ -53,7 +53,7 @@
 
   /* Designer Brief colors */
   --color-brief-yellow: #ffff00;
-  --color-brief-black: #000;
+  --color-black: #000;
   --color-brief-red: #ff0000;
 
   /* Wilde Plakken colors */
@@ -765,7 +765,7 @@
 /* Designer Brief Yellow */
 .article-style-designer-brief {
   background-color: var(--color-brief-yellow);
-  color: var(--color-brief-black);
+  color: var(--color-black);
   padding: 3rem;
   position: relative;
   min-height: 100vh;
@@ -823,7 +823,7 @@
   font-weight: bold;
   line-height: 1.1;
   margin-bottom: 1rem;
-  color: var(--color-brief-black);
+  color: var(--color-black);
 }
 
 .article-style-designer-brief__subheader {
@@ -831,14 +831,14 @@
   font-size: 1.5rem;
   font-weight: bold;
   margin-bottom: 2rem;
-  color: var(--color-brief-black);
+  color: var(--color-black);
 }
 
 .article-style-designer-brief__body {
   font-family: "Roboto", sans-serif;
   font-size: 1rem;
   line-height: 1.75;
-  color: var(--color-brief-black);
+  color: var(--color-black);
 }
 
 .article-style-designer-brief__body p {
@@ -852,7 +852,7 @@
 /* Designer Brief Variant: Pink with Seafoam */
 .article-style-designer-brief-barbie {
   background-color: var(--color-brief-pink);
-  color: var(--color-brief-black);
+  color: var(--color-black);
   padding: 3rem;
   position: relative;
   min-height: 100vh;
@@ -893,7 +893,7 @@
 .article-style-designer-brief-barbie__tag {
   display: inline-block;
   background-color: var(--color-brief-seafoam);
-  color: var(--color-brief-black);
+  color: var(--color-black);
   padding: 0.25rem 0.75rem;
   font-family: "Bebas Neue", sans-serif;
   font-size: 0.75rem;
@@ -910,7 +910,7 @@
   font-weight: bold;
   line-height: 1.1;
   margin-bottom: 1rem;
-  color: var(--color-brief-black);
+  color: var(--color-black);
 }
 
 .article-style-designer-brief-barbie__subheader {
@@ -918,14 +918,14 @@
   font-size: 1.5rem;
   font-weight: bold;
   margin-bottom: 2rem;
-  color: var(--color-brief-black);
+  color: var(--color-black);
 }
 
 .article-style-designer-brief-barbie__body {
   font-family: "Roboto", sans-serif;
   font-size: 1rem;
   line-height: 1.75;
-  color: var(--color-brief-black);
+  color: var(--color-black);
 }
 
 .article-style-designer-brief-barbie__body p {
@@ -980,7 +980,7 @@
 .article-style-designer-brief-ocean__tag {
   display: inline-block;
   background-color: var(--color-brief-lime);
-  color: var(--color-brief-black);
+  color: var(--color-black);
   padding: 0.25rem 0.75rem;
   font-family: "Bebas Neue", sans-serif;
   font-size: 0.75rem;
@@ -1030,7 +1030,7 @@
 }
 
 .article-style-wilde-plakken__header-section {
-  background-color: var(--color-wilde-charcoal);
+  background-color: var(--color-black);
   padding: 3rem 4rem;
   display: grid;
   grid-template-columns: 1fr 1.2fr;
