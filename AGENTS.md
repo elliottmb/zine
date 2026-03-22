@@ -199,6 +199,28 @@ generated, even when those classes appeared in the HTML.
 **Takeaway:** In Tailwind v4, always use `@import "tailwindcss"`. The old `@tailwind` directives are a v3 compatibility
 shim that skips the v4 default theme.
 
+### What `@import "tailwindcss"` Gives You For Free
+
+The single import is shorthand for:
+
+```css
+@layer theme, base, components, utilities;
+@import "tailwindcss/theme.css" layer(theme);
+@import "tailwindcss/preflight.css" layer(base);
+@import "tailwindcss/utilities.css" layer(utilities);
+```
+
+This automatically:
+
+- Declares the **cascade order** (`theme → base → components → utilities`) so our `@layer components` and `@utility`
+  directives slot in correctly
+- Injects **Preflight** (a CSS reset) which among other things makes `<img>` tags `display: block` and
+  `max-width: 100%; height: auto` by default
+- Exposes all **theme CSS variables** (`--color-*`, `--spacing-*`, etc.)
+
+You only need to write the expanded form if you want to disable specific parts (e.g., no preflight when integrating into
+an existing site). See `TAILWIND_V4_GUIDE.md` for full details.
+
 ## CSS Layer Conventions
 
 ### The Rule

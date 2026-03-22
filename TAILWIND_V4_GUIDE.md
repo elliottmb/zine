@@ -54,6 +54,43 @@ When a Tailwind utility covers what you need, use it directly in HTML rather tha
 <div class="tracking-[-0.05em]">...</div>
 ```
 
+## How `@import "tailwindcss"` Works
+
+The single import line in `src/styles.css` is shorthand for:
+
+```css
+@layer theme, base, components, utilities;
+@import "tailwindcss/theme.css" layer(theme);
+@import "tailwindcss/preflight.css" layer(base);
+@import "tailwindcss/utilities.css" layer(utilities);
+```
+
+This means three things happen automatically:
+
+1. **Cascade order is declared** — `theme → base → components → utilities`. Our `@layer components` block and `@utility`
+   directives slot into this order correctly without any extra setup.
+
+2. **Theme variables are available** — All `--color-*`, `--spacing-*`, `--radius-*`, etc. CSS variables are generated
+   from your config.
+
+3. **Preflight base styles are injected** — A CSS reset runs on top of
+   [modern-normalize](https://github.com/sindresorhus/modern-normalize). Key things preflight does that affect this
+   project:
+   - Removes all default `margin` and `padding` from every element
+   - Sets `box-sizing: border-box` everywhere
+   - Makes `<img>`, `<svg>`, `<video>` etc. `display: block` by default (not inline)
+   - Sets `max-width: 100%; height: auto` on images so they don't overflow containers
+   - Leaves headings (`h1`–`h6`) completely unstyled (same size/weight as body text)
+
+You do **not** need to write the expanded form unless you want to disable or customize specific parts (e.g., omit
+preflight when integrating into an existing site).
+
+### Preflight & Image Classes
+
+Because preflight already sets `display: block` and `height: auto` on `<img>` tags, the `block` and `h-auto` classes in
+HTML like `class="w-full h-auto block"` are technically redundant — but harmless. Keep them for explicitness. `w-full`
+(which sets `width: 100%`) is not redundant: preflight sets `max-width: 100%`, which is different.
+
 ## Why This Matters
 
 In Tailwind v4, all design tokens are automatically exposed as CSS variables. Our custom components leverage this system
