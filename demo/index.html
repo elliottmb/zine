@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zine Component Library - Demo</title>
+  <link rel="stylesheet" href="../dist/styles.css">
+  <style>
+    body {
+      @apply bg-white text-gray-900;
+    }
+    .demo-header {
+      @apply bg-black text-white p-16 text-center;
+    }
+    .demo-header h1 {
+      @apply font-april text-7xl font-black mb-4;
+    }
+    .demo-header p {
+      @apply font-serif text-xl text-gray-300;
+    }
+    .section-label {
+      @apply text-xs font-spaceMono uppercase tracking-widest text-gray-500 mt-16 mb-6 block;
+    }
+    .component-note {
+      @apply text-xs font-spaceMono text-gray-600 italic mt-2 p-3 bg-gray-50 rounded border-l-2 border-gray-400;
+    }
+  </style>
+</head>
+<body>
+  <!-- HEADER -->
+  <div class="demo-header">
+    <h1>ZINE COMPONENTS</h1>
+    <p>A retro-inspired component library for digital magazines</p>
+  </div>
+
+  <div class="max-w-6xl mx-auto px-6">
+
+    <!-- ========================================
+         SECTION: TYPOGRAPHY & HEADERS
+         ======================================== -->
+    <span class="section-label">Section 1: Headers & Typography</span>
+    <div class="bg-gray-50 p-12 rounded-lg mb-12">
+      <div class="space-y-12">
+        <div>
+          <div class="font-bebas text-6xl uppercase font-black tracking-wider text-gray-900 leading-tight">
+            DESIGN REVOLUTION
+          </div>
+          <div class="component-note">Bebas Neue Bold Uppercase – High energy, 70s influence</div>
+        </div>
+
+        <div>
+          <div class="font-playfair text-5xl font-black italic text-gray-800 leading-tight">
+            The Art of <span class="not-italic">Experimental</span> Typography
+          </div>
+          <div class="component-note">Playfair Display Serif – Elegant, editorial</div>
+        </div>
+
+        <div>
+          <div class="font-abril text-7xl text-gray-900 leading-tight" style="letter-spacing: -0.05em;">
+            BOLD
+          </div>
+          <div class="component-note">Abril Fatface – Display, dramatic</div>
+        </div>
+
+        <div>
+          <div class="font-garamond text-5xl text-gray-900 leading-tight font-bold">
+            A Timeless Approach to Visual Communication
+          </div>
+          <div class="component-note">EB Garamond – Timeless serif classic</div>
+        </div>
+
+        <div>
+          <div class="font-righteous text-6xl uppercase text-magenta-500 tracking-wider">
+            Color & Space
+          </div>
+          <div class="component-note">Righteous – Geometric, bold, 80s-90s</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ========================================
+         SECTION: PULL QUOTES & EMPHASIS
+         ======================================== -->
+    <span class="section-label">Section 2: Pull Quotes & Emphasis</span>
+    <div class="space-y-8 mb-12">
+      <div class="pullquote pullquote-classic">
+        <div class="italic font-serif font-semibold text-xl">
+          "Design is not just what it looks like and feels like. Design is how it works."
+        </div>
+        <div class="text-sm text-gray-600 mt-3 font-normal not-italic">
+          — Steve Jobs
+        </div>
+      </div>
+
+      <div class="pullquote pullquote-vibrant">
+        <div class="italic font-serif font-bold text-2xl">
+          The boundaries between disciplines continue to blur.
+        </div>
+        <div class="text-sm text-pink-700 mt-3 font-serif font-normal not-italic">
+          — Visual Trends 1987
+        </div>
+      </div>
+
+      <div class="pullquote pullquote-inverted">
+        <div class="italic font-serif font-bold text-2xl">
+          Maximize space. Minimize distraction.
+        </div>
+      </div>
+
+      <div class="bg-sunset-500 text-white p-8">
+        <div class="font-bebas text-sm uppercase tracking-wider mb-2">Key Point</div>
+        <div class="font-serif text-2xl font-bold leading-tight">
+          Digital magazines are experiencing a renaissance in expressive color and experimental typography.
+        </div>
+      </div>
+
+      <div class="bg-acid-50 border-l-4 border-acid-500 p-6">
+        <div class="font-righteous text-gray-900 text-xl uppercase tracking-wider">Design Insight</div>
+        <div class="font-serif text-base leading-relaxed text-gray-900 mt-3">
+          Asymmetrical layouts and unexpected color combinations create visual interest and guide the reader's eye.
+        </div>
+      </div>
+    </div>
+
+    <!-- ========================================
+         SECTION: ARTICLE STYLES - ALL STACKED
+         ======================================== -->
+    <span class="section-label">Section 3: Article Styles (All stacked on one page)</span>
+
+    <!-- ARTICLE 1: GEOMETRIC RED -->
+    <div class="zine-article article-style-geometric mb-0">
+      <div class="article-style-geometric__header">
+        BOLD GEOMETRY
+      </div>
+      <div class="article-style-geometric__subheader">
+        Red + White + Black Design Study
+      </div>
+      <div class="article-style-geometric__content">
+        <div class="article-style-geometric__text">
+          <p>Geometric forms and stark color contrasts defined design in the 1970s. Bold typefaces paired with high-contrast color schemes created immediate visual impact.</p>
+          <p>This style emphasizes clarity and directness. Every element has a purpose. Negative space is controlled and intentional.</p>
+          <p>Modern digital design can learn from these principles: boldness, clarity, and purposeful constraint.</p>
+        </div>
+        <div class="article-style-geometric__image-box">IMAGE AREA</div>
+      </div>
+    </div>
+
+    <div class="zine-section-divider"></div>
+
+    <!-- ARTICLE 2: TYPOGRAPHIC YELLOW -->
+    <div class="zine-article article-style-typographic mb-0">
+      <div class="article-style-typographic__header">TYPOGRAPHY MATTERS</div>
+      <div class="article-style-typographic__subtitle">Kerning, tracking, and experimental letter forms</div>
+      
+      <div class="article-style-typographic__grid">
+        <div class="article-style-typographic__grid-item">A</div>
+        <div class="article-style-typographic__grid-item">B</div>
+        <div class="article-style-typographic__grid-item">C</div>
+        <div class="article-style-typographic__grid-item">D</div>
+      </div>
+
+      <div class="article-style-typographic__content">
+        <p class="article-style-typographic__text">
+          In the 1980s and 90s, designers began playing with typography in new ways. The computer made experimentation easier and faster.
+        </p>
+        
+        <div class="article-style-typographic__section-title">The Golden Era</div>
+        <p class="article-style-typographic__text">
+          Avril Fatface, Bebas Neue, and custom typefaces gave designers new voices. <span class="article-style-typographic__highlight">Color and type became inseparable.</span>
+        </p>
+
+        <p class="article-style-typographic__text">
+          What made these designs memorable? They took risks. They didn't follow the safe, centered, balanced approach of earlier eras.
+        </p>
+      </div>
+    </div>
+
+    <div class="zine-section-divider"></div>
+
+    <!-- ARTICLE 3: GREEN COLLAGE -->
+    <div class="zine-article article-style-collage mb-0">
+      <div class="article-style-collage__header">Editorial Collage</div>
+      <div class="article-style-collage__byline">How constraints breed creativity</div>
+
+      <div class="article-style-collage__main-grid">
+        <div class="article-style-collage__text-col">
+          <p class="article-style-collage__body">
+            In the print era, designers worked within strict constraints. Limited color palettes. Specific paper stocks. Fixed column widths. These limitations forced creativity.
+          </p>
+          <div class="article-style-collage__pullquote-box">
+            <div class="article-style-collage__pullquote-text">
+              Constraints are where creativity lives
+            </div>
+            <div class="article-style-collage__pullquote-attribution">Design principle, timeless</div>
+          </div>
+          <p class="article-style-collage__body">
+            Digital design removed many constraints. Infinite colors. Infinite space. Infinite fonts. This freedom paradoxically made some design feel generic and corporate.
+          </p>
+        </div>
+        <div class="article-style-collage__image-col">
+          <div class="article-style-collage__image"></div>
+          <div class="article-style-collage__image-caption">Figure A: Asymmetrical layout study</div>
+        </div>
+      </div>
+
+      <div class="article-style-collage__two-column">
+        <div>
+          <p class="article-style-collage__body">
+            The best modern designs reclaim constraints. Deliberate color palettes. Curated font pairings. Structured grids with intentional breaks.
+          </p>
+        </div>
+        <div class="article-style-collage__sidebar">
+          <div class="article-style-collage__sidebar-title">Remember</div>
+          <p class="article-style-collage__sidebar-text">
+            Zines don't need to be perfect. They need to have personality. Use the tools—color, type, whitespace—deliberately.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="zine-section-divider"></div>
+
+    <!-- ARTICLE 4: DARK MINIMAL -->
+    <div class="zine-article article-style-minimal-dark mb-0">
+      <div class="article-style-minimal-dark__header">
+        Elegant Simplicity
+      </div>
+      <div class="article-style-minimal-dark__subtitle">Less is more—a retrospective on minimalism</div>
+
+      <div class="article-style-minimal-dark__content">
+        <div class="article-style-minimal-dark__text">
+          <p>Minimalism never goes out of style. While maximalist designers fill every inch of space, minimalists understand the power of restraint.</p>
+          <p>A single typeface. A clean grid. Plenty of whitespace. One accent color, used sparingly. This approach builds elegance through subtraction.</p>
+          <p>The challenge: making simplicity feel intentional, not lazy. Every element must earn its place.</p>
+        </div>
+        <div class="article-style-minimal-dark__sidebar">
+          <div class="article-style-minimal-dark__sidebar-title">Pro Tip</div>
+          <div class="article-style-minimal-dark__sidebar-text">
+            Use line-height and margin to create rhythm in simple layouts. Small adjustments compound into sophisticated typography.
+          </div>
+        </div>
+      </div>
+
+      <div class="article-style-minimal-dark__image"></div>
+    </div>
+
+    <div class="zine-section-divider"></div>
+
+    <!-- ARTICLE 5: ACID BRIGHT -->
+    <div class="zine-article article-style-acid-bright mb-0">
+      <div class="article-style-acid-bright__header">Neon Nostalgia</div>
+      <div class="article-style-acid-bright__subheader">The 80s and 90s revisited</div>
+
+      <div class="article-style-acid-bright__content">
+        <div>
+          <p class="article-style-acid-bright__text">
+            Neon colors dominated the 1980s. Bright yellows, magentas, and electric blues. Computer screens were just getting good, and designers wanted to show off.
+          </p>
+          <p class="article-style-acid-bright__text">
+            By the 90s, this had evolved into web design. Bright GIFs. Comic Sans. Animated elements everywhere. Was it bad? Maybe. Was it fun? Absolutely.
+          </p>
+        </div>
+        <div class="article-style-acid-bright__highlight-box">
+          <strong>Why neon matters</strong>
+          <p>Neon colors communicate energy, youth, and rebellion. They're impractical but unforgettable. Use them when you need to grab attention.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="zine-section-divider"></div>
+
+    <!-- ARTICLE 6: MAGENTA EXPERIMENTAL -->
+    <div class="zine-article article-style-magenta-exp mb-0">
+      <div class="article-style-magenta-exp__header-band">
+        <div class="article-style-magenta-exp__header">
+          Playful Experimentation
+        </div>
+        <div class="article-style-magenta-exp__byline">
+          Breaking rules with intention
+        </div>
+      </div>
+
+      <div class="article-style-magenta-exp__content">
+        <div class="article-style-magenta-exp__text">
+          <p>The best designers know the rules well enough to break them intelligently. They understand why certain choices work, which gives them permission to violate those rules for effect.</p>
+          <p>Playful design doesn't mean chaotic design. Even in the most experimental layouts, there's often an underlying grid. The experimentation sits on top of structure.</p>
+          
+          <div class="article-style-magenta-exp__accent-block">
+            <strong>Experiment within systems.</strong> Choose a grid. Choose a color palette. Choose a font family. Then break those rules deliberately, not randomly.
+          </div>
+        </div>
+        <div class="article-style-magenta-exp__image-col">
+          <div class="article-style-magenta-exp__image">IMAGE 1</div>
+          <div class="article-style-magenta-exp__image">IMAGE 2</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="zine-section-divider"></div>
+
+    <!-- ARTICLE 7: PEACOCK BLUE -->
+    <div class="zine-article article-style-peacock mb-0">
+      <div class="article-style-peacock__header">
+        Modern Editorial
+      </div>
+      <div class="article-style-peacock__tagline">
+        Where print tradition meets digital innovation
+      </div>
+
+      <div class="article-style-peacock__grid">
+        <div class="article-style-peacock__grid-item">
+          <div class="article-style-peacock__grid-title">Principle 1</div>
+          <p class="article-style-peacock__grid-text">
+            Strong typography grounds everything. When type is the hero, other elements support it.
+          </p>
+        </div>
+        <div class="article-style-peacock__grid-item">
+          <div class="article-style-peacock__grid-title">Principle 2</div>
+          <p class="article-style-peacock__grid-text">
+            Color creates mood instantly. Don't rely on neutrals when emotion serves the story better.
+          </p>
+        </div>
+        <div class="article-style-peacock__grid-item">
+          <div class="article-style-peacock__grid-title">Principle 3</div>
+          <p class="article-style-peacock__grid-text">
+            Space is a tool. Use it to group elements, create breathing room, or emphasize hierarchy.
+          </p>
+        </div>
+      </div>
+
+      <p class="article-style-peacock__body">
+        The future of design lies in combining the strengths of print and digital. Print's constraint-driven rigor. Digital's infinite possibility.
+      </p>
+    </div>
+
+    <div class="zine-section-divider"></div>
+
+    <!-- ARTICLE 8: SUNSET WARM -->
+    <div class="zine-article article-style-sunset mb-12">
+      <div class="article-style-sunset__header-box">
+        <div class="article-style-sunset__header">
+          Vintage Warmth
+        </div>
+        <div class="article-style-sunset__subtitle">
+          The enduring appeal of warm, earthy tones
+        </div>
+      </div>
+
+      <div class="article-style-sunset__content">
+        <p class="article-style-sunset__text">
+          Burnt orange. Mustard yellow. Deep browns. These colors recall 1970s design, but they never really go out of style. They feel warm, approachable, and timeless.
+        </p>
+
+        <div class="article-style-sunset__section-title">
+          Why warm colors work
+        </div>
+        <p class="article-style-sunset__text">
+          Warm colors are inviting. They slow you down. They encourage reading and contemplation. When combined with serif typefaces, they create nostalgia.
+        </p>
+
+        <div class="article-style-sunset__callout">
+          Modern design often defaults to cool grays and blues. Warm colors are a path to differentiation and humanity.
+        </div>
+
+        <div class="article-style-sunset__section-title">
+          Bringing it forward
+        </div>
+        <p class="article-style-sunset__text">
+          Use warm color palettes in editorial designs, long-form content, or anything where you want to encourage deeper engagement. Pair with generous whitespace and elegant serif typefaces for maximum effect.
+        </p>
+      </div>
+    </div>
+
+    <!-- FOOTER -->
+    <div class="bg-gray-100 p-12 rounded-lg text-center my-12">
+      <div class="font-bebas text-2xl uppercase tracking-wider text-gray-900 mb-4">
+        Component Library Ready
+      </div>
+      <p class="font-serif text-base text-gray-700 max-w-2xl mx-auto">
+        These 8 article styles can be combined and modified to create unique digital zine issues. Mix typography, colors, and layouts. Layer content. Break rules intentionally. Create something beautiful.
+      </p>
+    </div>
+
+  </div>
+</body>
+</html>

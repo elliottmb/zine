@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Courier+Prime:wght@400;700&family=Bebas+Neue&family=Roboto:wght@400;500;700&family=Abril+Fatface&family=IBM+Plex+Serif:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Courier+Prime:wght@400;700&family=Bebas+Neue&family=Roboto:wght@400;500;700&family=Abril+Fatface&family=IBM+Plex+Serif:wght@400;600&family=Space+Mono:wght@400;700&family=EB+Garamond:wght@400;600;700&family=Crimson+Text:ital,wght@0,400;0,600;1,400&family=Bodoni+Moda:wght@400;700&family=Raleway:wght@400;700;900&family=Righteous&family=Fredoka:wght@400;700&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -190,3 +190,237 @@
 .article-style-collage__sidebar-text strong {
   @apply block mt-3 mb-1 text-green-900;
 }
+
+/* ============================================
+   ARTICLE STYLE 4: DARK MINIMAL SERIF
+   Black background, white serif text, elegant simplicity
+   ============================================ */
+
+.article-style-minimal-dark {
+  @apply bg-black text-white p-16;
+}
+
+.article-style-minimal-dark__header {
+  @apply font-garamond text-6xl font-bold mb-8 leading-tight;
+  max-width: 800px;
+}
+
+.article-style-minimal-dark__subtitle {
+  @apply font-spaceMono text-xs uppercase tracking-widest text-gray-400 mb-12;
+}
+
+.article-style-minimal-dark__content {
+  @apply grid grid-cols-3 gap-12 max-w-5xl;
+}
+
+.article-style-minimal-dark__text {
+  @apply col-span-2 font-serif text-lg leading-relaxed text-gray-100;
+}
+
+.article-style-minimal-dark__text p {
+  @apply mb-6;
+}
+
+.article-style-minimal-dark__sidebar {
+  @apply col-span-1 border-l-2 border-white pl-6;
+}
+
+.article-style-minimal-dark__sidebar-title {
+  @apply font-bebas text-sm uppercase tracking-wider text-gray-300 mb-4;
+}
+
+.article-style-minimal-dark__sidebar-text {
+  @apply font-serif text-sm leading-relaxed text-gray-400;
+}
+
+.article-style-minimal-dark__image {
+  @apply bg-gray-900 border border-gray-700 my-8;
+  aspect-ratio: 16 / 9;
+}
+
+/* ============================================
+   ARTICLE STYLE 5: ACID BRIGHT HIGH CONTRAST
+   Neon yellow background, black text, retro 80s-90s energy
+   ============================================ */
+
+.article-style-acid-bright {
+  @apply bg-acid-50 text-gray-900 p-12;
+  border: 4px solid #ccff00;
+}
+
+.article-style-acid-bright__header {
+  @apply font-righteous text-6xl uppercase font-black mb-4;
+  letter-spacing: 0.05em;
+  color: #b3cc00;
+}
+
+.article-style-acid-bright__subheader {
+  @apply font-bebas text-2xl uppercase mb-8 tracking-wider;
+  color: #b3cc00;
+}
+
+.article-style-acid-bright__content {
+  @apply grid grid-cols-2 gap-8;
+}
+
+.article-style-acid-bright__text {
+  @apply font-serif text-base leading-relaxed;
+}
+
+.article-style-acid-bright__text p {
+  @apply mb-4;
+}
+
+.article-style-acid-bright__highlight-box {
+  @apply bg-gray-900 text-white p-6 border-2 border-acid-500;
+}
+
+.article-style-acid-bright__highlight-box strong {
+  @apply block text-acid-500 text-lg font-bebas uppercase tracking-wider mb-2;
+}
+
+/* ============================================
+   ARTICLE STYLE 6: MAGENTA EXPERIMENTAL
+   Magenta + White + Black, layered, playful
+   ============================================ */
+
+.article-style-magenta-exp {
+  @apply bg-white p-0 overflow-hidden;
+}
+
+.article-style-magenta-exp__header-band {
+  @apply bg-magenta-500 text-white p-12;
+}
+
+.article-style-magenta-exp__header {
+  @apply font-april text-6xl font-black leading-tight;
+}
+
+.article-style-magenta-exp__byline {
+  @apply font-spaceMono text-xs uppercase tracking-widest text-magenta-200 mt-4;
+}
+
+.article-style-magenta-exp__content {
+  @apply p-12 grid grid-cols-2 gap-12 items-start;
+}
+
+.article-style-magenta-exp__text {
+  @apply font-serif text-base leading-relaxed;
+}
+
+.article-style-magenta-exp__image-col {
+  @apply space-y-4;
+}
+
+.article-style-magenta-exp__image {
+  @apply bg-black text-white flex items-center justify-center font-bebas text-2xl;
+  aspect-ratio: 1;
+}
+
+.article-style-magenta-exp__accent-block {
+  @apply bg-magenta-100 border-l-4 border-magenta-500 p-6;
+}
+
+.article-style-magenta-exp__accent-block strong {
+  @apply text-magenta-600 font-bebas uppercase;
+}
+
+/* ============================================
+   ARTICLE STYLE 7: PEACOCK BLUE EDITORIAL
+   Gradient blue, white text, modern editorial feel
+   ============================================ */
+
+.article-style-peacock {
+  @apply bg-gradient-to-br from-peacock-500 to-peacock-900 text-white p-12;
+}
+
+.article-style-peacock__header {
+  @apply font-raleway text-5xl font-black mb-6 uppercase;
+  letter-spacing: 0.03em;
+}
+
+.article-style-peacock__tagline {
+  @apply font-crimson text-2xl italic mb-12 text-peacock-100;
+}
+
+.article-style-peacock__grid {
+  @apply grid grid-cols-3 gap-8 mb-12;
+}
+
+.article-style-peacock__grid-item {
+  @apply bg-peacock-400 bg-opacity-30 p-8 rounded-lg backdrop-blur-sm;
+}
+
+.article-style-peacock__grid-title {
+  @apply font-bebas text-lg uppercase tracking-wider mb-3;
+}
+
+.article-style-peacock__grid-text {
+  @apply font-serif text-sm leading-relaxed;
+}
+
+.article-style-peacock__body {
+  @apply font-serif text-base leading-relaxed max-w-3xl;
+}
+
+.article-style-peacock__body p {
+  @apply mb-6;
+}
+
+/* ============================================
+   ARTICLE STYLE 8: SUNSET WARM CLASSIC
+   Burnt orange + cream, serif-heavy, vintage feel
+   ============================================ */
+
+.article-style-sunset {
+  @apply bg-burnished-50 text-gray-900 p-12;
+}
+
+.article-style-sunset__header-box {
+  @apply bg-sunset-500 text-white p-12 mb-12 relative transform -rotate-1;
+}
+
+.article-style-sunset__header {
+  @apply font-bodoni text-5xl font-bold;
+}
+
+.article-style-sunset__subtitle {
+  @apply font-fredoka text-sm uppercase tracking-wider mt-4 text-sunset-100;
+}
+
+.article-style-sunset__content {
+  @apply max-w-3xl;
+}
+
+.article-style-sunset__section-title {
+  @apply font-bodoni text-3xl font-bold mt-12 mb-6 text-sunset-900;
+}
+
+.article-style-sunset__text {
+  @apply font-crimson text-base leading-relaxed mb-6;
+}
+
+.article-style-sunset__callout {
+  @apply border-l-4 border-sunset-500 pl-6 my-8 italic font-crimson text-lg text-gray-800;
+}
+
+/* ============================================
+   SPACING & STRUCTURE UTILITIES
+   ============================================ */
+
+.zine-article {
+  @apply mb-0 scroll-mt-0;
+}
+
+.zine-article + .zine-article {
+  @apply border-t-0;
+}
+
+.zine-section {
+  @apply mb-12;
+}
+
+.zine-section-divider {
+  @apply my-16 h-1 bg-gradient-to-r from-transparent via-gray-400 to-transparent;
+}
+
