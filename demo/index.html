@@ -7,7 +7,8 @@
     <link rel="stylesheet" href="../dist/styles.css" />
     <style>
       body {
-        @apply bg-black text-gray-900;
+        background-color: black;
+        color: #111827;
       }
       .demo-container {
         max-width: 1200px;
@@ -15,19 +16,42 @@
         background-color: white;
       }
       .demo-header {
-        @apply bg-black text-white p-16 text-center;
+        background-color: black;
+        color: white;
+        padding: 4rem;
+        text-align: center;
       }
       .demo-header h1 {
-        @apply font-april text-7xl font-black mb-4;
+        font-family: "Abril Fatface", serif;
+        font-size: 3rem;
+        font-weight: 900;
+        margin-bottom: 1rem;
       }
       .demo-header p {
-        @apply font-serif text-xl text-gray-300;
+        font-family: "IBM Plex Serif", serif;
+        font-size: 1.25rem;
+        color: #d1d5db;
       }
       .section-label {
-        @apply text-xs font-spaceMono uppercase tracking-widest text-gray-500 mt-16 mb-6 block;
+        font-family: "Space Mono", monospace;
+        font-size: 0.75rem;
+        text-transform: uppercase;
+        letter-spacing: 0.16em;
+        color: #9ca3af;
+        margin-top: 4rem;
+        margin-bottom: 1.5rem;
+        display: block;
       }
       .component-note {
-        @apply text-xs font-spaceMono text-gray-600 italic mt-2 p-3 bg-gray-50 rounded border-l-2 border-gray-400;
+        font-family: "Space Mono", monospace;
+        font-size: 0.75rem;
+        color: #4b5563;
+        font-style: italic;
+        margin-top: 0.5rem;
+        padding: 0.75rem;
+        background-color: #f3f4f6;
+        border-radius: 0.25rem;
+        border-left: 2px solid #9ca3af;
       }
     </style>
   </head>
