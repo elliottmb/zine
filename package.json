@@ -7,13 +7,11 @@
     "watch": "tailwindcss build src/styles.css -o dist/styles.css --watch",
     "start": "npm run build && npm run watch"
   },
-  "dependencies": {
-    "tailwindcss": "^2.2.19",
-    "postcss": "^8.2.15",
-    "autoprefixer": "^10.3.7"
-  },
   "devDependencies": {
-    "concurrently": "^6.0.0"
+    "autoprefixer": "^10.4.27",
+    "concurrently": "^6.0.0",
+    "postcss": "^8.5.8",
+    "tailwindcss": "^4.2.2"
   },
   "license": "MIT"
 }

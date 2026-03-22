@@ -19,15 +19,21 @@
 }
 
 .pullquote-classic {
-  @apply border-l-black text-black bg-gray-50;
+  border-color: #1f2937;
+  color: black;
+  @apply bg-gray-50;
 }
 
 .pullquote-vibrant {
-  @apply border-l-pink-600 text-pink-600 bg-pink-50;
+  border-color: #ec4899;
+  color: #be185d;
+  @apply bg-pink-50;
 }
 
 .pullquote-inverted {
-  @apply border-l-white text-white bg-black;
+  border-color: white;
+  color: white;
+  @apply bg-black;
 }
 
 /* ============================================
@@ -118,11 +124,11 @@
    ============================================ */
 
 .article-style-collage {
-  @apply bg-gradient-to-br from-lime-100 to-green-50 p-12;
+  @apply bg-gradient-to-br from-green-100 to-green-100 p-12;
 }
 
 .article-style-collage__header {
-  @apply font-display text-6xl font-black mb-1 text-green-900;
+  @apply font-playfair text-6xl font-black mb-1 text-green-900;
 }
 
 .article-style-collage__byline {
@@ -159,7 +165,7 @@
 }
 
 .article-style-collage__pullquote-text {
-  @apply font-display text-xl font-bold text-green-900 italic;
+  @apply font-playfair text-xl font-bold text-green-900 italic;
 }
 
 .article-style-collage__pullquote-attribution {

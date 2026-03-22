@@ -1,4 +1,5 @@
-module.exports = {
+/** @type {import('tailwindcss').Config} */
+export default {
   content: ['./src/**/*.{html,js}', './demo/**/*.html'],
   theme: {
     extend: {
@@ -62,39 +63,5 @@ module.exports = {
       },
     },
   },
-  plugins: [
-    function ({ addUtilities }) {
-      const newUtilities = {
-        '.pullquote': {
-          fontSize: '1.5rem',
-          fontStyle: 'italic',
-          color: '#007acc',
-          borderLeft: '4px solid #d5006d',
-          paddingLeft: '1rem',
-          margin: '1.5rem 0',
-        },
-        '.article-section': {
-          marginBottom: '2rem',
-          padding: '1rem',
-          border: '1px solid #e0e0e0',
-          borderRadius: '8px',
-        },
-        '.text-emphasis': {
-          color: '#d5006d',
-          fontWeight: 'bold',
-        },
-        '.text-rotate-small': {
-          transform: 'rotate(-1deg)',
-        },
-        '.text-rotate-large': {
-          transform: 'rotate(-3deg)',
-        },
-        '.text-outline': {
-          textStroke: '1px currentColor',
-          paintOrder: 'stroke fill',
-        },
-      };
-      addUtilities(newUtilities, ['responsive', 'hover']);
-    },
-  ],
+  plugins: [],
 };
