@@ -10,7 +10,7 @@ export default {
         vibrantOrange: '#ff6200ea',
         vibrantGreen: '#32cd32',
         vibrantYellow: '#ffeb3b',
-        
+
         // Extended retro palette
         burnished: {
           50: '#faf8f5',

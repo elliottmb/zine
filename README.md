@@ -1,14 +1,17 @@
 # Zine Component Library 🎨📰
 
-A retro-inspired HTML/CSS component library for creating expressive digital zines. Built with Tailwind CSS v4 and Google Fonts, featuring 8 distinct article styles and atomic components inspired by 70s-90s magazine design.
+A retro-inspired HTML/CSS component library for creating expressive digital zines. Built with Tailwind CSS v4 and Google
+Fonts, featuring 8 distinct article styles and atomic components inspired by 70s-90s magazine design.
 
 ## Features
 
-✨ **8 Article Styles** - Geometric Bold, Typographic Study, Editorial Collage, Minimal Dark, Acid Bright, Magenta Experimental, Peacock Blue, Sunset Warm
+✨ **8 Article Styles** - Geometric Bold, Typographic Study, Editorial Collage, Minimal Dark, Acid Bright, Magenta
+Experimental, Peacock Blue, Sunset Warm
 
 🎨 **Expressive Color** - Custom retro-inspired color palettes (sunset, acid, magenta, peacock, burnished)
 
-📝 **Rich Typography** - 12 Google Fonts (Bebas Neue, EB Garamond, Playfair, Space Mono, Bodoni Moda, Righteous, Crimson Text, and more)
+📝 **Rich Typography** - 12 Google Fonts (Bebas Neue, EB Garamond, Playfair, Space Mono, Bodoni Moda, Righteous, Crimson
+Text, and more)
 
 🧩 **Atomic Components** - Headers, pull quotes, emphasis blocks, layouts, and more
 
@@ -17,22 +20,26 @@ A retro-inspired HTML/CSS component library for creating expressive digital zine
 ## Quick Start
 
 ### Install
+
 ```bash
 npm install
 ```
 
 ### Development
+
 ```bash
 npm run build    # One-time build
 npm run watch    # Watch mode during development
 ```
 
 ### View the Demo
+
 Open `demo/index.html` in your browser to see all components and article styles in action.
 
 ## Usage
 
 ### Basic Article Template
+
 ```html
 <div class="article-style-geometric">
   <div class="article-style-geometric__header">Your Headline</div>
@@ -47,18 +54,16 @@ Open `demo/index.html` in your browser to see all components and article styles 
 ```
 
 ### Pull Quotes
+
 ```html
 <div class="pullquote pullquote-classic">
-  <div class="italic font-serif font-semibold text-xl">
-    Your memorable quote here
-  </div>
-  <div class="text-sm text-gray-600 mt-3 font-normal not-italic">
-    — Attribution
-  </div>
+  <div class="italic font-serif font-semibold text-xl">Your memorable quote here</div>
+  <div class="text-sm text-gray-600 mt-3 font-normal not-italic">— Attribution</div>
 </div>
 ```
 
 ### All 8 Article Styles
+
 - `article-style-geometric` - Red + white, stark contrast
 - `article-style-typographic` - Yellow, experimental type
 - `article-style-collage` - Green gradient, asymmetrical
@@ -107,6 +112,7 @@ package.json            # Dependencies
 ## Color Palettes
 
 **Vibrant Magazine Colors:**
+
 - Vibrant Blue: #007acc
 - Vibrant Pink: #d5006d
 - Vibrant Orange: #ff6200
@@ -114,6 +120,7 @@ package.json            # Dependencies
 - Vibrant Yellow: #ffeb3b
 
 **Extended Retro Palettes:**
+
 - **Sunset** - Burnt orange + cream (50/500/900)
 - **Acid** - Neon yellow tones (50/500/900)
 - **Magenta** - Bold magenta (50/500/900)
@@ -123,22 +130,25 @@ package.json            # Dependencies
 ## Architecture & Best Practices
 
 ### Tailwind v4 CSS Variables
-This library uses Tailwind v4's CSS variables via `var()` for all design tokens instead of hardcoding values. This means:
 
-✓ **Maintainability** - Change colors/spacing in `tailwind.config.js`, they automatically update everywhere
-✓ **Consistency** - All values reference the same design system
-✓ **Modern** - Leverages Tailwind v4's native architecture
+This library uses Tailwind v4's CSS variables via `var()` for all design tokens instead of hardcoding values. This
+means:
+
+✓ **Maintainability** - Change colors/spacing in `tailwind.config.js`, they automatically update everywhere ✓
+**Consistency** - All values reference the same design system ✓ **Modern** - Leverages Tailwind v4's native architecture
 
 Example:
+
 ```css
 .article-style-geometric {
-  background-color: var(--color-red-600);  /* Uses Tailwind's color system */
+  background-color: var(--color-red-600); /* Uses Tailwind's color system */
   color: var(--color-white);
   padding: 3rem;
 }
 ```
 
 Available Tailwind v4 variables:
+
 - `--color-*` - All colors from your palette
 - `--font-*` - Typography scales
 - `--spacing-*` - Spacing/sizing
@@ -146,15 +156,17 @@ Available Tailwind v4 variables:
 - `--shadow-*` - Box shadow values
 
 ### BEM Naming Convention
+
 All component classes follow BEM (Block, Element, Modifier):
+
 ```
 .article-style-geometric           /* Block */
 .article-style-geometric__header   /* Element */
 .article-style-geometric__header--alt /* Modifier (if needed) */
 ```
 
-This makes components easy to customize and compose.
-Edit `tailwind.config.js` to change the color palette:
+This makes components easy to customize and compose. Edit `tailwind.config.js` to change the color palette:
+
 ```javascript
 colors: {
   myCustom: {
@@ -166,12 +178,15 @@ colors: {
 ```
 
 ### Add Fonts
+
 Add Google Fonts to `src/styles.css`:
+
 ```css
 @import url('https://fonts.googleapis.com/css2?family=Your+Font&display=swap');
 ```
 
 Then add to `tailwind.config.js`:
+
 ```javascript
 fontFamily: {
   yourFont: ['Your Font', 'fallback'],
@@ -179,7 +194,9 @@ fontFamily: {
 ```
 
 ### Create New Article Styles
+
 Add to `src/styles.css`:
+
 ```css
 .article-style-custom {
   background-color: #yourcolor;
