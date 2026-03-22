@@ -4,6 +4,17 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Explicit CSS variable definitions for colors used in this library */
+:root {
+  --color-black: #000;
+  --color-white: #fff;
+  --color-gray-50: #f9fafb;
+  --color-gray-900: #111827;
+  --color-pink-50: #fdf2f8;
+  --color-pink-600: #db2777;
+  --color-purple-900: #7e22ce;
+}
+
 /* ============================================
    TAILWIND V4 CSS VARIABLES USAGE
    
