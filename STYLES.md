@@ -443,31 +443,31 @@ weight.
 
 **Visual character:** A deep navy header dominates the top, holding the title in enormous tight-tracked uppercase DM
 Sans (7rem, weight 800) that pushes to the bottom of the field. Byline and ISBN sit at the top in light-weight
-uppercase, providing metadata before the announcement. Below the header, three section variants alternate between
-tan (`--tan`), light slate (`--slate`), and matching navy (`--blue`) — creating a rhythm that can run long without
-becoming monotonous. Pull quotes are indented, italic, thin-weight, and borderless, letting the words carry the
-weight. Images float within prose using the standard left/right/full pattern.
+uppercase, providing metadata before the announcement. Below the header, three section variants alternate between tan
+(`--tan`), light slate (`--slate`), and matching navy (`--blue`) — creating a rhythm that can run long without becoming
+monotonous. Pull quotes are indented, italic, thin-weight, and borderless, letting the words carry the weight. Images
+float within prose using the standard left/right/full pattern.
 
 **Typography:** DM Sans exclusively, across the full weight range — 300 for byline and pull quotes, 400 for body and
 captions, 500 for subtitle, 800 for the display title and section headings. Captions are small, uppercase,
 letter-spaced, and inherit their color from the section.
 
-**Colors:** `--color-studio-blue` (`#02169f`) for the header and blue section, `--color-studio-tan` (`#bfb6a2`) for
-the tan section, `slate-100` for the light section, `--color-studio-blue-mid` (`#6773c5`) and
-`--color-studio-blue-light` (`#8d96d4`) for metadata hierarchy in the header.
+**Colors:** `--color-studio-blue` (`#02169f`) for the header and blue section, `--color-studio-tan` (`#bfb6a2`) for the
+tan section, `slate-100` for the light section, `--color-studio-blue-mid` (`#6773c5`) and `--color-studio-blue-light`
+(`#8d96d4`) for metadata hierarchy in the header.
 
 **Section variants:**
 
-- **`--tan`**: Stone-toned background with near-black titles. For interview transcripts, prose features, anything
-  with warmth.
-- **`--slate`**: Light background with studio-blue titles and body text. The highest contrast section — for
-  sidebars, pull focus, key passages.
+- **`--tan`**: Stone-toned background with near-black titles. For interview transcripts, prose features, anything with
+  warmth.
+- **`--slate`**: Light background with studio-blue titles and body text. The highest contrast section — for sidebars,
+  pull focus, key passages.
 - **`--blue`**: Full navy, white text. For closing statements, summaries, or anything meant to feel like the cover
   wrapping back around.
 
-**Best used for:** Design industry writing, studio profiles, process documentation, career features, any longform
-piece that benefits from a clean, authoritative reading experience. The single-typeface system (DM Sans at varying
-weights) creates coherence across long pieces. The section color system rewards structural writing.
+**Best used for:** Design industry writing, studio profiles, process documentation, career features, any longform piece
+that benefits from a clean, authoritative reading experience. The single-typeface system (DM Sans at varying weights)
+creates coherence across long pieces. The section color system rewards structural writing.
 
 ---
 

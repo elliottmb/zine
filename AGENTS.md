@@ -345,22 +345,22 @@ Only add custom colors to `:root` when there is no sufficiently close Tailwind e
 
 ### Design-Critical Custom Colors — Do Not Substitute
 
-| Variable                    | Hex       | Why it must not change                                         |
-| --------------------------- | --------- | -------------------------------------------------------------- |
+| Variable                    | Hex       | Why it must not change                                        |
+| --------------------------- | --------- | ------------------------------------------------------------- |
 | `--color-brief-yellow`      | `#ffff00` | Pure yellow by design — `yellow-400` (`#facc15`) is different |
 | `--color-liberation-yellow` | `#e3e446` | 40+ channels from `yellow-300` (`#fde047`)                    |
 | `--color-liberation-pink`   | `#e12b96` | 40+ channels from `pink-600` (`#db2777`)                      |
 | `--color-liberation-purple` | `#942c79` | 40+ channels from `fuchsia-800` (`#86198f`)                   |
-| `--color-studio-blue`       | `#02169f` | Deep navy — no Tailwind equivalent at this depth               |
-| `--color-studio-tan`        | `#bfb6a2` | Warm stone — midpoint between `stone-300` and `stone-400`      |
+| `--color-studio-blue`       | `#02169f` | Deep navy — no Tailwind equivalent at this depth              |
+| `--color-studio-tan`        | `#bfb6a2` | Warm stone — midpoint between `stone-300` and `stone-400`     |
 
 Never replace these with Tailwind shades. The distinction is intentional and design-critical.
 
 ### `--color-purple-900` Mismatch Warning
 
-`--color-purple-900` is defined in `:root` as `#7e22ce`, which is actually Tailwind's `purple-700` value — a
-mismatch from an early session. Do not rely on `var(--color-purple-900)` in new styles. Use `var(--color-violet-900)`
-or direct Tailwind shade references instead.
+`--color-purple-900` is defined in `:root` as `#7e22ce`, which is actually Tailwind's `purple-700` value — a mismatch
+from an early session. Do not rely on `var(--color-purple-900)` in new styles. Use `var(--color-violet-900)` or direct
+Tailwind shade references instead.
 
 ### Gray Family Color Reference
 
@@ -486,13 +486,12 @@ When renaming a style (e.g. `article-style-peacock` → `article-style-swiss-min
 3. `STYLES.md` — the style entry heading and any references
 4. `README.md` — the style list
 
-The color palette name (e.g. `--color-peacock-*`) is independent of the style name — leave color variable names
-alone.
+The color palette name (e.g. `--color-peacock-*`) is independent of the style name — leave color variable names alone.
 
 ## Float-Based Image Layout Pattern
 
-Both `article-style-programme`, `article-style-liberation`, and `article-style-studio-culture` use CSS floats for
-inline images. The correct pattern:
+Both `article-style-programme`, `article-style-liberation`, and `article-style-studio-culture` use CSS floats for inline
+images. The correct pattern:
 
 ```html
 <!-- Float image left with prose wrapping right -->
@@ -546,4 +545,3 @@ This speed is thanks to Tailwind v4's optimized compiler.
 3. **Theme presets** - Create configurable theme mode (dark/light mode toggles per article).
 4. **Print CSS** - Add `@media print` styles for PDF export workflows.
 5. **Static site generator templates** - Create wrappers for MkDocs, Hugo, 11ty, Jekyll.
-

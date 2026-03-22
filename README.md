@@ -7,8 +7,8 @@ Fonts, featuring 14 distinct article styles and atomic components inspired by 70
 
 ✨ **22 Article Styles** - Geometric Bold, Typographic Study, Editorial Collage, Minimal Dark, Acid Bright, Magenta
 Experimental, Swiss Minimal, Sunset Warm, European Editorial, Split Editorial, Designer Brief (Yellow/Barbie/Ocean),
-Wilde Plakken, Music Bold, Trademarks, Pentagram (Standard/Inverted), Thirty Centuries, Programme, Liberation,
-Studio Culture
+Wilde Plakken, Music Bold, Trademarks, Pentagram (Standard/Inverted), Thirty Centuries, Programme, Liberation, Studio
+Culture
 
 🎨 **Expressive Color** - Custom retro-inspired color palettes (sunset, acid, magenta, peacock, burnished, editorial,
 music)
