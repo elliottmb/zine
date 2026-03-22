@@ -466,4 +466,104 @@ This speed is thanks to Tailwind v4's optimized compiler.
 
 ---
 
-**Note:** This file captures the development story. Use it as reference when maintaining or extending the library.
+## Session 3: Color Audit, New Styles & STYLES.md
+
+### What Was Added
+
+- **Article style `article-style-trademarks`** — Album art grid, deep purple palette, Monoton + Audiowide fonts
+- **Article style `article-style-split-editorial`** — Two-column inverted color scheme with clip-path split header
+- **`STYLES.md`** — Documentation for all 19 article styles with real print sources, inspiration, typography, colors,
+  and use cases
+- **Audiowide font** added to Google Fonts import and `tailwind.config.js`
+
+### Style Renames This Session
+
+- `article-style-peacock` → `article-style-swiss-minimal` (user preferred "swiss-minimal"; "unit-design" was also tried
+  and rejected)
+- When renaming a style: update `src/styles.css`, `demo/index.html`, `STYLES.md`, `README.md`. The `peacock` **color
+  palette** (`--color-peacock-*`) is unrelated to the style name — leave it alone.
+
+### Color Audit: What Was Done & Key Rules
+
+All hardcoded hex values throughout `src/styles.css` were replaced with `var(--color-*)` references. Key rules going
+forward:
+
+- **Never hardcode hex values** outside `:root`. Use `var(--color-*)` everywhere.
+- **Tailwind v4 exposes all default palette colors automatically** as `var(--color-*)` via `@import "tailwindcss"`. You
+  do NOT need to define `var(--color-zinc-700)`, `var(--color-yellow-400)`, etc. in `:root` — they are already
+  available.
+- **Only define custom colors in `:root`** that have no Tailwind equivalent (e.g. `--color-music-blue`,
+  `--color-acid-500`, `--color-brief-yellow`).
+- **`--color-brief-yellow: #ffff00`** must never be changed to `yellow-400` — it is an intentional pure yellow used in
+  the designer brief styles. `yellow-400` is `#facc15`, which is different by design.
+
+### Critical Color Variable Warning
+
+**`--color-purple-900` in `:root` is defined as `#7e22ce`**, which is actually Tailwind's `purple-700` value — a
+mismatch. Do not rely on `var(--color-purple-900)` in new styles. Use `var(--color-violet-900)` or explicit Tailwind
+shade references instead.
+
+### Gray Family Color Matching
+
+When replacing hardcoded grays, use perceptual luminance to find the closest match across gray/zinc/neutral/stone. Key
+mappings established this session:
+
+| Hex    | Tailwind equivalent |
+| ------ | ------------------- |
+| `#333` | `gray-800`          |
+| `#444` | `stone-700`         |
+| `#555` | `gray-600`          |
+| `#666` | `gray-500`          |
+| `#888` | `neutral-500`       |
+| `#999` | `zinc-400`          |
+| `#ddd` | `zinc-200`          |
+| `#eee` | `gray-200`          |
+
+The custom `--color-warm-50/100/200/300` variables were removed and replaced with `stone-50`, `stone-100`,
+`neutral-200`, `neutral-300` respectively.
+
+### Split Header Clip-Path Technique
+
+The `article-style-split-editorial` uses `clip-path: inset()` to render a single header element in two colors — white
+over the dark column, red over the light column:
+
+```css
+.article-style-split-editorial__header-light {
+  clip-path: inset(0 50% 0 0); /* show left half only */
+  color: white;
+}
+.article-style-split-editorial__header-accent {
+  clip-path: inset(0 0 0 50%); /* show right half only */
+  color: var(--color-red-600);
+}
+```
+
+Both elements are positioned absolutely over the same space. The 50% clip aligns exactly with the column boundary when
+padding is symmetric.
+
+### STYLES.md — Reference Book Sources
+
+`STYLES.md` at the project root documents all 19 styles. Most have specific source books from
+[The Print Arkive](https://www.theprintarkive.co.uk/). When adding new styles, add a corresponding entry to `STYLES.md`
+with inspiration, visual character, typography, colors, and best use. If a Print Arkive source is known, include the
+book title, year, publisher, and editors.
+
+### Current Style Count
+
+The library has **19 article styles** as of this session. The footer in `demo/index.html` and `README.md` style list may
+need updating when new styles are added.
+
+### Overlay Color Variables
+
+Semi-transparent overlay colors live in `:root` as named variables rather than inline `rgba()`:
+
+```css
+--color-overlay-dark-10: rgba(0, 0, 0, 0.1);
+--color-overlay-dark-15: rgba(0, 0, 0, 0.15);
+--color-overlay-dark-20: rgba(0, 0, 0, 0.2);
+--color-overlay-light-50: rgba(255, 255, 255, 0.5);
+--color-overlay-light-60: rgba(255, 255, 255, 0.6);
+--color-overlay-light-80: rgba(255, 255, 255, 0.8);
+```
+
+Use these instead of writing `rgba()` values inline.
