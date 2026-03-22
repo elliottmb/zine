@@ -1441,6 +1441,112 @@
   color: var(--color-white);
 }
 
+/* Thirty Centuries - Elegant typography, white space, multi-font hierarchy */
+.article-style-thirty-centuries {
+  background-color: var(--color-white);
+  color: var(--color-black);
+  padding: 5rem 4rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.article-style-thirty-centuries__eyebrow {
+  font-family: "Space Mono", monospace;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: #666666;
+  margin-bottom: 2rem;
+  font-weight: 400;
+}
+
+.article-style-thirty-centuries__headline {
+  font-family: "Playfair Display", serif;
+  font-size: 4.5rem;
+  font-weight: 700;
+  line-height: 1.1;
+  color: var(--color-black);
+  margin-bottom: 0.5rem;
+  letter-spacing: -0.02em;
+  border-bottom: 3px solid #0052cc;
+  padding-bottom: 1rem;
+}
+
+.article-style-thirty-centuries__headline::first-letter {
+  color: #ff0000;
+  font-weight: 900;
+}
+
+.article-style-thirty-centuries__subheadline {
+  font-family: "Raleway", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 300;
+  line-height: 1.6;
+  color: #555555;
+  margin-bottom: 3rem;
+  max-width: 700px;
+  letter-spacing: 0.01em;
+  border-bottom: 2px solid #0052cc;
+  padding-bottom: 1rem;
+}
+
+.article-style-thirty-centuries__intro {
+  font-family: "EB Garamond", serif;
+  font-size: 1.25rem;
+  font-weight: 600;
+  line-height: 1.8;
+  color: var(--color-black);
+  margin-bottom: 2.5rem;
+  max-width: 700px;
+}
+
+.article-style-thirty-centuries__body {
+  font-family: "EB Garamond", serif;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.9;
+  color: #333333;
+  margin-bottom: 2rem;
+}
+
+.article-style-thirty-centuries__body p {
+  margin-bottom: 1.5rem;
+}
+
+.article-style-thirty-centuries__pullquote {
+  font-family: "Playfair Display", serif;
+  font-size: 1.8rem;
+  font-weight: 700;
+  font-style: italic;
+  line-height: 1.6;
+  color: var(--color-black);
+  margin: 3rem 0;
+  padding-left: 2rem;
+  border-left: 3px solid #0052cc;
+  max-width: 650px;
+}
+
+.article-style-thirty-centuries__footer {
+  font-family: "Space Mono", monospace;
+  font-size: 0.85rem;
+  font-weight: 400;
+  color: #888888;
+  margin-top: 4rem;
+  padding-top: 2rem;
+  border-top: 1px solid #eeeeee;
+}
+
+.article-style-thirty-centuries__column-split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  margin: 3rem 0;
+}
+
+.article-style-thirty-centuries__column-split p {
+  margin-bottom: 1.5rem;
+}
+
 /* Utility classes */
 .zine-article {
   margin-bottom: 0;
