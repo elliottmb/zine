@@ -6,13 +6,46 @@
 
 /* Explicit CSS variable definitions for colors used in this library */
 :root {
+  /* Neutral colors */
   --color-black: #000;
   --color-white: #fff;
   --color-gray-50: #f9fafb;
   --color-gray-900: #111827;
+
+  /* Common utility colors */
   --color-pink-50: #fdf2f8;
   --color-pink-600: #db2777;
   --color-purple-900: #7e22ce;
+
+  /* Custom magazine color palettes */
+  --color-sunset-50: #fef2e8;
+  --color-sunset-500: #ff6b35;
+  --color-sunset-900: #8b2e00;
+
+  --color-acid-50: #f0ff00;
+  --color-acid-500: #ccff00;
+  --color-acid-900: #b3cc00;
+
+  --color-magenta-50: #ffe0f7;
+  --color-magenta-500: #ff00ff;
+  --color-magenta-900: #cc00cc;
+
+  --color-peacock-50: #e0f7ff;
+  --color-peacock-500: #00bfff;
+  --color-peacock-900: #0066cc;
+
+  --color-burnished-50: #faf8f5;
+  --color-burnished-900: #2d1810;
+
+  /* Extended grays for flexibility */
+  --color-gray-100: #f3f4f6;
+  --color-gray-200: #e5e7eb;
+  --color-gray-300: #d1d5db;
+  --color-gray-400: #9ca3af;
+  --color-gray-500: #6b7280;
+  --color-gray-600: #4b5563;
+  --color-gray-700: #374151;
+  --color-gray-800: #1f2937;
 }
 
 /* ============================================
