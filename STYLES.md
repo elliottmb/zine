@@ -394,7 +394,7 @@ portraits, and archival images equally well.
 
 ---
 
-## 21. She-Devils (`article-style-liberation`)
+## 21. Liberation (`article-style-liberation`)
 
 **Inspiration:** _Suffragettes to She-Devils: Women's Liberation and Beyond_ (1997, Phaidon Press) by Liz McQuiston — a
 survey of feminist graphic design from the militant suffragette campaigns of the early twentieth century through Women's
@@ -431,6 +431,46 @@ structurally.
 
 ---
 
+## 22. Studio Culture (`article-style-studio-culture`)
+
+**Inspiration:** _Studio Culture Now_ (2020, Unit Editions, London), edited by Mark Sinclair — 492 pages of in-depth
+interviews with leading design studios about getting jobs, working with clients, balancing creativity with
+profitability, hiring, wellbeing, and adapting to change. The interviewees include Atelier Dyakova, Studio Rejane Dal
+Bello, OK-RM, Hansje van Halem, Helmo, Hey Studio, and dozens more. Where most design books are made about finished
+work, this one is made about the conditions that produce it — the unglamorous, essential stuff of practice. The style
+reflects that directness: no ornament, no decoration, just a commanding blue field and clear DM Sans type at every
+weight.
+
+**Visual character:** A deep navy header dominates the top, holding the title in enormous tight-tracked uppercase DM
+Sans (7rem, weight 800) that pushes to the bottom of the field. Byline and ISBN sit at the top in light-weight
+uppercase, providing metadata before the announcement. Below the header, three section variants alternate between
+tan (`--tan`), light slate (`--slate`), and matching navy (`--blue`) — creating a rhythm that can run long without
+becoming monotonous. Pull quotes are indented, italic, thin-weight, and borderless, letting the words carry the
+weight. Images float within prose using the standard left/right/full pattern.
+
+**Typography:** DM Sans exclusively, across the full weight range — 300 for byline and pull quotes, 400 for body and
+captions, 500 for subtitle, 800 for the display title and section headings. Captions are small, uppercase,
+letter-spaced, and inherit their color from the section.
+
+**Colors:** `--color-studio-blue` (`#02169f`) for the header and blue section, `--color-studio-tan` (`#bfb6a2`) for
+the tan section, `slate-100` for the light section, `--color-studio-blue-mid` (`#6773c5`) and
+`--color-studio-blue-light` (`#8d96d4`) for metadata hierarchy in the header.
+
+**Section variants:**
+
+- **`--tan`**: Stone-toned background with near-black titles. For interview transcripts, prose features, anything
+  with warmth.
+- **`--slate`**: Light background with studio-blue titles and body text. The highest contrast section — for
+  sidebars, pull focus, key passages.
+- **`--blue`**: Full navy, white text. For closing statements, summaries, or anything meant to feel like the cover
+  wrapping back around.
+
+**Best used for:** Design industry writing, studio profiles, process documentation, career features, any longform
+piece that benefits from a clean, authoritative reading experience. The single-typeface system (DM Sans at varying
+weights) creates coherence across long pieces. The section color system rewards structural writing.
+
+---
+
 ## Combining Styles
 
 A zine is most interesting when styles create contrast with each other. Some productive pairings:
@@ -440,7 +480,7 @@ A zine is most interesting when styles create contrast with each other. Some pro
 - **Trademarks → Split Editorial**: Visual catalog, then analytical deep-dive.
 - **Designer Brief → Wilde Plakken**: Branded single-voice, then image-forward sprawl.
 - **Pentagram → European Editorial**: Geometric argument, then two-sided conversation.
-- **Programme → She-Devils**: Formal institution, then radical counter-voice.
+- **Programme → Liberation**: Formal institution, then radical counter-voice.
 
 There are no rules about sequencing. The point is that each style should feel like a distinct room — different
 temperature, different light, different expectation of the reader.

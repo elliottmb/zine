@@ -221,6 +221,25 @@ This automatically:
 You only need to write the expanded form if you want to disable specific parts (e.g., no preflight when integrating into
 an existing site). See `TAILWIND_V4_GUIDE.md` for full details.
 
+### 7. Duplicate CSS Property Declarations
+
+**The Mistake:** During a color update, an edit accidentally left two `color:` declarations on the same rule:
+
+```css
+/* ❌ Bad — second declaration silently overrides the first */
+.article-style-liberation__section-title {
+  color: var(--color-liberation-purple);
+  color: var(--color-white); /* leftover from previous value */
+}
+```
+
+The second `color: white` silently won, making the yellow section's title invisible.
+
+**The Fix:** After editing any CSS block, grep for the selector and scan for duplicate property declarations.
+
+**Takeaway:** CSS silently discards duplicate properties without error. Always scan edited blocks for duplicates before
+building.
+
 ## CSS Layer Conventions
 
 ### The Rule
@@ -311,6 +330,68 @@ This ensures variables are always available, regardless of what utilities Tailwi
 **Takeaway:** When using Tailwind v4 CSS variables in custom CSS, explicitly define them in `:root`. Don't rely on
 Tailwind to generate them.
 
+## Color Conventions
+
+### Never Hardcode Hex Values Outside `:root`
+
+Use `var(--color-*)` everywhere in component CSS. All hex values live exclusively in the `:root` block.
+
+### Tailwind's Default Palette Is Already Available
+
+`@import "tailwindcss"` automatically exposes every default palette color as a CSS variable. You do **not** need to
+define `var(--color-zinc-700)`, `var(--color-yellow-400)`, etc. in `:root` — they are already available.
+
+Only add custom colors to `:root` when there is no sufficiently close Tailwind equivalent.
+
+### Design-Critical Custom Colors — Do Not Substitute
+
+| Variable                    | Hex       | Why it must not change                                         |
+| --------------------------- | --------- | -------------------------------------------------------------- |
+| `--color-brief-yellow`      | `#ffff00` | Pure yellow by design — `yellow-400` (`#facc15`) is different |
+| `--color-liberation-yellow` | `#e3e446` | 40+ channels from `yellow-300` (`#fde047`)                    |
+| `--color-liberation-pink`   | `#e12b96` | 40+ channels from `pink-600` (`#db2777`)                      |
+| `--color-liberation-purple` | `#942c79` | 40+ channels from `fuchsia-800` (`#86198f`)                   |
+| `--color-studio-blue`       | `#02169f` | Deep navy — no Tailwind equivalent at this depth               |
+| `--color-studio-tan`        | `#bfb6a2` | Warm stone — midpoint between `stone-300` and `stone-400`      |
+
+Never replace these with Tailwind shades. The distinction is intentional and design-critical.
+
+### `--color-purple-900` Mismatch Warning
+
+`--color-purple-900` is defined in `:root` as `#7e22ce`, which is actually Tailwind's `purple-700` value — a
+mismatch from an early session. Do not rely on `var(--color-purple-900)` in new styles. Use `var(--color-violet-900)`
+or direct Tailwind shade references instead.
+
+### Gray Family Color Reference
+
+When replacing hardcoded grays with Tailwind variables, use perceptual luminance to find the closest match:
+
+| Hex    | Tailwind equivalent |
+| ------ | ------------------- |
+| `#333` | `gray-800`          |
+| `#444` | `stone-700`         |
+| `#555` | `gray-600`          |
+| `#666` | `gray-500`          |
+| `#888` | `neutral-500`       |
+| `#999` | `zinc-400`          |
+| `#ddd` | `zinc-200`          |
+| `#eee` | `gray-200`          |
+
+### Overlay Color Variables
+
+Semi-transparent overlays live in `:root` as named variables rather than inline `rgba()`:
+
+```css
+--color-overlay-dark-10: rgba(0, 0, 0, 0.1);
+--color-overlay-dark-15: rgba(0, 0, 0, 0.15);
+--color-overlay-dark-20: rgba(0, 0, 0, 0.2);
+--color-overlay-light-50: rgba(255, 255, 255, 0.5);
+--color-overlay-light-60: rgba(255, 255, 255, 0.6);
+--color-overlay-light-80: rgba(255, 255, 255, 0.8);
+```
+
+Use these instead of writing `rgba()` values inline.
+
 ## Prettier Configuration
 
 ### The Decision
@@ -396,6 +477,43 @@ This allows 8 distinct styles to coexist on the same page without conflicts. Eac
 
 **Takeaway:** BEM naming is essential for multi-style component libraries. It scales better than utility-only approach.
 
+## Renaming Article Styles
+
+When renaming a style (e.g. `article-style-peacock` → `article-style-swiss-minimal`), update all four of these:
+
+1. `src/styles.css` — the class definitions
+2. `demo/index.html` — all usages
+3. `STYLES.md` — the style entry heading and any references
+4. `README.md` — the style list
+
+The color palette name (e.g. `--color-peacock-*`) is independent of the style name — leave color variable names
+alone.
+
+## Float-Based Image Layout Pattern
+
+Both `article-style-programme`, `article-style-liberation`, and `article-style-studio-culture` use CSS floats for
+inline images. The correct pattern:
+
+```html
+<!-- Float image left with prose wrapping right -->
+<div class="...__image ...__image--left">
+  <img src="..." alt="..." />
+  <div class="...__caption">Caption text</div>
+</div>
+<p>Prose flows to the right of the image...</p>
+<p>More prose...</p>
+<div class="...__clearfix"></div>
+<!-- REQUIRED: resets float before the next float -->
+
+<!-- Then float another image right -->
+<div class="...__image ...__image--right">...</div>
+<p>Prose flows to the left...</p>
+<div class="...__clearfix"></div>
+```
+
+**Common mistake:** Placing two floated images (left + right) consecutively before the prose — the paragraph wedges
+between them. Always interleave: one float → prose → clearfix → next float → prose → clearfix.
+
 ## Placeholder Images
 
 ### Using placehold.co
@@ -410,12 +528,12 @@ This better simulates the final product and is easier to replace with real image
 
 ## Build Performance
 
-The library builds in **50-63ms** with:
+The library builds in **50-90ms** with:
 
-- 8 distinct article styles
-- 12 Google Fonts
-- 5 custom color palettes
-- 500+ line output CSS (15KB optimized)
+- 22 distinct article styles
+- 15+ Google Fonts
+- Custom color palettes + Tailwind defaults
+- ~74KB compiled CSS output
 
 This speed is thanks to Tailwind v4's optimized compiler.
 
