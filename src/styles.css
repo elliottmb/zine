@@ -1272,21 +1272,23 @@
   padding: 3rem;
   display: flex;
   flex-direction: column;
-  gap: 3rem;
+  gap: 8rem;
   min-height: 100vh;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
+  padding-top: 15rem;
 }
 
 .article-style-pentagram__header-wrapper {
   display: flex;
   gap: 0;
   align-items: flex-start;
-  transform: skewY(-5deg);
+  height: 250px;
+  margin-bottom: 4rem;
 }
 
 .article-style-pentagram__header {
-  font-family: "Monoton", sans-serif;
+  font-family: "Zilla Slab Highlight", serif;
   font-size: 5rem;
   font-weight: 900;
   line-height: 1;
@@ -1299,7 +1301,7 @@
 }
 
 .article-style-pentagram__subheader {
-  font-family: "Monoton", sans-serif;
+  font-family: "Zilla Slab Highlight", serif;
   font-size: 5rem;
   font-weight: 900;
   line-height: 1;
@@ -1334,19 +1336,21 @@
 .article-style-pentagram__block--yellow-black {
   background-color: #ffff00;
   color: var(--color-black);
-  border: 3px solid var(--color-black);
+}
+
+.article-style-pentagram__block--black-yellow {
+  background-color: var(--color-black);
+  color: #ffff00;
 }
 
 .article-style-pentagram__block--white-black {
   background-color: var(--color-white);
   color: var(--color-black);
-  border: 3px solid var(--color-black);
 }
 
 .article-style-pentagram__block--black-white {
   background-color: var(--color-black);
   color: var(--color-white);
-  border: 3px solid var(--color-white);
 }
 
 /* Pentagram Inverted - Inverted color scheme */
@@ -1355,21 +1359,23 @@
   padding: 3rem;
   display: flex;
   flex-direction: column;
-  gap: 3rem;
+  gap: 8rem;
   min-height: 100vh;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
+  padding-top: 15rem;
 }
 
 .article-style-pentagram-inverted__header-wrapper {
   display: flex;
   gap: 0;
   align-items: flex-start;
-  transform: skewY(-5deg);
+  height: 250px;
+  margin-bottom: 4rem;
 }
 
 .article-style-pentagram-inverted__header {
-  font-family: "Monoton", sans-serif;
+  font-family: "Zilla Slab Highlight", serif;
   font-size: 5rem;
   font-weight: 900;
   line-height: 1;
@@ -1382,7 +1388,7 @@
 }
 
 .article-style-pentagram-inverted__subheader {
-  font-family: "Monoton", sans-serif;
+  font-family: "Zilla Slab Highlight", serif;
   font-size: 5rem;
   font-weight: 900;
   line-height: 1;
@@ -1415,22 +1421,24 @@
   text-align: center;
 }
 
-.article-style-pentagram-inverted__block--yellow-black {
+.article-style-pentagram-inverted__block--black-yellow {
   background-color: var(--color-black);
   color: #ffff00;
-  border: 3px solid var(--color-black);
+}
+
+.article-style-pentagram-inverted__block--yellow-black {
+  background-color: #ffff00;
+  color: var(--color-black);
 }
 
 .article-style-pentagram-inverted__block--white-black {
-  background-color: var(--color-black);
-  color: var(--color-white);
-  border: 3px solid var(--color-white);
+  background-color: var(--color-white);
+  color: var(--color-black);
 }
 
-.article-style-pentagram-inverted__block--yellow-white {
-  background-color: var(--color-white);
-  color: #ffff00;
-  border: 3px solid var(--color-black);
+.article-style-pentagram-inverted__block--black-white {
+  background-color: var(--color-black);
+  color: var(--color-white);
 }
 
 /* Utility classes */
