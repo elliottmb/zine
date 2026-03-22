@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Courier+Prime:wght@400;700&family=Bebas+Neue&family=Roboto:wght@400;500;700&family=Abril+Fatface&family=IBM+Plex+Serif:wght@400;600&family=Space+Mono:wght@400;700&family=EB+Garamond:wght@400;600;700&family=Crimson+Text:ital,wght@0,400;0,600;1,400&family=Bodoni+Moda:wght@400;700&family=Raleway:wght@400;700;900&family=Righteous&family=Fredoka:wght@400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Courier+Prime:wght@400;700&family=Bebas+Neue&family=Roboto:wght@400;500;700&family=Abril+Fatface&family=IBM+Plex+Serif:wght@400;600&family=Space+Mono:wght@400;700&family=EB+Garamond:wght@400;600;700&family=Crimson+Text:ital,wght@0,400;0,600;1,400&family=Bodoni+Moda:wght@400;700&family=Raleway:wght@400;700;900&family=Righteous&family=Fredoka:wght@400;700&display=swap");
 
 @tailwind base;
 @tailwind components;
@@ -55,7 +55,7 @@
 }
 
 .article-style-geometric__header {
-  font-family: 'Bebas Neue', sans-serif;
+  font-family: "Bebas Neue", sans-serif;
   font-size: 3.75rem;
   font-weight: 900;
   margin-bottom: 1rem;
@@ -93,7 +93,7 @@
   align-items: center;
   justify-content: center;
   color: var(--color-gray-500);
-  font-family: 'Bebas Neue', sans-serif;
+  font-family: "Bebas Neue", sans-serif;
   font-size: 1.5rem;
   aspect-ratio: 1;
 }
@@ -106,7 +106,7 @@
 }
 
 .article-style-typographic__header {
-  font-family: 'Abril Fatface', serif;
+  font-family: "Abril Fatface", serif;
   font-size: 3.5rem;
   margin-bottom: 0.5rem;
   line-height: 1.2;
@@ -147,7 +147,7 @@
 }
 
 .article-style-typographic__section-title {
-  font-family: 'Bebas Neue', sans-serif;
+  font-family: "Bebas Neue", sans-serif;
   font-size: 1.875rem;
   text-transform: uppercase;
   margin-top: 2.5rem;
@@ -174,7 +174,7 @@
 }
 
 .article-style-collage__header {
-  font-family: 'Playfair Display', serif;
+  font-family: "Playfair Display", serif;
   font-size: 3.75rem;
   font-weight: 900;
   margin-bottom: 0.25rem;
@@ -226,7 +226,7 @@
 }
 
 .article-style-collage__pullquote-text {
-  font-family: 'Playfair Display', serif;
+  font-family: "Playfair Display", serif;
   font-size: 1.25rem;
   font-weight: bold;
   color: var(--color-green-900);
@@ -253,7 +253,7 @@
 }
 
 .article-style-collage__sidebar-title {
-  font-family: 'Bebas Neue', sans-serif;
+  font-family: "Bebas Neue", sans-serif;
   font-size: 1.125rem;
   color: var(--color-green-900);
   margin-bottom: 1rem;
@@ -281,7 +281,7 @@
 }
 
 .article-style-minimal-dark__header {
-  font-family: 'EB Garamond', serif;
+  font-family: "EB Garamond", serif;
   font-size: 3.75rem;
   font-weight: bold;
   margin-bottom: 2rem;
@@ -290,7 +290,7 @@
 }
 
 .article-style-minimal-dark__subtitle {
-  font-family: 'Space Mono', monospace;
+  font-family: "Space Mono", monospace;
   font-size: 0.75rem;
   text-transform: uppercase;
   letter-spacing: 0.1em;
@@ -324,7 +324,7 @@
 }
 
 .article-style-minimal-dark__sidebar-title {
-  font-family: 'Bebas Neue', sans-serif;
+  font-family: "Bebas Neue", sans-serif;
   font-size: 0.875rem;
   text-transform: uppercase;
   letter-spacing: 0.05em;
@@ -355,7 +355,7 @@
 }
 
 .article-style-acid-bright__header {
-  font-family: 'Righteous', sans-serif;
+  font-family: "Righteous", sans-serif;
   font-size: 3.75rem;
   text-transform: uppercase;
   font-weight: 900;
@@ -365,7 +365,7 @@
 }
 
 .article-style-acid-bright__subheader {
-  font-family: 'Bebas Neue', sans-serif;
+  font-family: "Bebas Neue", sans-serif;
   font-size: 1.5rem;
   text-transform: uppercase;
   margin-bottom: 2rem;
@@ -400,7 +400,7 @@
   display: block;
   color: var(--color-purple-900);
   font-size: 1.125rem;
-  font-family: 'Bebas Neue', sans-serif;
+  font-family: "Bebas Neue", sans-serif;
   text-transform: uppercase;
   letter-spacing: 0.05em;
   margin-bottom: 0.5rem;
@@ -419,14 +419,14 @@
 }
 
 .article-style-magenta-exp__header {
-  font-family: 'Abril Fatface', serif;
+  font-family: "Abril Fatface", serif;
   font-size: 3.75rem;
   font-weight: 900;
   line-height: 1.2;
 }
 
 .article-style-magenta-exp__byline {
-  font-family: 'Space Mono', monospace;
+  font-family: "Space Mono", monospace;
   font-size: 0.75rem;
   text-transform: uppercase;
   letter-spacing: 0.1em;
@@ -470,7 +470,7 @@
 
 .article-style-magenta-exp__accent-block strong {
   color: #cc00cc;
-  font-family: 'Bebas Neue', sans-serif;
+  font-family: "Bebas Neue", sans-serif;
   text-transform: uppercase;
 }
 
@@ -482,7 +482,7 @@
 }
 
 .article-style-peacock__header {
-  font-family: 'Raleway', sans-serif;
+  font-family: "Raleway", sans-serif;
   font-size: 3.125rem;
   font-weight: 900;
   margin-bottom: 1.5rem;
@@ -491,7 +491,7 @@
 }
 
 .article-style-peacock__tagline {
-  font-family: 'Crimson Text', serif;
+  font-family: "Crimson Text", serif;
   font-size: 1.5rem;
   font-style: italic;
   margin-bottom: 3rem;
@@ -513,7 +513,7 @@
 }
 
 .article-style-peacock__grid-title {
-  font-family: 'Bebas Neue', sans-serif;
+  font-family: "Bebas Neue", sans-serif;
   font-size: 1.125rem;
   text-transform: uppercase;
   letter-spacing: 0.05em;
@@ -554,13 +554,13 @@
 }
 
 .article-style-sunset__header {
-  font-family: 'Bodoni Moda', serif;
+  font-family: "Bodoni Moda", serif;
   font-size: 3.125rem;
   font-weight: bold;
 }
 
 .article-style-sunset__subtitle {
-  font-family: 'Fredoka', sans-serif;
+  font-family: "Fredoka", sans-serif;
   font-size: 0.875rem;
   text-transform: uppercase;
   letter-spacing: 0.05em;
@@ -573,7 +573,7 @@
 }
 
 .article-style-sunset__section-title {
-  font-family: 'Bodoni Moda', serif;
+  font-family: "Bodoni Moda", serif;
   font-size: 1.875rem;
   font-weight: bold;
   margin-top: 3rem;
@@ -582,7 +582,7 @@
 }
 
 .article-style-sunset__text {
-  font-family: 'Crimson Text', serif;
+  font-family: "Crimson Text", serif;
   font-size: 1rem;
   line-height: 1.75;
   margin-bottom: 1.5rem;
@@ -593,7 +593,7 @@
   padding-left: 1.5rem;
   margin: 2rem 0;
   font-style: italic;
-  font-family: 'Crimson Text', serif;
+  font-family: "Crimson Text", serif;
   font-size: 1.125rem;
   color: var(--color-gray-800);
 }

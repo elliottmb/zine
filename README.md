@@ -182,7 +182,7 @@ colors: {
 Add Google Fonts to `src/styles.css`:
 
 ```css
-@import url('https://fonts.googleapis.com/css2?family=Your+Font&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Your+Font&display=swap");
 ```
 
 Then add to `tailwind.config.js`:
@@ -204,7 +204,7 @@ Add to `src/styles.css`:
 }
 
 .article-style-custom__header {
-  font-family: 'Your Font', serif;
+  font-family: "Your Font", serif;
   font-size: 3.75rem;
   /* ... */
 }
