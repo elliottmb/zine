@@ -1266,6 +1266,173 @@
   color: var(--color-music-blue);
 }
 
+/* Pentagram Grid - Bold yellow and black geometric design */
+.article-style-pentagram {
+  background-color: var(--color-black);
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  min-height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+
+.article-style-pentagram__header-wrapper {
+  display: flex;
+  gap: 0;
+  align-items: flex-start;
+  transform: skewY(-5deg);
+}
+
+.article-style-pentagram__header {
+  font-family: "Monoton", sans-serif;
+  font-size: 5rem;
+  font-weight: 900;
+  line-height: 1;
+  text-transform: uppercase;
+  letter-spacing: -0.04em;
+  color: #ffff00;
+  transform: rotate(-45deg);
+  writing-mode: horizontal-tb;
+  white-space: nowrap;
+}
+
+.article-style-pentagram__subheader {
+  font-family: "Monoton", sans-serif;
+  font-size: 5rem;
+  font-weight: 900;
+  line-height: 1;
+  text-transform: uppercase;
+  letter-spacing: -0.04em;
+  color: var(--color-white);
+  transform: rotate(-45deg) scaleY(-1) scaleX(-1);
+  writing-mode: horizontal-tb;
+  white-space: nowrap;
+}
+
+.article-style-pentagram__content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  width: 100%;
+  max-width: 1000px;
+}
+
+.article-style-pentagram__block {
+  padding: 3rem;
+  font-family: "IBM Plex Serif", serif;
+  font-size: 1.1rem;
+  line-height: 1.7;
+  min-height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.article-style-pentagram__block--yellow-black {
+  background-color: #ffff00;
+  color: var(--color-black);
+  border: 3px solid var(--color-black);
+}
+
+.article-style-pentagram__block--white-black {
+  background-color: var(--color-white);
+  color: var(--color-black);
+  border: 3px solid var(--color-black);
+}
+
+.article-style-pentagram__block--black-white {
+  background-color: var(--color-black);
+  color: var(--color-white);
+  border: 3px solid var(--color-white);
+}
+
+/* Pentagram Inverted - Inverted color scheme */
+.article-style-pentagram-inverted {
+  background-color: #ffff00;
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  min-height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+
+.article-style-pentagram-inverted__header-wrapper {
+  display: flex;
+  gap: 0;
+  align-items: flex-start;
+  transform: skewY(-5deg);
+}
+
+.article-style-pentagram-inverted__header {
+  font-family: "Monoton", sans-serif;
+  font-size: 5rem;
+  font-weight: 900;
+  line-height: 1;
+  text-transform: uppercase;
+  letter-spacing: -0.04em;
+  color: var(--color-black);
+  transform: rotate(-45deg);
+  writing-mode: horizontal-tb;
+  white-space: nowrap;
+}
+
+.article-style-pentagram-inverted__subheader {
+  font-family: "Monoton", sans-serif;
+  font-size: 5rem;
+  font-weight: 900;
+  line-height: 1;
+  text-transform: uppercase;
+  letter-spacing: -0.04em;
+  color: var(--color-white);
+  transform: rotate(-45deg) scaleY(-1) scaleX(-1);
+  writing-mode: horizontal-tb;
+  white-space: nowrap;
+  text-shadow: 2px 2px 0 var(--color-black);
+}
+
+.article-style-pentagram-inverted__content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  width: 100%;
+  max-width: 1000px;
+}
+
+.article-style-pentagram-inverted__block {
+  padding: 3rem;
+  font-family: "IBM Plex Serif", serif;
+  font-size: 1.1rem;
+  line-height: 1.7;
+  min-height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.article-style-pentagram-inverted__block--yellow-black {
+  background-color: var(--color-black);
+  color: #ffff00;
+  border: 3px solid var(--color-black);
+}
+
+.article-style-pentagram-inverted__block--white-black {
+  background-color: var(--color-black);
+  color: var(--color-white);
+  border: 3px solid var(--color-white);
+}
+
+.article-style-pentagram-inverted__block--yellow-white {
+  background-color: var(--color-white);
+  color: #ffff00;
+  border: 3px solid var(--color-black);
+}
+
 /* Utility classes */
 .zine-article {
   margin-bottom: 0;
