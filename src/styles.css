@@ -560,8 +560,8 @@
     text-transform: uppercase;
   }
 
-  /* Peacock blue */
-  .article-style-peacock {
+  /* Swiss Minimal */
+  .article-style-swiss-minimal {
     background-color: var(--color-white);
     color: var(--color-black);
     padding: 0;
@@ -569,7 +569,7 @@
     flex-direction: column;
   }
 
-  .article-style-peacock__header {
+  .article-style-swiss-minimal__header {
     font-family: "Bebas Neue", sans-serif;
     font-size: 2.5rem;
     text-transform: uppercase;
@@ -581,7 +581,7 @@
     background-color: var(--color-stone-100);
   }
 
-  .article-style-peacock__tagline {
+  .article-style-swiss-minimal__tagline {
     font-family: "IBM Plex Serif", serif;
     font-size: 0.95rem;
     font-style: italic;
@@ -591,7 +591,7 @@
     background-color: var(--color-stone-100);
   }
 
-  .article-style-peacock__grid {
+  .article-style-swiss-minimal__grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 1.5rem;
@@ -600,14 +600,14 @@
     background-color: var(--color-stone-100);
   }
 
-  .article-style-peacock__grid-item {
+  .article-style-swiss-minimal__grid-item {
     background-color: var(--color-white);
     padding: 1.5rem;
     border: 1px solid var(--color-zinc-200);
     border-radius: 0;
   }
 
-  .article-style-peacock__grid-title {
+  .article-style-swiss-minimal__grid-title {
     font-family: "Bebas Neue", sans-serif;
     font-size: 1rem;
     text-transform: uppercase;
@@ -616,14 +616,14 @@
     color: var(--color-black);
   }
 
-  .article-style-peacock__grid-text {
+  .article-style-swiss-minimal__grid-text {
     font-family: "IBM Plex Serif", serif;
     font-size: 0.85rem;
     line-height: 1.6;
     color: var(--color-gray-600);
   }
 
-  .article-style-peacock__body {
+  .article-style-swiss-minimal__body {
     font-family: "IBM Plex Serif", serif;
     font-size: 0.95rem;
     line-height: 1.8;
@@ -638,11 +638,11 @@
     align-items: center;
   }
 
-  .article-style-peacock__body p {
+  .article-style-swiss-minimal__body p {
     margin-bottom: 1rem;
   }
 
-  .article-style-peacock__body p:last-child {
+  .article-style-swiss-minimal__body p:last-child {
     margin-bottom: 0;
   }
 

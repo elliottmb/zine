@@ -72,7 +72,7 @@ Open `demo/index.html` in your browser to see all components and article styles 
 - `article-style-minimal-dark` - Black, elegant serif
 - `article-style-acid-bright` - Neon yellow, high contrast
 - `article-style-magenta-exp` - Magenta, playful
-- `article-style-swiss-minimal` - Cream + teal, minimal editorial
+- `article-style-swiss-minimal` - Stone + teal, structured editorial
 - `article-style-sunset` - Warm orange + cream, vintage
 - `article-style-european-editorial` - Zinc-800 + cream, two-column
 - `article-style-designer-brief` - Yellow with red tag, image-heavy
