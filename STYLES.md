@@ -4,6 +4,10 @@ Each article style in this library is a self-contained visual language — a com
 that evokes a specific era, medium, or design tradition. They are meant to be mixed across a single zine issue, creating
 contrast and rhythm as the reader moves through pages.
 
+Many of these styles were directly inspired by books sourced from [The Print Arkive](https://www.theprintarkive.co.uk/)
+— a curated shop of used graphic design, typography, and visual culture books. It's an excellent starting point for
+finding design inspiration grounded in print history.
+
 ---
 
 ## 1. Geometric (`article-style-geometric`)
