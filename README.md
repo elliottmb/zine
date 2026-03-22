@@ -1,17 +1,19 @@
 # Zine Component Library 🎨📰
 
 A retro-inspired HTML/CSS component library for creating expressive digital zines. Built with Tailwind CSS v4 and Google
-Fonts, featuring 8 distinct article styles and atomic components inspired by 70s-90s magazine design.
+Fonts, featuring 14 distinct article styles and atomic components inspired by 70s-90s magazine design.
 
 ## Features
 
-✨ **8 Article Styles** - Geometric Bold, Typographic Study, Editorial Collage, Minimal Dark, Acid Bright, Magenta
-Experimental, Peacock Blue, Sunset Warm
+✨ **14 Article Styles** - Geometric Bold, Typographic Study, Editorial Collage, Minimal Dark, Acid Bright, Magenta
+Experimental, Swiss Minimal, Sunset Warm, European Editorial, Designer Brief (Yellow), Wilde Plakken (Mixed Grid),
+Designer Brief Barbie, Designer Brief Ocean, Music Bold
 
-🎨 **Expressive Color** - Custom retro-inspired color palettes (sunset, acid, magenta, peacock, burnished)
+🎨 **Expressive Color** - Custom retro-inspired color palettes (sunset, acid, magenta, peacock, burnished, editorial,
+music)
 
-📝 **Rich Typography** - 12 Google Fonts (Bebas Neue, EB Garamond, Playfair, Space Mono, Bodoni Moda, Righteous, Crimson
-Text, and more)
+📝 **Rich Typography** - 14 Google Fonts (Bebas Neue, EB Garamond, Playfair, Space Mono, Bodoni Moda, Righteous, Crimson
+Text, Erica One, Climate Crisis, and more)
 
 🧩 **Atomic Components** - Headers, pull quotes, emphasis blocks, layouts, and more
 
@@ -62,7 +64,7 @@ Open `demo/index.html` in your browser to see all components and article styles 
 </div>
 ```
 
-### All 8 Article Styles
+### All 14 Article Styles
 
 - `article-style-geometric` - Red + white, stark contrast
 - `article-style-typographic` - Yellow, experimental type
@@ -70,8 +72,14 @@ Open `demo/index.html` in your browser to see all components and article styles 
 - `article-style-minimal-dark` - Black, elegant serif
 - `article-style-acid-bright` - Neon yellow, high contrast
 - `article-style-magenta-exp` - Magenta, playful
-- `article-style-peacock` - Blue gradient, editorial
+- `article-style-swiss-minimal` - Cream + teal, minimal editorial
 - `article-style-sunset` - Warm orange + cream, vintage
+- `article-style-european-editorial` - Zinc-800 + cream, two-column
+- `article-style-designer-brief` - Yellow with red tag, image-heavy
+- `article-style-wilde-plakken` - Mixed layout grid, electric blue on black
+- `article-style-designer-brief-barbie` - Hot pink + seafoam, playful
+- `article-style-designer-brief-ocean` - Cyan + lime green, vibrant
+- `article-style-music-bold` - Deep blue with red accents, minimal text, image showcase
 
 All styles use BEM naming (`article-style-NAME__element`) for clear composition.
 
@@ -108,6 +116,8 @@ package.json            # Dependencies
 - **Fredoka** - Friendly sans-serif
 - **Courier Prime** - Code/typewriter
 - **IBM Plex Serif** - Professional serif
+- **Erica One** - Bold display font
+- **Climate Crisis** - Bold display font
 
 ## Color Palettes
 
@@ -126,6 +136,9 @@ package.json            # Dependencies
 - **Magenta** - Bold magenta (50/500/900)
 - **Peacock** - Electric blue (50/500/900)
 - **Burnished** - Dark warm browns (50/900)
+- **Editorial** - Teal + coral accents
+- **Music** - Deep blue + red accents
+- **Zinc** - Neutral grays (zinc-800, zinc-900 from Tailwind)
 
 ## Architecture & Best Practices
 

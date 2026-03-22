@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Courier+Prime:wght@400;700&family=Bebas+Neue&family=Roboto:wght@400;500;700&family=Abril+Fatface&family=IBM+Plex+Serif:wght@400;600&family=Space+Mono:wght@400;700&family=EB+Garamond:wght@400;600;700&family=Crimson+Text:ital,wght@0,400;0,600;1,400&family=Bodoni+Moda:wght@400;700&family=Raleway:wght@400;700;900&family=Righteous&family=Fredoka:wght@400;700&family=Erica+One&family=Climate+Crisis&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Courier+Prime:wght@400;700&family=Bebas+Neue&family=Roboto:wght@400;500;700&family=Abril+Fatface&family=IBM+Plex+Serif:wght@400;600&family=Space+Mono:wght@400;700&family=EB+Garamond:wght@400;600;700&family=Crimson+Text:ital,wght@0,400;0,600;1,400&family=Bodoni+Moda:wght@400;700&family=Raleway:wght@400;700;900&family=Righteous&family=Fredoka:wght@400;700&family=Climate+Crisis&family=Limelight&family=Zilla+Slab+Highlight&family=Knewwave&family=Monoton&display=swap");
 
 @tailwind base;
 @tailwind components;
@@ -1174,7 +1174,7 @@
 }
 
 .article-style-music-bold__header {
-  font-family: "Erica One", sans-serif;
+  font-family: "Limelight", sans-serif;
   font-size: 7.5rem;
   text-transform: uppercase;
   letter-spacing: 0.08em;
@@ -1189,7 +1189,7 @@
 }
 
 .article-style-music-bold__subheader {
-  font-family: "Erica One", sans-serif;
+  font-family: "Limelight", sans-serif;
   font-size: 3rem;
   text-transform: uppercase;
   letter-spacing: 0.05em;

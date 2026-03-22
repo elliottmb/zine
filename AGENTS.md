@@ -2,6 +2,154 @@
 
 This document captures patterns, decisions, and lessons learned during development of the Zine Component Library.
 
+## Important Lessons: Common Mistakes & Corrections
+
+### 1. Don't Use @apply in Inline <style> Tags
+
+**The Mistake:** In Tailwind v4, `@apply` doesn't work at all. I attempted to use it in inline `<style>` tags for the
+demo page:
+
+```css
+/* ❌ This won't work */
+<style>
+  body {
+    @apply bg-black text-gray-900;
+  }
+</style>
+```
+
+**Why It Failed:** Tailwind v4 removed the `@apply` directive entirely. Inline styles are processed as plain CSS, not
+Tailwind directives.
+
+**The Fix:** Use plain CSS properties instead:
+
+```css
+/* ✅ Correct */
+<style>
+  body {
+    background-color: black;
+    color: #111827;
+  }
+</style>
+```
+
+**Takeaway:** In Tailwind v4, never use `@apply` anywhere. Use CSS variables (`var()`) or plain CSS properties. This is
+especially important for inline styles that won't go through Tailwind's processing.
+
+### 2. Always Import New Google Fonts Explicitly
+
+**The Mistake:** I added two new fonts to `tailwind.config.js` (Erica One, Climate Crisis) for the music-bold article
+style, but forgot to add them to the Google Fonts import URL in `src/styles.css`. Result: The fonts never rendered—
+browsers fell back to system fonts.
+
+**Why It Happened:** There are two separate configurations:
+
+1. `tailwind.config.js` - Defines font names for Tailwind utility generation
+2. `src/styles.css` - Imports the actual font files from Google Fonts
+
+I only updated one of them.
+
+**The Fix:** When adding new fonts, update BOTH places:
+
+```javascript
+// 1. Add to tailwind.config.js
+fontFamily: {
+  ericaOne: ["Erica One", "sans-serif"],
+  climateCrisis: ["Climate Crisis", "sans-serif"],
+}
+```
+
+```css
+/* 2. Add to src/styles.css import URL */
+@import url("https://fonts.googleapis.com/css2?family=...&family=Erica+One&family=Climate+Crisis&display=swap");
+```
+
+**Takeaway:** Font configuration lives in two places. Always update both. This is easy to miss!
+
+### 3. Watch Out for Lost Styling When Restoring Features
+
+**The Mistake:** After working on the music-bold style and making various edits, I accidentally lost the demo page's
+styling:
+
+- Black body background
+- White .demo-container with 1200px max-width
+
+I had to restore it completely because the inline styles were using `@apply` (which doesn't work in v4).
+
+**Why It Happened:** Inline styles don't persist well through multiple editing passes. Small changes can accidentally
+remove them.
+
+**The Fix:** Extract commonly-used styling into the main stylesheet or ensure inline styles use plain CSS:
+
+```css
+/* Better approach: Keep it in src/styles.css */
+body {
+  background-color: black;
+}
+.demo-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: white;
+}
+```
+
+**Takeaway:** Minimize inline styling. Put reusable styles in the main stylesheet to prevent loss during edits.
+
+### 4. Color Contrast Requires Testing
+
+**The Mistake:** The magenta article's byline was colored `#ff00ff` on a `#ff00ff` magenta background—completely
+invisible!
+
+**Why It Happened:** I didn't visually verify all color combinations when updating the byline. Magenta on magenta seemed
+like it should be fine in theory.
+
+**The Fix:** Always test color contrast, especially with expressive colors:
+
+```css
+/* ❌ Bad: Same color as background */
+.article-style-magenta-exp__byline {
+  color: #ff00ff; /* Same as background */
+}
+
+/* ✅ Good: High contrast */
+.article-style-magenta-exp__byline {
+  color: var(--color-white); /* Clear against magenta */
+}
+```
+
+Use tools like WebAIM Contrast Checker for WCAG compliance.
+
+**Takeaway:** Always visually test color combinations, especially bold/expressive colors. Don't rely on intuition.
+
+### 5. Font Size Scaling Should Match Visual Intent
+
+**The Original Request:** "Make the music-bold headers almost twice as large"
+
+**The Mistake:** I increased header from 4rem to 7.5rem, but kept the font as Bebas Neue. For such large type, this font
+felt underwhelming.
+
+**The Correction:** The user suggested using Erica One instead, which is a naturally bolder, more impactful display
+font.
+
+**Why This Matters:** Font size and font choice work together. When scaling up significantly:
+
+- Use fonts designed for large display sizes (Erica One, Abril Fatface, Climate Crisis)
+- Avoid fonts designed for body text
+- Test the combination visually
+
+```css
+/* ✅ Good: Bold font for bold statement */
+.article-style-music-bold__header {
+  font-family: "Erica One", sans-serif;
+  font-size: 7.5rem;
+  font-weight: 900;
+}
+```
+
+**Takeaway:** Font and size should support the same visual intent. Large + weak = inconsistent design.
+
+---
+
 ## CSS Variables in Tailwind v4
 
 ### The Issue
@@ -150,6 +298,41 @@ This speed is thanks to Tailwind v4's optimized compiler.
 3. **Theme presets** - Create configurable theme mode (dark/light mode toggles per article).
 4. **Print CSS** - Add `@media print` styles for PDF export workflows.
 5. **Static site generator templates** - Create wrappers for MkDocs, Hugo, 11ty, Jekyll.
+
+---
+
+## Session 2: Music Bold & Final Polish
+
+### What Was Added
+
+- **Article 14: Music Bold** - High-contrast image-heavy style for music/media content
+  - Deep blue background (#0052cc) with red (#ff2d2d) accents
+  - Extra-large headers (7.5rem) in Erica One font for maximum impact
+  - Minimal text with italic serif tagline
+  - Featured image section with red border
+  - Link button grid for destination platforms (Spotify, Apple Music, etc.)
+  - Full-viewport height for immersive presentation
+
+### Additional Refinements
+
+1. **Color Updates**
+   - Changed European Editorial dark side to Tailwind's `zinc-800` instead of custom `zinc-900`
+   - Fixed magenta article byline from invisible magenta to white for contrast
+   - Added `--color-music-blue` and `--color-music-red` to CSS variables
+
+2. **Typography Additions**
+   - Added Erica One and Climate Crisis fonts to both `tailwind.config.js` and Google Fonts import
+   - Both fonts specifically chosen for bold display work
+
+3. **Demo Page Styling**
+   - Restored max-width 1200px container with black body background and white center
+   - Fixed inline styles to use plain CSS (removed non-functional `@apply`)
+
+### Build Performance
+
+- 14 article styles compile in 60-90ms
+- Final CSS output: ~16KB optimized
+- All fonts loading correctly via Google Fonts
 
 ---
 

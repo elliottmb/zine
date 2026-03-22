@@ -52,7 +52,10 @@ export default {
         righteous: ["Righteous", "sans-serif"],
         fredoka: ["Fredoka", "sans-serif"],
         climateCrisis: ["Climate Crisis", "sans-serif"],
-        ericaOne: ["Erica One", "sans-serif"],
+        limelight: ["Limelight", "sans-serif"],
+        zillaSlab: ["Zilla Slab Highlight", "serif"],
+        knewwave: ["Knewwave", "sans-serif"],
+        monoton: ["Monoton", "sans-serif"],
       },
       letterSpacing: {
         tighter: "-0.05em",
