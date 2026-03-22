@@ -142,6 +142,35 @@ package.json            # Dependencies
 
 ## Architecture & Best Practices
 
+### CSS Layer Conventions
+
+All custom CSS follows Tailwind's layer system:
+
+| Class type                                              | Location                |
+| ------------------------------------------------------- | ----------------------- |
+| Article styles, pull quotes (multi-property components) | `@layer components { }` |
+| Single-purpose helpers (`.zine-*`)                      | `@utility name { }`     |
+
+Placing component classes in `@layer components` means Tailwind utility classes always override them — so you can
+customize any component directly in HTML:
+
+```html
+<!-- rounded-lg overrides the component's default corners -->
+<div class="article-style-pentagram rounded-lg">...</div>
+```
+
+### Tailwind Utilities Over Inline Styles
+
+When Tailwind has a utility for what you need, use it. Never reach for `style=""` when a class exists:
+
+```html
+<!-- ❌ Avoid inline styles -->
+<img style="width: 100%; height: auto; display: block" />
+
+<!-- ✅ Use Tailwind utilities -->
+<img class="w-full h-auto block" />
+```
+
 ### Tailwind v4 CSS Variables
 
 This library uses Tailwind v4's CSS variables via `var()` for all design tokens instead of hardcoding values. This
@@ -216,20 +245,38 @@ fontFamily: {
 
 ### Create New Article Styles
 
-Add to `src/styles.css`:
+Add to `src/styles.css` inside the existing `@layer components` block:
 
 ```css
-.article-style-custom {
-  background-color: #yourcolor;
-  padding: 3rem;
-}
+@layer components {
+  .article-style-custom {
+    background-color: #yourcolor;
+    padding: 3rem;
+  }
 
-.article-style-custom__header {
-  font-family: "Your Font", serif;
-  font-size: 3.75rem;
-  /* ... */
+  .article-style-custom__header {
+    font-family: "Your Font", serif;
+    font-size: 3.75rem;
+    /* ... */
+  }
 }
 ```
+
+### Styling in HTML: Tailwind Utilities First
+
+If Tailwind has a utility class for what you need, use it — never use `style=""` attributes:
+
+```html
+<!-- ❌ Avoid -->
+<img style="width: 100%; height: auto; display: block" />
+<div style="padding-top: 2rem">...</div>
+
+<!-- ✅ Use Tailwind utilities -->
+<img class="w-full h-auto block" />
+<div class="pt-8">...</div>
+```
+
+Utility classes work with variants (`hover:`, `lg:`, `dark:`). Inline styles don't.
 
 ## Use Cases
 

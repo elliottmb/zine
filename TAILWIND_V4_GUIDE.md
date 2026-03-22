@@ -2,6 +2,58 @@
 
 This project uses **Tailwind v4's native CSS variables** to reference design tokens instead of hardcoding values.
 
+## CSS Layer & Utility Conventions
+
+### Placing Custom Classes in the Right Layer
+
+All custom CSS in this project follows Tailwind's layer system so specificity is predictable:
+
+**`@layer components`** — for multi-property component classes (article styles, pull quotes):
+
+```css
+@layer components {
+  .article-style-geometric {
+    background-color: var(--color-red-600);
+    color: var(--color-white);
+    padding: 3rem;
+  }
+}
+```
+
+This ensures Tailwind utility classes always override component defaults:
+
+```html
+<!-- bg-blue-600 wins over the component's background — works because of @layer components -->
+<div class="article-style-geometric bg-blue-600">...</div>
+```
+
+**`@utility`** — for single-purpose helpers (Tailwind v4 syntax):
+
+```css
+@utility zine-section-divider {
+  margin: 4rem 0;
+  height: 0.25rem;
+  background: linear-gradient(to right, transparent, var(--color-gray-400), transparent);
+}
+```
+
+Custom utilities defined with `@utility` automatically support variants (`hover:`, `lg:`, etc.) and are inserted into
+the utilities layer.
+
+### Prefer Tailwind Utility Classes in HTML
+
+When a Tailwind utility covers what you need, use it directly in HTML rather than a `style=""` attribute:
+
+```html
+<!-- ❌ Don't use inline styles when Tailwind has the class -->
+<img style="width: 100%; height: auto; display: block" />
+<div style="letter-spacing: -0.05em">...</div>
+
+<!-- ✅ Use Tailwind utilities — they support variants and are scannable -->
+<img class="w-full h-auto block" />
+<div class="tracking-[-0.05em]">...</div>
+```
+
 ## Why This Matters
 
 In Tailwind v4, all design tokens are automatically exposed as CSS variables. Our custom components leverage this system

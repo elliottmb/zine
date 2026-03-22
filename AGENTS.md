@@ -2,6 +2,28 @@
 
 This document captures patterns, decisions, and lessons learned during development of the Zine Component Library.
 
+## Build After Significant Changes
+
+Always run the build after making significant changes to `src/styles.css` or `tailwind.config.js`:
+
+```bash
+npm run build
+```
+
+This compiles `src/styles.css` → `dist/styles.css`. The demo page loads from `dist/`, so changes won't appear until the
+build runs. Use `npm run watch` during active development to rebuild automatically on save.
+
+## Run Prettier Regularly
+
+Run Prettier periodically during development and always before finishing a session:
+
+```bash
+npx prettier --write .
+```
+
+This formats all CSS, HTML, JS, and Markdown files consistently per `.prettierrc.yaml` (120-char line width, prose wrap
+for Markdown).
+
 ## Important Lessons: Common Mistakes & Corrections
 
 ### 1. Don't Use @apply in Inline <style> Tags
@@ -66,34 +88,38 @@ fontFamily: {
 
 **Takeaway:** Font configuration lives in two places. Always update both. This is easy to miss!
 
-### 3. Watch Out for Lost Styling When Restoring Features
+### 3. Prefer Tailwind Utility Classes Over Inline Styles
 
-**The Mistake:** After working on the music-bold style and making various edits, I accidentally lost the demo page's
-styling:
+**The Rule:** If Tailwind has a utility class for what you need, use it. Never use `style=""` attributes when a Tailwind
+class covers the same ground.
 
-- Black body background
-- White .demo-container with 1200px max-width
+**Why It Matters:**
 
-I had to restore it completely because the inline styles were using `@apply` (which doesn't work in v4).
+- Inline styles can't use Tailwind variants (`hover:`, `lg:`, `dark:`, etc.)
+- They're harder to scan and maintain
+- They bypass the design token system
+- They're easy to lose during edits (see lesson above)
 
-**Why It Happened:** Inline styles don't persist well through multiple editing passes. Small changes can accidentally
-remove them.
+**Examples:**
 
-**The Fix:** Extract commonly-used styling into the main stylesheet or ensure inline styles use plain CSS:
+```html
+<!-- ❌ Avoid inline styles when Tailwind has the utility -->
+<div style="padding-top: 2rem; padding-bottom: 2rem">...</div>
+<img style="width: 100%; height: auto; display: block" />
+<div style="letter-spacing: -0.05em">...</div>
 
-```css
-/* Better approach: Keep it in src/styles.css */
-body {
-  background-color: black;
-}
-.demo-container {
-  max-width: 1200px;
-  margin: 0 auto;
-  background-color: white;
-}
+<!-- ✅ Use Tailwind utility classes -->
+<div class="py-8">...</div>
+<img class="w-full h-auto block" />
+<div class="tracking-[-0.05em]">...</div>
 ```
 
-**Takeaway:** Minimize inline styling. Put reusable styles in the main stylesheet to prevent loss during edits.
+**When inline styles are acceptable:**
+
+- One-off values with no Tailwind equivalent and no reuse potential
+- Dynamic values set via JavaScript
+
+**Takeaway:** Default to Tailwind. Reach for `style=""` only when Tailwind genuinely can't do it.
 
 ### 4. Color Contrast Requires Testing
 
@@ -150,7 +176,66 @@ font.
 
 ---
 
-## CSS Variables in Tailwind v4
+## CSS Layer Conventions
+
+### The Rule
+
+Follow Tailwind's layer system for all custom CSS in `src/styles.css`:
+
+| What you're writing                                          | Where it goes           |
+| ------------------------------------------------------------ | ----------------------- |
+| Multi-property component class (article styles, pull quotes) | `@layer components { }` |
+| Single-purpose utility helper                                | `@utility name { }`     |
+| Page/element defaults                                        | `@layer base { }`       |
+
+### `@layer components` — Article & Component Classes
+
+All `.article-style-*`, `.pullquote-*`, and any other multi-property component classes belong inside
+`@layer components`. This is critical: it means Tailwind utility classes **always win**, so you can override any
+component property directly in HTML.
+
+```css
+/* ✅ Correct */
+@layer components {
+  .article-style-geometric {
+    background-color: var(--color-red-600);
+    color: var(--color-white);
+    padding: 3rem;
+  }
+  .article-style-geometric__header {
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 3.75rem;
+  }
+}
+```
+
+Now utility overrides work:
+
+```html
+<!-- rounded-lg overrides the component's default shape -->
+<div class="article-style-pentagram rounded-lg">...</div>
+```
+
+### `@utility` — Custom Utility Classes
+
+Single-purpose helpers that behave like Tailwind utilities (respond to variants, don't need component-level specificity)
+use the `@utility` directive (Tailwind v4 syntax):
+
+```css
+/* ✅ Correct — single-purpose helpers */
+@utility zine-article {
+  margin-bottom: 0;
+}
+
+@utility zine-section-divider {
+  margin: 4rem 0;
+  height: 0.25rem;
+  background: linear-gradient(to right, transparent, var(--color-gray-400), transparent);
+}
+```
+
+**Takeaway:** `@layer components` for rich component classes. `@utility` for single-purpose helpers. Never leave custom
+classes as unscoped globals — they'll lose to Tailwind utility specificity battles unpredictably.
 
 ### The Issue
 
