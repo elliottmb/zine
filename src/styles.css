@@ -1297,7 +1297,7 @@
     line-height: 1;
     text-transform: uppercase;
     letter-spacing: -0.04em;
-    color: #ffff00;
+    color: var(--color-yellow-400);
     transform: rotate(-45deg);
     writing-mode: horizontal-tb;
     white-space: nowrap;
@@ -1337,13 +1337,13 @@
   }
 
   .article-style-pentagram__block--yellow-black {
-    background-color: #ffff00;
+    background-color: var(--color-yellow-400);
     color: var(--color-black);
   }
 
   .article-style-pentagram__block--black-yellow {
     background-color: var(--color-black);
-    color: #ffff00;
+    color: var(--color-yellow-400);
   }
 
   .article-style-pentagram__block--white-black {
@@ -1358,7 +1358,7 @@
 
   /* Pentagram Inverted - Inverted color scheme */
   .article-style-pentagram-inverted {
-    background-color: #ffff00;
+    background-color: var(--color-yellow-400);
     padding: 3rem;
     display: flex;
     flex-direction: column;
@@ -1426,11 +1426,11 @@
 
   .article-style-pentagram-inverted__block--black-yellow {
     background-color: var(--color-black);
-    color: #ffff00;
+    color: var(--color-yellow-400);
   }
 
   .article-style-pentagram-inverted__block--yellow-black {
-    background-color: #ffff00;
+    background-color: var(--color-yellow-400);
     color: var(--color-black);
   }
 
@@ -1561,7 +1561,7 @@
   .article-style-thirty-centuries__byline-box {
     width: 100%;
     height: 5rem;
-    background-color: #ffff00;
+    background-color: var(--color-yellow-400);
   }
 
   .article-style-thirty-centuries__byline-name {
@@ -1598,7 +1598,7 @@
   }
 
   .article-style-pentagram-inverted {
-    background-color: #ffff00;
+    background-color: var(--color-yellow-400);
   }
 }
 
