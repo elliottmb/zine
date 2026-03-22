@@ -3,14 +3,12 @@
   "version": "1.0.0",
   "description": "A Tailwind CSS component library for retro-inspired digital zines.",
   "scripts": {
-    "build": "tailwindcss build src/styles.css -o dist/styles.css",
-    "watch": "tailwindcss build src/styles.css -o dist/styles.css --watch",
-    "start": "npm run build && npm run watch"
+    "build": "tailwindcss -i ./src/styles.css -o ./dist/styles.css",
+    "watch": "tailwindcss -i ./src/styles.css -o ./dist/styles.css --watch",
+    "start": "npm run watch"
   },
   "devDependencies": {
-    "autoprefixer": "^10.4.27",
-    "concurrently": "^6.0.0",
-    "postcss": "^8.5.8",
+    "@tailwindcss/cli": "^4.2.2",
     "tailwindcss": "^4.2.2"
   },
   "license": "MIT"
