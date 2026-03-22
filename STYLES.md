@@ -369,6 +369,66 @@ essays with formal ambitions. The most prose-dense style in the library — it e
 
 ---
 
+## 20. Programme (`article-style-programme`)
+
+**Inspiration:** _National Theatre Posters: A Design History_ (2017, Unit Editions, London) by Rick Poynor — a
+comprehensive survey of the National Theatre's poster tradition across more than 50 years, designed and published by
+Unit Editions. The theatre's in-house graphic designers — Ken Briggs, Richard Bird, Michael Mayhew, Charlotte Wilkinson,
+Ollie Winser — created an unbroken lineage of bold typographic poster work. The style channels that tradition: a single
+dark header that announces the subject with absolute confidence, followed by clean editorial prose.
+
+**Visual character:** A zinc-800 header dominates the top, holding a massive Anton title that fills the width. Below is
+generous white space and EB Garamond body text — the programme notes that explain what you are about to see. Images
+float within the prose as production photographs, set design models, rehearsal documentation. The contrast between the
+dark announcement and the intimate reading experience mirrors the experience of a theatre programme itself.
+
+**Typography:** Anton for the title (condensed grotesque, maximum weight — the poster tradition applied to the page),
+Space Mono for the eyebrow label (catalog metadata), EB Garamond for body prose (warm, literary, readable at length),
+Space Mono again for image captions.
+
+**Colors:** `zinc-800` header, `zinc-400` eyebrow, `zinc-300` subtitle, white content area, `gray-900` body text.
+
+**Best used for:** Arts and culture coverage, theatre and film reviews, event features, any article where the subject is
+substantial enough to merit a formal, authoritative opening. The floating image layout handles production photography,
+portraits, and archival images equally well.
+
+---
+
+## 21. She-Devils (`article-style-she-devils`)
+
+**Inspiration:** _Suffragettes to She-Devils: Women's Liberation and Beyond_ (1997, Phaidon Press) by Liz McQuiston — a
+survey of feminist graphic design from the militant suffragette campaigns of the early twentieth century through Women's
+Liberation in the 1960s to the cyberfeminism of the 1990s. The book is described as "a sourcebook of some of the world's
+most arresting graphic images," covering posters, badges, billboards, logos, artworks, and computer graphics. Its own
+design — vibrant, bold, unapologetically colored — is the direct model for this style.
+
+**Visual character:** A violet header with a yellow accent bar at its base opens the article. Below, the writer can use
+three interchangeable content sections: yellow (`--yellow`), pink (`--pink`), and white (`--white`). These aren't
+decorative options — they are rhetorical ones. A yellow section might carry the historical argument, a pink section the
+personal essay, a white section the visual archive. The palette echoes the political color language of the book's
+subject matter without quoting it literally.
+
+**Typography:** Abril Fatface for the header title and section headings (bold, high-contrast, graphic — the poster
+sensibility), IBM Plex Serif for body text (structured, legible, document-like), Space Mono for eyebrow and captions.
+
+**Colors:** `violet-700` header, `yellow-400` accent bar, `violet-200` subtitle, `violet-800` section titles. Sections:
+`yellow-200`, `pink-200`, and white with `violet-200` top border.
+
+**Section variants:**
+
+- **`--yellow`**: For argumentative or historical content. The warmth of yellow gives urgency.
+- **`--pink`**: For personal, essayistic, or reflective content. The softness invites vulnerability.
+- **`--white`**: For image-led content or visual archives. Neutral ground lets images speak.
+
+**Image support:** All three sections support `__image--left`, `__image--right`, and `__image--full` floating layouts
+with `__caption` below, plus `__clearfix` to close floated content.
+
+**Best used for:** Political and cultural criticism, feminist writing, social history, visual essays, any article that
+benefits from distinct rhetorical registers within a single piece. The section system rewards writers who think
+structurally.
+
+---
+
 ## Combining Styles
 
 A zine is most interesting when styles create contrast with each other. Some productive pairings:
@@ -378,6 +438,7 @@ A zine is most interesting when styles create contrast with each other. Some pro
 - **Trademarks → Split Editorial**: Visual catalog, then analytical deep-dive.
 - **Designer Brief → Wilde Plakken**: Branded single-voice, then image-forward sprawl.
 - **Pentagram → European Editorial**: Geometric argument, then two-sided conversation.
+- **Programme → She-Devils**: Formal institution, then radical counter-voice.
 
 There are no rules about sequencing. The point is that each style should feel like a distinct room — different
 temperature, different light, different expectation of the reader.

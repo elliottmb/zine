@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Courier+Prime:wght@400;700&family=Bebas+Neue&family=Roboto:wght@400;500;700&family=Abril+Fatface&family=IBM+Plex+Serif:wght@400;600&family=Space+Mono:wght@400;700&family=EB+Garamond:wght@400;600;700&family=Crimson+Text:ital,wght@0,400;0,600;1,400&family=Bodoni+Moda:wght@400;700&family=Raleway:wght@400;700;900&family=Righteous&family=Fredoka:wght@400;700&family=Climate+Crisis&family=Limelight&family=Zilla+Slab+Highlight&family=Knewwave&family=Monoton&family=Audiowide&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Courier+Prime:wght@400;700&family=Bebas+Neue&family=Roboto:wght@400;500;700&family=Abril+Fatface&family=IBM+Plex+Serif:wght@400;600&family=Space+Mono:wght@400;700&family=EB+Garamond:wght@400;600;700&family=Crimson+Text:ital,wght@0,400;0,600;1,400&family=Bodoni+Moda:wght@400;700&family=Raleway:wght@400;700;900&family=Righteous&family=Fredoka:wght@400;700&family=Climate+Crisis&family=Limelight&family=Zilla+Slab+Highlight&family=Knewwave&family=Monoton&family=Audiowide&family=Anton&display=swap");
 
 @import "tailwindcss";
 @config "../tailwind.config.js";
@@ -59,6 +59,11 @@
 
   /* Designer Brief colors */
   --color-brief-yellow: #ffff00;
+
+  /* She-Devils palette */
+  --color-she-devils-yellow: #e3e446;
+  --color-she-devils-pink: #e12b96;
+  --color-she-devils-purple: #942c79;
   --color-black: #000;
   --color-brief-red: #ff0000;
 
@@ -1816,6 +1821,242 @@
 
   .article-style-pentagram-inverted {
     background-color: var(--color-yellow-400);
+  }
+
+  /* Programme / National Theatre */
+  .article-style-programme {
+    background-color: var(--color-white);
+  }
+
+  .article-style-programme__header {
+    background-color: var(--color-zinc-800);
+    padding: 4rem 3rem 3.5rem;
+  }
+
+  .article-style-programme__eyebrow {
+    font-family: "Space Mono", monospace;
+    font-size: 0.7rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--color-zinc-400);
+    margin-bottom: 2rem;
+  }
+
+  .article-style-programme__title {
+    font-family: "Anton", sans-serif;
+    font-size: 8rem;
+    line-height: 0.9;
+    text-transform: uppercase;
+    color: var(--color-pink-400);
+    margin-bottom: 2rem;
+  }
+
+  .article-style-programme__subtitle {
+    font-family: "EB Garamond", serif;
+    font-size: 1.25rem;
+    font-style: italic;
+    color: var(--color-zinc-300);
+    max-width: 44rem;
+    line-height: 1.6;
+  }
+
+  .article-style-programme__content {
+    padding: 3rem;
+    max-width: 52rem;
+    margin: 0 auto;
+  }
+
+  .article-style-programme__body {
+    font-family: "EB Garamond", serif;
+    font-size: 1.125rem;
+    line-height: 1.8;
+    color: var(--color-gray-900);
+  }
+
+  .article-style-programme__body p {
+    margin-bottom: 1.5rem;
+  }
+
+  .article-style-programme__body p:last-child {
+    margin-bottom: 0;
+  }
+
+  .article-style-programme__image {
+    margin-bottom: 1.5rem;
+  }
+
+  .article-style-programme__image--left {
+    float: left;
+    width: 40%;
+    margin-right: 2rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .article-style-programme__image--right {
+    float: right;
+    width: 40%;
+    margin-left: 2rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .article-style-programme__image img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  .article-style-programme__caption {
+    font-family: "Space Mono", monospace;
+    font-size: 0.65rem;
+    letter-spacing: 0.05em;
+    color: var(--color-gray-500);
+    margin-top: 0.5rem;
+  }
+
+  .article-style-programme__clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  /* She-Devils / Suffragettes */
+  .article-style-she-devils {
+    background-color: var(--color-white);
+  }
+
+  .article-style-she-devils__header {
+    background-color: var(--color-she-devils-yellow);
+    padding: 4rem 3rem;
+    position: relative;
+  }
+
+  .article-style-she-devils__header::after {
+    content: "";
+    display: block;
+    height: 0.5rem;
+    background: var(--color-she-devils-purple);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+
+  .article-style-she-devils__eyebrow {
+    font-family: "Space Mono", monospace;
+    font-size: 0.7rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--color-she-devils-purple);
+    margin-bottom: 1.5rem;
+  }
+
+  .article-style-she-devils__title {
+    font-family: "Abril Fatface", serif;
+    font-size: 6rem;
+    line-height: 0.95;
+    color: var(--color-she-devils-purple);
+    margin-bottom: 1.5rem;
+  }
+
+  .article-style-she-devils__subtitle {
+    font-family: "IBM Plex Serif", serif;
+    font-size: 1.1rem;
+    color: var(--color-she-devils-purple);
+    max-width: 42rem;
+    line-height: 1.6;
+  }
+
+  .article-style-she-devils__section {
+    padding: 3rem;
+  }
+
+  .article-style-she-devils__section--yellow {
+    background-color: var(--color-she-devils-yellow);
+  }
+
+  .article-style-she-devils__section--pink {
+    background-color: var(--color-she-devils-pink);
+  }
+
+  .article-style-she-devils__section--white {
+    background-color: var(--color-white);
+    border-top: 4px solid var(--color-she-devils-purple);
+  }
+
+  .article-style-she-devils__section-title {
+    font-family: "Abril Fatface", serif;
+    font-size: 2rem;
+    color: var(--color-she-devils-purple);
+  }
+
+  .article-style-she-devils__body {
+    font-family: "IBM Plex Serif", serif;
+    font-size: 1rem;
+    line-height: 1.75;
+    color: var(--color-gray-900);
+  }
+
+  .article-style-she-devils__section--pink .article-style-she-devils__section-title {
+    color: var(--color-white);
+  }
+
+  .article-style-she-devils__section--pink .article-style-she-devils__body {
+    color: var(--color-white);
+  }
+
+  .article-style-she-devils__section--pink .article-style-she-devils__caption {
+    color: var(--color-pink-200);
+  }
+
+  .article-style-she-devils__body p {
+    margin-bottom: 1.25rem;
+  }
+
+  .article-style-she-devils__body p:last-child {
+    margin-bottom: 0;
+  }
+
+  .article-style-she-devils__image {
+    margin-bottom: 1.5rem;
+  }
+
+  .article-style-she-devils__image--left {
+    float: left;
+    width: 45%;
+    margin-right: 2rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .article-style-she-devils__image--right {
+    float: right;
+    width: 45%;
+    margin-left: 2rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .article-style-she-devils__image--full {
+    width: 100%;
+    margin-bottom: 1.5rem;
+  }
+
+  .article-style-she-devils__image img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  .article-style-she-devils__caption {
+    font-family: "Space Mono", monospace;
+    font-size: 0.65rem;
+    letter-spacing: 0.05em;
+    color: var(--color-gray-600);
+    margin-top: 0.5rem;
+  }
+
+  .article-style-she-devils__clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
   }
 }
 
