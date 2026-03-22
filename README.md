@@ -5,9 +5,10 @@ Fonts, featuring 14 distinct article styles and atomic components inspired by 70
 
 ## Features
 
-✨ **14 Article Styles** - Geometric Bold, Typographic Study, Editorial Collage, Minimal Dark, Acid Bright, Magenta
-Experimental, Swiss Minimal, Sunset Warm, European Editorial, Designer Brief (Yellow), Wilde Plakken (Mixed Grid),
-Designer Brief Barbie, Designer Brief Ocean, Music Bold
+✨ **22 Article Styles** - Geometric Bold, Typographic Study, Editorial Collage, Minimal Dark, Acid Bright, Magenta
+Experimental, Swiss Minimal, Sunset Warm, European Editorial, Split Editorial, Designer Brief (Yellow/Barbie/Ocean),
+Wilde Plakken, Music Bold, Trademarks, Pentagram (Standard/Inverted), Thirty Centuries, Programme, Liberation,
+Studio Culture
 
 🎨 **Expressive Color** - Custom retro-inspired color palettes (sunset, acid, magenta, peacock, burnished, editorial,
 music)
@@ -64,7 +65,7 @@ Open `demo/index.html` in your browser to see all components and article styles 
 </div>
 ```
 
-### All 14 Article Styles
+### All 22 Article Styles
 
 - `article-style-geometric` - Red + white, stark contrast
 - `article-style-typographic` - Yellow, experimental type
@@ -75,11 +76,19 @@ Open `demo/index.html` in your browser to see all components and article styles 
 - `article-style-swiss-minimal` - Stone + teal, structured editorial
 - `article-style-sunset` - Warm orange + cream, vintage
 - `article-style-european-editorial` - Zinc-800 + cream, two-column
+- `article-style-split-editorial` - Zinc-700/white split, clip-path header
 - `article-style-designer-brief` - Yellow with red tag, image-heavy
-- `article-style-wilde-plakken` - Mixed layout grid, electric blue on black
 - `article-style-designer-brief-barbie` - Hot pink + seafoam, playful
 - `article-style-designer-brief-ocean` - Cyan + lime green, vibrant
+- `article-style-wilde-plakken` - Mixed layout grid, electric blue on black
 - `article-style-music-bold` - Deep blue with red accents, minimal text, image showcase
+- `article-style-trademarks` - Deep purple, album art grid, Monoton + Audiowide
+- `article-style-pentagram` - Black + yellow color-block grid
+- `article-style-pentagram-inverted` - Yellow + black inversion
+- `article-style-thirty-centuries` - White editorial, drop cap, full typographic hierarchy
+- `article-style-programme` - Zinc-800 header, Anton title, float image prose
+- `article-style-liberation` - Yellow/pink/white section system, feminist editorial
+- `article-style-studio-culture` - Deep navy, DM Sans, three section variants
 
 All styles use BEM naming (`article-style-NAME__element`) for clear composition.
 
@@ -87,7 +96,7 @@ All styles use BEM naming (`article-style-NAME__element`) for clear composition.
 
 ```
 src/
-├── styles.css          # Main stylesheet (632 lines)
+├── styles.css          # Main stylesheet (2265 lines)
 ├── components/
 │   ├── headers.html    # Header examples
 │   ├── pullquotes.html # Pull quotes & emphasis
@@ -96,7 +105,7 @@ demo/
 └── index.html          # Full showcase page
 
 dist/
-└── styles.css          # Compiled output (14KB)
+└── styles.css          # Compiled output (~74KB)
 
 tailwind.config.js      # Tailwind v4 config
 package.json            # Dependencies
