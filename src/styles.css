@@ -46,6 +46,25 @@
   --color-gray-600: #4b5563;
   --color-gray-700: #374151;
   --color-gray-800: #1f2937;
+
+  /* European Editorial colors */
+  --color-editorial-teal: #20b2aa;
+  --color-editorial-coral: #ff6b9d;
+
+  /* Designer Brief colors */
+  --color-brief-yellow: #ffff00;
+  --color-brief-black: #000;
+  --color-brief-red: #ff0000;
+
+  /* Wilde Plakken colors */
+  --color-wilde-blue: #0066ff;
+  --color-wilde-charcoal: #3a3a3a;
+
+  /* Designer Brief variants */
+  --color-brief-pink: #ff69b4;
+  --color-brief-seafoam: #20b2aa;
+  --color-brief-cyan: #00bfff;
+  --color-brief-lime: #32cd32;
 }
 
 /* ============================================
@@ -640,6 +659,473 @@
   font-family: "Crimson Text", serif;
   font-size: 1.125rem;
   color: var(--color-gray-800);
+}
+
+/* European Editorial Minimal */
+.article-style-european-editorial {
+  background-color: var(--color-white);
+  color: var(--color-gray-900);
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 100vh;
+  gap: 0;
+}
+
+.article-style-european-editorial__dark-side {
+  background-color: #3a3a3a;
+  color: var(--color-editorial-teal);
+  padding: 4rem 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.article-style-european-editorial__dark-content {
+  text-align: center;
+}
+
+.article-style-european-editorial__dark-header {
+  font-family: "EB Garamond", serif;
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  line-height: 1.4;
+  font-weight: 700;
+  color: var(--color-editorial-teal);
+}
+
+.article-style-european-editorial__light-side {
+  background-color: #faf9f7;
+  padding: 4rem 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-left: 1px solid #e5e3e0;
+}
+
+.article-style-european-editorial__title {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 1.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 2rem;
+  color: var(--color-gray-900);
+}
+
+.article-style-european-editorial__subtitle {
+  font-family: "EB Garamond", serif;
+  font-size: 1.125rem;
+  font-style: italic;
+  margin-bottom: 1.5rem;
+  color: #666;
+}
+
+.article-style-european-editorial__body {
+  font-family: "IBM Plex Serif", serif;
+  font-size: 0.9rem;
+  line-height: 1.8;
+  color: #555;
+  max-width: 40rem;
+}
+
+.article-style-european-editorial__body p {
+  margin-bottom: 1rem;
+}
+
+.article-style-european-editorial__image-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  margin: 2rem 0;
+  padding: 1.5rem;
+  background-color: #f5f3f0;
+  border: 1px solid #e5e3e0;
+}
+
+.article-style-european-editorial__image-item {
+  aspect-ratio: 1;
+  background-color: var(--color-gray-100);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #d9d7d4;
+  font-size: 0.75rem;
+  color: #999;
+  font-family: monospace;
+}
+
+.article-style-european-editorial__image-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Designer Brief Yellow */
+.article-style-designer-brief {
+  background-color: var(--color-brief-yellow);
+  color: var(--color-brief-black);
+  padding: 3rem;
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.article-style-designer-brief__spine {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 80px;
+  background-color: rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+}
+
+.article-style-designer-brief__spine-text {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 1.25rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: rgba(255, 255, 255, 0.5);
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+}
+
+.article-style-designer-brief__content {
+  margin-left: 60px;
+  max-width: 45rem;
+}
+
+.article-style-designer-brief__tag {
+  display: inline-block;
+  background-color: var(--color-brief-red);
+  color: var(--color-white);
+  padding: 0.25rem 0.75rem;
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 1.5rem;
+  font-weight: bold;
+}
+
+.article-style-designer-brief__header {
+  font-family: "Abril Fatface", serif;
+  font-size: 3.5rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  line-height: 1.1;
+  margin-bottom: 1rem;
+  color: var(--color-brief-black);
+}
+
+.article-style-designer-brief__subheader {
+  font-family: "IBM Plex Serif", serif;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+  color: var(--color-brief-black);
+}
+
+.article-style-designer-brief__body {
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+  line-height: 1.75;
+  color: var(--color-brief-black);
+}
+
+.article-style-designer-brief__body p {
+  margin-bottom: 1rem;
+}
+
+.article-style-designer-brief__body strong {
+  font-weight: bold;
+}
+
+/* Designer Brief Variant: Pink with Seafoam */
+.article-style-designer-brief-barbie {
+  background-color: var(--color-brief-pink);
+  color: var(--color-brief-black);
+  padding: 3rem;
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.article-style-designer-brief-barbie__spine {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 80px;
+  background-color: rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+}
+
+.article-style-designer-brief-barbie__spine-text {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 1.25rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: rgba(255, 255, 255, 0.5);
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+}
+
+.article-style-designer-brief-barbie__content {
+  margin-left: 60px;
+  max-width: 45rem;
+}
+
+.article-style-designer-brief-barbie__tag {
+  display: inline-block;
+  background-color: var(--color-brief-seafoam);
+  color: var(--color-brief-black);
+  padding: 0.25rem 0.75rem;
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 1.5rem;
+  font-weight: bold;
+}
+
+.article-style-designer-brief-barbie__header {
+  font-family: "Abril Fatface", serif;
+  font-size: 3.5rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  line-height: 1.1;
+  margin-bottom: 1rem;
+  color: var(--color-brief-black);
+}
+
+.article-style-designer-brief-barbie__subheader {
+  font-family: "IBM Plex Serif", serif;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+  color: var(--color-brief-black);
+}
+
+.article-style-designer-brief-barbie__body {
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+  line-height: 1.75;
+  color: var(--color-brief-black);
+}
+
+.article-style-designer-brief-barbie__body p {
+  margin-bottom: 1rem;
+}
+
+.article-style-designer-brief-barbie__body strong {
+  font-weight: bold;
+}
+
+/* Designer Brief Variant: Ocean Cyan */
+.article-style-designer-brief-ocean {
+  background-color: var(--color-brief-cyan);
+  color: var(--color-white);
+  padding: 3rem;
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.article-style-designer-brief-ocean__spine {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 80px;
+  background-color: rgba(0, 0, 0, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+}
+
+.article-style-designer-brief-ocean__spine-text {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 1.25rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: rgba(255, 255, 255, 0.6);
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+}
+
+.article-style-designer-brief-ocean__content {
+  margin-left: 60px;
+  max-width: 45rem;
+}
+
+.article-style-designer-brief-ocean__tag {
+  display: inline-block;
+  background-color: var(--color-brief-lime);
+  color: var(--color-brief-black);
+  padding: 0.25rem 0.75rem;
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 1.5rem;
+  font-weight: bold;
+}
+
+.article-style-designer-brief-ocean__header {
+  font-family: "Abril Fatface", serif;
+  font-size: 3.5rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  line-height: 1.1;
+  margin-bottom: 1rem;
+  color: var(--color-white);
+}
+
+.article-style-designer-brief-ocean__subheader {
+  font-family: "IBM Plex Serif", serif;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+  color: var(--color-white);
+}
+
+.article-style-designer-brief-ocean__body {
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+  line-height: 1.75;
+  color: var(--color-white);
+}
+
+.article-style-designer-brief-ocean__body p {
+  margin-bottom: 1rem;
+}
+
+.article-style-designer-brief-ocean__body strong {
+  font-weight: bold;
+}
+
+/* Wilde Plakken Mixed Layout */
+.article-style-wilde-plakken {
+  background-color: var(--color-white);
+  color: var(--color-gray-900);
+}
+
+.article-style-wilde-plakken__header-section {
+  background-color: var(--color-wilde-charcoal);
+  padding: 3rem 4rem;
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 2rem;
+  align-items: center;
+}
+
+.article-style-wilde-plakken__header-image {
+  width: 100%;
+  aspect-ratio: 0.75;
+  background-color: #555;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #666;
+}
+
+.article-style-wilde-plakken__header-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.article-style-wilde-plakken__header-text {
+  text-align: right;
+}
+
+.article-style-wilde-plakken__header {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 4rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--color-wilde-blue);
+  font-weight: bold;
+  line-height: 1.1;
+  margin-bottom: 0.5rem;
+}
+
+.article-style-wilde-plakken__subheader {
+  font-family: "Fredoka", sans-serif;
+  font-size: 1.5rem;
+  color: var(--color-white);
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.article-style-wilde-plakken__content {
+  padding: 3rem 4rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  grid-auto-flow: dense;
+  grid-auto-rows: auto;
+}
+
+.article-style-wilde-plakken__prose {
+  grid-column: span 1;
+  font-family: "IBM Plex Serif", serif;
+  font-size: 0.95rem;
+  line-height: 1.8;
+  color: #444;
+}
+
+.article-style-wilde-plakken__prose p {
+  margin-bottom: 1rem;
+}
+
+.article-style-wilde-plakken__prose--wide {
+  grid-column: span 2;
+}
+
+.article-style-wilde-plakken__image {
+  aspect-ratio: 0.8;
+  background-color: #eee;
+  border: 1px solid #ddd;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.85rem;
+  color: #999;
+}
+
+.article-style-wilde-plakken__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.article-style-wilde-plakken__image--large {
+  grid-column: span 2;
+  aspect-ratio: 2;
+}
+
+.article-style-wilde-plakken__image--right {
+  grid-column: 2;
 }
 
 /* Utility classes */
