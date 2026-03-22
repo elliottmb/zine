@@ -553,6 +553,95 @@ book title, year, publisher, and editors.
 The library has **19 article styles** as of this session. The footer in `demo/index.html` and `README.md` style list may
 need updating when new styles are added.
 
+---
+
+## Session 4: New Styles, Color Fixes & Demo Layout
+
+### What Was Added
+
+- **Article 19: `article-style-programme`** — Dark zinc-800 header with Anton font at 8rem, pink (`--color-pink-400`)
+  title text, white content area with EB Garamond prose, floating images (left/right) with captions
+  - Inspired by _National Theatre Posters: A Design History_ (2017, Unit Editions) by Rick Poynor
+  - **Anton** added to Google Fonts import URL and `tailwind.config.js` as `anton: ["Anton", "sans-serif"]`
+- **Article 20: `article-style-liberation`** — Yellow header with large Abril Fatface title, three interchangeable
+  content section variants: `--yellow`, `--pink`, `--white`
+  - Inspired by _Suffragettes to She-Devils_ (1997, Phaidon) by Liz McQuiston
+
+### She-Devils Custom Color Palette
+
+Three custom colors added to `:root` — all have no sufficiently close Tailwind equivalent:
+
+| Variable                    | Hex       | Purpose                                                      |
+| --------------------------- | --------- | ------------------------------------------------------------ |
+| `--color-liberation-yellow` | `#e3e446` | Header background + yellow section background                |
+| `--color-liberation-pink`   | `#e12b96` | Pink section background                                      |
+| `--color-liberation-purple` | `#942c79` | Header text, section titles, separator, white section border |
+
+The closest Tailwind colors are `yellow-300` (#fde047), `pink-600` (#db2777), and `fuchsia-800` (#86198f) — all differ
+by 40+ channel points. Never substitute Tailwind equivalents for these; the distinction is intentional and
+design-critical.
+
+### She-Devils Section Color Logic
+
+- `--yellow` section: `liberation-purple` titles on `liberation-yellow` bg
+- `--pink` section: **white** titles and body on `liberation-pink` bg (override needed for readability)
+- `--white` section: `liberation-purple` border-top, `liberation-purple` titles, `gray-900` body
+
+Override pattern for the pink section:
+
+```css
+.article-style-liberation__section--pink .article-style-liberation__section-title {
+  color: var(--color-white); /* overrides default purple */
+}
+.article-style-liberation__section--pink .article-style-liberation__body {
+  color: var(--color-white);
+}
+```
+
+### Float-Based Image Layout Pattern
+
+Both `article-style-programme` and `article-style-liberation` use CSS floats for inline images. The pattern:
+
+```html
+<!-- Float image left with prose wrapping right -->
+<div class="...__image ...__image--left">
+  <img src="..." alt="..." />
+  <div class="...__caption">Caption text</div>
+</div>
+<p>Prose flows to the right of the image...</p>
+<p>More prose...</p>
+<div class="...__clearfix"></div>
+<!-- REQUIRED to reset float -->
+
+<!-- Then float another image right -->
+<div class="...__image ...__image--right">...</div>
+<p>Prose flows to the left...</p>
+<div class="...__clearfix"></div>
+```
+
+**Common mistake:** Placing two floated images (left + right) consecutively before the prose — the paragraph wedges
+between them. Always interleave: one float → prose → clearfix → next float → prose → clearfix.
+
+### Duplicate CSS Property Bug
+
+During the liberation purple color update, an edit accidentally left **two `color:` declarations** on the same rule:
+
+```css
+/* ❌ Bad — second declaration silently overrides the first */
+.article-style-liberation__section-title {
+  color: var(--color-liberation-purple);
+  color: var(--color-white); /* leftover from old value */
+}
+```
+
+The second `color: white` silently won, making the yellow section title invisible. Always grep the liberation block
+after edits to confirm no duplicate property declarations.
+
+### Style Count
+
+The library now has **21 article styles**. Footer in `demo/index.html` says "21 article styles". Keep `README.md` and
+`STYLES.md` in sync when adding new styles.
+
 ### Overlay Color Variables
 
 Semi-transparent overlay colors live in `:root` as named variables rather than inline `rgba()`:

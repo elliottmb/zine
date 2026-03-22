@@ -58,6 +58,7 @@ export default {
         monoton: ["Monoton", "sans-serif"],
         audiowide: ["Audiowide", "sans-serif"],
         anton: ["Anton", "sans-serif"],
+        dmSans: ["DM Sans", "sans-serif"],
       },
       letterSpacing: {
         tighter: "-0.05em",

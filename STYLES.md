@@ -394,7 +394,7 @@ portraits, and archival images equally well.
 
 ---
 
-## 21. She-Devils (`article-style-she-devils`)
+## 21. She-Devils (`article-style-liberation`)
 
 **Inspiration:** _Suffragettes to She-Devils: Women's Liberation and Beyond_ (1997, Phaidon Press) by Liz McQuiston — a
 survey of feminist graphic design from the militant suffragette campaigns of the early twentieth century through Women's
@@ -402,8 +402,8 @@ Liberation in the 1960s to the cyberfeminism of the 1990s. The book is described
 most arresting graphic images," covering posters, badges, billboards, logos, artworks, and computer graphics. Its own
 design — vibrant, bold, unapologetically colored — is the direct model for this style.
 
-**Visual character:** A violet header with a yellow accent bar at its base opens the article. Below, the writer can use
-three interchangeable content sections: yellow (`--yellow`), pink (`--pink`), and white (`--white`). These aren't
+**Visual character:** A yellow header with a purple separator bar at its base opens the article. Below, the writer can
+use three interchangeable content sections: yellow (`--yellow`), pink (`--pink`), and white (`--white`). These aren't
 decorative options — they are rhetorical ones. A yellow section might carry the historical argument, a pink section the
 personal essay, a white section the visual archive. The palette echoes the political color language of the book's
 subject matter without quoting it literally.
@@ -411,8 +411,10 @@ subject matter without quoting it literally.
 **Typography:** Abril Fatface for the header title and section headings (bold, high-contrast, graphic — the poster
 sensibility), IBM Plex Serif for body text (structured, legible, document-like), Space Mono for eyebrow and captions.
 
-**Colors:** `violet-700` header, `yellow-400` accent bar, `violet-200` subtitle, `violet-800` section titles. Sections:
-`yellow-200`, `pink-200`, and white with `violet-200` top border.
+**Colors:** Custom palette — `--color-liberation-yellow` (`#e3e446`) header background and yellow section,
+`--color-liberation-pink` (`#e12b96`) pink section, `--color-liberation-purple` (`#942c79`) for all purple text,
+separator bar, and white section border. Pink section text is overridden to white for readability on the vibrant pink
+background.
 
 **Section variants:**
 
