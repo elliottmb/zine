@@ -137,6 +137,14 @@ means:
 ✓ **Maintainability** - Change colors/spacing in `tailwind.config.js`, they automatically update everywhere ✓
 **Consistency** - All values reference the same design system ✓ **Modern** - Leverages Tailwind v4's native architecture
 
+**Important:** The library includes an explicit `:root` block in `src/styles.css` that defines all color variables used
+by the components. This ensures they're available at runtime regardless of how Tailwind processes utilities. This block
+includes:
+
+- All custom magazine palettes (sunset, acid, magenta, peacock, burnished)
+- Neutral colors (black, white, grays 50-900)
+- Utility colors (pink, purple)
+
 Example:
 
 ```css
@@ -149,7 +157,7 @@ Example:
 
 Available Tailwind v4 variables:
 
-- `--color-*` - All colors from your palette
+- `--color-*` - All colors from your palette (defined in `:root`)
 - `--font-*` - Typography scales
 - `--spacing-*` - Spacing/sizing
 - `--radius-*` - Border radius tokens
