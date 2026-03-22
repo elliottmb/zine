@@ -2089,7 +2089,7 @@
   .article-style-studio-culture__byline {
     font-family: "DM Sans", sans-serif;
     font-weight: 300;
-    font-size: 0.75rem;
+    font-size: 1rem;
     letter-spacing: 0.12em;
     text-transform: uppercase;
     color: var(--color-studio-blue-light);
@@ -2098,7 +2098,7 @@
   .article-style-studio-culture__eyebrow {
     font-family: "DM Sans", sans-serif;
     font-weight: 400;
-    font-size: 0.7rem;
+    font-size: 0.9rem;
     letter-spacing: 0.08em;
     color: var(--color-studio-blue-mid);
   }
@@ -2117,8 +2117,8 @@
 
   .article-style-studio-culture__subtitle {
     font-family: "DM Sans", sans-serif;
-    font-weight: 300;
-    font-size: 1.1rem;
+    font-weight: 500;
+    font-size: 1.25rem;
     letter-spacing: 0.08em;
     text-transform: uppercase;
     color: var(--color-blue-100);
@@ -2231,8 +2231,8 @@
 
   .article-style-studio-culture__caption {
     font-family: "DM Sans", sans-serif;
-    font-weight: 300;
-    font-size: 0.65rem;
+    font-weight: 400;
+    font-size: 0.8rem;
     letter-spacing: 0.08em;
     text-transform: uppercase;
     color: inherit;
