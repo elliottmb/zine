@@ -4,6 +4,20 @@
 @tailwind components;
 @tailwind utilities;
 
+/* ============================================
+   TAILWIND V4 CSS VARIABLES USAGE
+   
+   This stylesheet uses Tailwind v4's built-in
+   CSS variables (--color-*, etc.) via var()
+   instead of hardcoding values. This ensures:
+   - Design tokens stay in sync with config
+   - Easy theme customization
+   - Better maintainability
+   
+   Tailwind v4 automatically generates these
+   variables from your theme config.
+   ============================================ */
+
 /* Pull quote styles */
 .pullquote {
   font-style: italic;
@@ -16,27 +30,27 @@
 }
 
 .pullquote-classic {
-  border-left-color: #1f2937;
-  color: #000;
-  background-color: #f9fafb;
+  border-left-color: var(--color-gray-900);
+  color: var(--color-black);
+  background-color: var(--color-gray-50);
 }
 
 .pullquote-vibrant {
-  border-left-color: #ec4899;
-  color: #be185d;
-  background-color: #fdf2f8;
+  border-left-color: var(--color-pink-600);
+  color: var(--color-pink-600);
+  background-color: var(--color-pink-50);
 }
 
 .pullquote-inverted {
-  border-left-color: #fff;
-  color: #fff;
-  background-color: #000;
+  border-left-color: var(--color-white);
+  color: var(--color-white);
+  background-color: var(--color-black);
 }
 
 /* Article styles */
 .article-style-geometric {
-  background-color: #dc2626;
-  color: white;
+  background-color: var(--color-red-600);
+  color: var(--color-white);
   padding: 3rem;
 }
 
@@ -74,11 +88,11 @@
 }
 
 .article-style-geometric__image-box {
-  background-color: #111;
+  background-color: var(--color-gray-900);
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #6b7280;
+  color: var(--color-gray-500);
   font-family: 'Bebas Neue', sans-serif;
   font-size: 1.5rem;
   aspect-ratio: 1;
@@ -86,8 +100,8 @@
 
 /* Typographic style */
 .article-style-typographic {
-  background-color: #fcd34d;
-  color: #111827;
+  background-color: var(--color-yellow-300);
+  color: var(--color-gray-900);
   padding: 3rem;
 }
 
@@ -116,7 +130,7 @@
 }
 
 .article-style-typographic__grid-item {
-  background-color: white;
+  background-color: var(--color-white);
   padding: 1rem;
   text-align: center;
   font-family: monospace;
@@ -155,7 +169,7 @@
 
 /* Collage style */
 .article-style-collage {
-  background: linear-gradient(to bottom right, #dcfce7, #f0fdf4);
+  background: linear-gradient(to bottom right, var(--color-green-100), var(--color-green-50));
   padding: 3rem;
 }
 
@@ -164,13 +178,13 @@
   font-size: 3.75rem;
   font-weight: 900;
   margin-bottom: 0.25rem;
-  color: #15803d;
+  color: var(--color-green-900);
 }
 
 .article-style-collage__byline {
   font-family: serif;
   font-size: 1rem;
-  color: #4b5563;
+  color: var(--color-gray-600);
   margin-bottom: 3rem;
   font-weight: 300;
   font-style: italic;
@@ -185,14 +199,14 @@
 }
 
 .article-style-collage__image {
-  background-color: #15803d;
+  background-color: var(--color-green-900);
   aspect-ratio: 1;
 }
 
 .article-style-collage__image-caption {
   font-size: 0.75rem;
   text-align: center;
-  color: #4b5563;
+  color: var(--color-gray-600);
   margin-top: 0.5rem;
 }
 
@@ -204,8 +218,8 @@
 }
 
 .article-style-collage__pullquote-box {
-  background-color: white;
-  border-left: 4px solid #15803d;
+  background-color: var(--color-white);
+  border-left: 4px solid var(--color-green-900);
   padding: 1.5rem;
   margin: 2rem 0;
   box-shadow: 0 1px 3px rgba(0,0,0,0.1);
@@ -215,14 +229,14 @@
   font-family: 'Playfair Display', serif;
   font-size: 1.25rem;
   font-weight: bold;
-  color: #15803d;
+  color: var(--color-green-900);
   font-style: italic;
 }
 
 .article-style-collage__pullquote-attribution {
   font-family: serif;
   font-size: 0.75rem;
-  color: #4b5563;
+  color: var(--color-gray-600);
   margin-top: 0.75rem;
 }
 
@@ -233,15 +247,15 @@
 }
 
 .article-style-collage__sidebar {
-  background-color: white;
+  background-color: var(--color-white);
   padding: 1.5rem;
-  border-top: 4px solid #15803d;
+  border-top: 4px solid var(--color-green-900);
 }
 
 .article-style-collage__sidebar-title {
   font-family: 'Bebas Neue', sans-serif;
   font-size: 1.125rem;
-  color: #15803d;
+  color: var(--color-green-900);
   margin-bottom: 1rem;
   text-transform: uppercase;
   letter-spacing: 0.05em;
@@ -256,13 +270,13 @@
   display: block;
   margin-top: 0.75rem;
   margin-bottom: 0.25rem;
-  color: #15803d;
+  color: var(--color-green-900);
 }
 
 /* Dark minimal */
 .article-style-minimal-dark {
-  background-color: #000;
-  color: white;
+  background-color: var(--color-black);
+  color: var(--color-white);
   padding: 4rem;
 }
 
@@ -280,7 +294,7 @@
   font-size: 0.75rem;
   text-transform: uppercase;
   letter-spacing: 0.1em;
-  color: #6b7280;
+  color: var(--color-gray-400);
   margin-bottom: 3rem;
 }
 
@@ -296,7 +310,7 @@
   font-family: serif;
   font-size: 1.125rem;
   line-height: 1.75;
-  color: #e5e7eb;
+  color: var(--color-gray-100);
 }
 
 .article-style-minimal-dark__text p {
@@ -305,7 +319,7 @@
 
 .article-style-minimal-dark__sidebar {
   grid-column: span 1;
-  border-left: 2px solid white;
+  border-left: 2px solid var(--color-white);
   padding-left: 1.5rem;
 }
 
@@ -314,7 +328,7 @@
   font-size: 0.875rem;
   text-transform: uppercase;
   letter-spacing: 0.05em;
-  color: #d1d5db;
+  color: var(--color-gray-300);
   margin-bottom: 1rem;
 }
 
@@ -322,12 +336,12 @@
   font-family: serif;
   font-size: 0.875rem;
   line-height: 1.625;
-  color: #9ca3af;
+  color: var(--color-gray-400);
 }
 
 .article-style-minimal-dark__image {
-  background-color: #111;
-  border: 1px solid #374151;
+  background-color: var(--color-gray-900);
+  border: 1px solid var(--color-gray-700);
   margin: 2rem 0;
   aspect-ratio: 16 / 9;
 }
@@ -335,7 +349,7 @@
 /* Acid bright */
 .article-style-acid-bright {
   background-color: #f0ff00;
-  color: #111;
+  color: var(--color-gray-900);
   padding: 3rem;
   border: 4px solid #ccff00;
 }
@@ -347,7 +361,7 @@
   font-weight: 900;
   margin-bottom: 1rem;
   letter-spacing: 0.05em;
-  color: #b3cc00;
+  color: var(--color-purple-900);
 }
 
 .article-style-acid-bright__subheader {
@@ -356,7 +370,7 @@
   text-transform: uppercase;
   margin-bottom: 2rem;
   letter-spacing: 0.05em;
-  color: #b3cc00;
+  color: var(--color-purple-900);
 }
 
 .article-style-acid-bright__content {
@@ -376,15 +390,15 @@
 }
 
 .article-style-acid-bright__highlight-box {
-  background-color: #111;
-  color: white;
+  background-color: var(--color-gray-900);
+  color: var(--color-white);
   padding: 1.5rem;
   border: 2px solid #f0ff00;
 }
 
 .article-style-acid-bright__highlight-box strong {
   display: block;
-  color: #f0ff00;
+  color: var(--color-purple-900);
   font-size: 1.125rem;
   font-family: 'Bebas Neue', sans-serif;
   text-transform: uppercase;
@@ -394,13 +408,13 @@
 
 /* Magenta experimental */
 .article-style-magenta-exp {
-  background-color: white;
+  background-color: var(--color-white);
   overflow: hidden;
 }
 
 .article-style-magenta-exp__header-band {
   background-color: #ff00ff;
-  color: white;
+  color: var(--color-white);
   padding: 3rem;
 }
 
@@ -441,15 +455,11 @@
   gap: 1rem;
 }
 
-.article-style-magenta-exp__image {
-  background-color: black;
-  color: white;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-family: 'Bebas Neue', sans-serif;
-  font-size: 1.5rem;
-  aspect-ratio: 1;
+.article-style-magenta-exp__image-col img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 0.25rem;
 }
 
 .article-style-magenta-exp__accent-block {
@@ -467,7 +477,7 @@
 /* Peacock blue */
 .article-style-peacock {
   background: linear-gradient(to bottom right, #00bfff, #003366);
-  color: white;
+  color: var(--color-white);
   padding: 3rem;
 }
 
@@ -530,13 +540,13 @@
 /* Sunset warm */
 .article-style-sunset {
   background-color: #faf8f5;
-  color: #111;
+  color: var(--color-gray-900);
   padding: 3rem;
 }
 
 .article-style-sunset__header-box {
   background-color: #ff6b35;
-  color: white;
+  color: var(--color-white);
   padding: 3rem;
   margin-bottom: 3rem;
   transform: rotate(-1deg);
@@ -585,7 +595,7 @@
   font-style: italic;
   font-family: 'Crimson Text', serif;
   font-size: 1.125rem;
-  color: #333;
+  color: var(--color-gray-800);
 }
 
 /* Utility classes */
@@ -600,5 +610,5 @@
 .zine-section-divider {
   margin: 4rem 0;
   height: 0.25rem;
-  background: linear-gradient(to right, transparent, #999, transparent);
+  background: linear-gradient(to right, transparent, var(--color-gray-400), transparent);
 }

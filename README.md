@@ -120,9 +120,40 @@ package.json            # Dependencies
 - **Peacock** - Electric blue (50/500/900)
 - **Burnished** - Dark warm browns (50/900)
 
-## Customization
+## Architecture & Best Practices
 
-### Modify Colors
+### Tailwind v4 CSS Variables
+This library uses Tailwind v4's CSS variables via `var()` for all design tokens instead of hardcoding values. This means:
+
+✓ **Maintainability** - Change colors/spacing in `tailwind.config.js`, they automatically update everywhere
+✓ **Consistency** - All values reference the same design system
+✓ **Modern** - Leverages Tailwind v4's native architecture
+
+Example:
+```css
+.article-style-geometric {
+  background-color: var(--color-red-600);  /* Uses Tailwind's color system */
+  color: var(--color-white);
+  padding: 3rem;
+}
+```
+
+Available Tailwind v4 variables:
+- `--color-*` - All colors from your palette
+- `--font-*` - Typography scales
+- `--spacing-*` - Spacing/sizing
+- `--radius-*` - Border radius tokens
+- `--shadow-*` - Box shadow values
+
+### BEM Naming Convention
+All component classes follow BEM (Block, Element, Modifier):
+```
+.article-style-geometric           /* Block */
+.article-style-geometric__header   /* Element */
+.article-style-geometric__header--alt /* Modifier (if needed) */
+```
+
+This makes components easy to customize and compose.
 Edit `tailwind.config.js` to change the color palette:
 ```javascript
 colors: {
