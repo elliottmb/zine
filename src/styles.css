@@ -1446,6 +1446,7 @@
 
   /* Thirty Centuries - Elegant typography, white space, multi-font hierarchy */
   .article-style-thirty-centuries {
+    position: relative;
     background-color: var(--color-white);
     color: var(--color-black);
     padding: 5rem 4rem;
@@ -1548,6 +1549,31 @@
 
   .article-style-thirty-centuries__column-split p {
     margin-bottom: 1.5rem;
+  }
+
+  .article-style-thirty-centuries__byline {
+    position: absolute;
+    top: 0;
+    right: 0;
+    text-align: left;
+  }
+
+  .article-style-thirty-centuries__byline-box {
+    width: 100%;
+    height: 5rem;
+    background-color: #ffff00;
+  }
+
+  .article-style-thirty-centuries__byline-name {
+    font-family: "Space Mono", monospace;
+    font-size: 0.6rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--color-black);
+    line-height: 2;
+    padding-right: 4rem;
+    padding-top: 0.25rem;
   }
 
   /* Background color defaults — inside @layer components so utilities can override */
