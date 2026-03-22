@@ -830,7 +830,9 @@
     font-size: 5rem;
     line-height: 1;
     text-transform: uppercase;
-    letter-spacing: -0.02em;
+    text-align: justify;
+    text-align-last: justify;
+    text-justify: inter-character;
   }
 
   .article-style-split-editorial__header-light {
