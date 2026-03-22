@@ -14,5 +14,6 @@
     "prettier": "^3.8.1",
     "tailwindcss": "^4.2.2"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "type": "module"
 }

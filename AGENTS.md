@@ -174,7 +174,30 @@ font.
 
 **Takeaway:** Font and size should support the same visual intent. Large + weak = inconsistent design.
 
----
+### 6. Use `@import "tailwindcss"` — Not the v3 `@tailwind` Directives
+
+**The Mistake:** The stylesheet used Tailwind v3-style directives:
+
+```css
+/* ❌ v3 syntax — does not load Tailwind v4's full default theme */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+```
+
+This caused the entire default utility palette (gray, white, spacing, border radius, font weight, etc.) to not be
+generated, even when those classes appeared in the HTML.
+
+**The Fix:** Use Tailwind v4's native import, with `@config` for the JavaScript config file:
+
+```css
+/* ✅ v4 syntax */
+@import "tailwindcss";
+@config "../tailwind.config.js";
+```
+
+**Takeaway:** In Tailwind v4, always use `@import "tailwindcss"`. The old `@tailwind` directives are a v3 compatibility
+shim that skips the v4 default theme.
 
 ## CSS Layer Conventions
 

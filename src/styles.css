@@ -1,8 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Courier+Prime:wght@400;700&family=Bebas+Neue&family=Roboto:wght@400;500;700&family=Abril+Fatface&family=IBM+Plex+Serif:wght@400;600&family=Space+Mono:wght@400;700&family=EB+Garamond:wght@400;600;700&family=Crimson+Text:ital,wght@0,400;0,600;1,400&family=Bodoni+Moda:wght@400;700&family=Raleway:wght@400;700;900&family=Righteous&family=Fredoka:wght@400;700&family=Climate+Crisis&family=Limelight&family=Zilla+Slab+Highlight&family=Knewwave&family=Monoton&display=swap");
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+@config "../tailwind.config.js";
 
 /* Explicit CSS variable definitions for colors used in this library */
 :root {
