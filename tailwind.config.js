@@ -56,6 +56,7 @@ export default {
         zillaSlab: ["Zilla Slab Highlight", "serif"],
         knewwave: ["Knewwave", "sans-serif"],
         monoton: ["Monoton", "sans-serif"],
+        audiowide: ["Audiowide", "sans-serif"],
       },
       letterSpacing: {
         tighter: "-0.05em",

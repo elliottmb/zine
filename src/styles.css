@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Courier+Prime:wght@400;700&family=Bebas+Neue&family=Roboto:wght@400;500;700&family=Abril+Fatface&family=IBM+Plex+Serif:wght@400;600&family=Space+Mono:wght@400;700&family=EB+Garamond:wght@400;600;700&family=Crimson+Text:ital,wght@0,400;0,600;1,400&family=Bodoni+Moda:wght@400;700&family=Raleway:wght@400;700;900&family=Righteous&family=Fredoka:wght@400;700&family=Climate+Crisis&family=Limelight&family=Zilla+Slab+Highlight&family=Knewwave&family=Monoton&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Courier+Prime:wght@400;700&family=Bebas+Neue&family=Roboto:wght@400;500;700&family=Abril+Fatface&family=IBM+Plex+Serif:wght@400;600&family=Space+Mono:wght@400;700&family=EB+Garamond:wght@400;600;700&family=Crimson+Text:ital,wght@0,400;0,600;1,400&family=Bodoni+Moda:wght@400;700&family=Raleway:wght@400;700;900&family=Righteous&family=Fredoka:wght@400;700&family=Climate+Crisis&family=Limelight&family=Zilla+Slab+Highlight&family=Knewwave&family=Monoton&family=Audiowide&display=swap");
 
 @import "tailwindcss";
 @config "../tailwind.config.js";
@@ -1300,7 +1300,7 @@
   }
 
   .article-style-trademarks__mark {
-    font-family: "Bebas Neue", sans-serif;
+    font-family: "Monoton", sans-serif;
     font-size: 8rem;
     line-height: 0.85;
     color: var(--color-rose-900);
@@ -1308,7 +1308,7 @@
   }
 
   .article-style-trademarks__title {
-    font-family: "Bebas Neue", sans-serif;
+    font-family: "Audiowide", sans-serif;
     font-size: 4rem;
     line-height: 1;
     letter-spacing: 0.08em;
