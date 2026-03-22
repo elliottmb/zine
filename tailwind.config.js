@@ -51,6 +51,8 @@ export default {
         raleway: ["Raleway", "sans-serif"],
         righteous: ["Righteous", "sans-serif"],
         fredoka: ["Fredoka", "sans-serif"],
+        climateCrisis: ["Climate Crisis", "sans-serif"],
+        ericaOne: ["Erica One", "sans-serif"],
       },
       letterSpacing: {
         tighter: "-0.05em",
