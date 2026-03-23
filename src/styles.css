@@ -1194,7 +1194,7 @@
         color: var(--color-white);
       }
 
-      > header > .subtitle {
+      > header > h2 {
         font-family: "IBM Plex Serif", serif;
         font-size: 1.5rem;
         font-weight: bold;
@@ -1262,7 +1262,7 @@
           margin-bottom: 0.5rem;
         }
 
-        > header > .subtitle {
+        > header > h2 {
           font-family: "Fredoka", sans-serif;
           font-size: 1.5rem;
           color: var(--color-white);
