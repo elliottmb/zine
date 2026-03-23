@@ -2071,178 +2071,179 @@
      Inspired by Studio Culture Now (2020, Unit Editions) ed. Mark Sinclair
      ============================================= */
 
-  .article-style-studio-culture__header {
-    background-color: var(--color-studio-blue);
-    padding: 3rem;
-    min-height: 30rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-  }
+  .article-style-studio-culture {
+    > .header {
+      background-color: var(--color-studio-blue);
+      padding: 3rem;
+      min-height: 30rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
 
-  .article-style-studio-culture__header-top {
-    display: flex;
-    flex-direction: column;
-    gap: 0.25rem;
-  }
+      > .header-top {
+        display: flex;
+        flex-direction: column;
+        gap: 0.25rem;
 
-  .article-style-studio-culture__byline {
-    font-family: "DM Sans", sans-serif;
-    font-weight: 300;
-    font-size: 1rem;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    color: var(--color-studio-blue-light);
-  }
+        > .byline {
+          font-family: "DM Sans", sans-serif;
+          font-weight: 300;
+          font-size: 1rem;
+          letter-spacing: 0.12em;
+          text-transform: uppercase;
+          color: var(--color-studio-blue-light);
+        }
 
-  .article-style-studio-culture__eyebrow {
-    font-family: "DM Sans", sans-serif;
-    font-weight: 400;
-    font-size: 0.9rem;
-    letter-spacing: 0.08em;
-    color: var(--color-studio-blue-mid);
-  }
+        > .eyebrow {
+          font-family: "DM Sans", sans-serif;
+          font-weight: 400;
+          font-size: 0.9rem;
+          letter-spacing: 0.08em;
+          color: var(--color-studio-blue-mid);
+        }
+      }
 
-  .article-style-studio-culture__title {
-    font-family: "DM Sans", sans-serif;
-    font-weight: 800;
-    font-size: 7rem;
-    line-height: 0.88;
-    letter-spacing: -0.03em;
-    text-transform: uppercase;
-    color: var(--color-white);
-    margin-top: auto;
-    padding-top: 2rem;
-  }
+      > .title-group {
+        > .title {
+          font-family: "DM Sans", sans-serif;
+          font-weight: 800;
+          font-size: 7rem;
+          line-height: 0.88;
+          letter-spacing: -0.03em;
+          text-transform: uppercase;
+          color: var(--color-white);
+          padding-top: 2rem;
+        }
 
-  .article-style-studio-culture__subtitle {
-    font-family: "DM Sans", sans-serif;
-    font-weight: 500;
-    font-size: 1.25rem;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    color: var(--color-blue-100);
-    margin-top: 1.5rem;
-    padding-top: 1.5rem;
-  }
+        > .subtitle {
+          font-family: "DM Sans", sans-serif;
+          font-weight: 500;
+          font-size: 1.25rem;
+          letter-spacing: 0.08em;
+          text-transform: uppercase;
+          color: var(--color-blue-100);
+          margin-top: 1.5rem;
+          padding-top: 1.5rem;
+        }
+      }
+    }
 
-  /* Sections */
-  .article-style-studio-culture__section {
-    padding: 3rem;
-  }
+    > .section {
+      padding: 3rem;
 
-  .article-style-studio-culture__section--tan {
-    background-color: var(--color-studio-tan);
-  }
+      &.tan {
+        background-color: var(--color-studio-tan);
+      }
 
-  .article-style-studio-culture__section--slate {
-    background-color: var(--color-slate-100);
-  }
+      &.slate {
+        background-color: var(--color-slate-100);
+      }
 
-  .article-style-studio-culture__section--blue {
-    background-color: var(--color-studio-blue);
-  }
+      &.blue {
+        background-color: var(--color-studio-blue);
+      }
 
-  .article-style-studio-culture__section-title {
-    font-family: "DM Sans", sans-serif;
-    font-weight: 800;
-    font-size: 1.75rem;
-    line-height: 1.1;
-    letter-spacing: -0.02em;
-    text-transform: uppercase;
-    color: var(--color-stone-900);
-    margin-bottom: 1.5rem;
-  }
+      > .title {
+        font-family: "DM Sans", sans-serif;
+        font-weight: 800;
+        font-size: 1.75rem;
+        line-height: 1.1;
+        letter-spacing: -0.02em;
+        text-transform: uppercase;
+        color: var(--color-stone-900);
+        margin-bottom: 1.5rem;
+      }
 
-  .article-style-studio-culture__section--slate .article-style-studio-culture__section-title {
-    color: var(--color-studio-blue);
-  }
+      &.slate > .title {
+        color: var(--color-studio-blue);
+      }
 
-  .article-style-studio-culture__section--blue .article-style-studio-culture__section-title {
-    color: var(--color-white);
-  }
+      &.blue > .title {
+        color: var(--color-white);
+      }
 
-  .article-style-studio-culture__body {
-    font-family: "DM Sans", sans-serif;
-    font-weight: 400;
-    font-size: 1rem;
-    line-height: 1.75;
-    color: var(--color-stone-800);
-  }
+      > .body {
+        font-family: "DM Sans", sans-serif;
+        font-weight: 400;
+        font-size: 1rem;
+        line-height: 1.75;
+        color: var(--color-stone-800);
 
-  .article-style-studio-culture__section--slate .article-style-studio-culture__body {
-    color: var(--color-studio-blue);
-  }
+        p {
+          margin-bottom: 1.25rem;
 
-  .article-style-studio-culture__section--blue .article-style-studio-culture__body {
-    color: var(--color-white);
-  }
+          &:last-child {
+            margin-bottom: 0;
+          }
+        }
 
-  .article-style-studio-culture__body p {
-    margin-bottom: 1.25rem;
-  }
+        /* Pull quote — indented, thin weight, no border */
+        > .quote {
+          font-family: "DM Sans", sans-serif;
+          font-weight: 300;
+          font-size: 1.1rem;
+          line-height: 1.65;
+          font-style: italic;
+          padding: 0 2.5rem;
+          margin: 2rem 0;
+          opacity: 0.8;
+        }
 
-  .article-style-studio-culture__body p:last-child {
-    margin-bottom: 0;
-  }
+        > .image {
+          margin-bottom: 1rem;
 
-  /* Pull quote — indented, thin weight, no border */
-  .article-style-studio-culture__quote {
-    font-family: "DM Sans", sans-serif;
-    font-weight: 300;
-    font-size: 1.1rem;
-    line-height: 1.65;
-    font-style: italic;
-    padding: 0 2.5rem;
-    margin: 2rem 0;
-    opacity: 0.8;
-  }
+          &.left {
+            float: left;
+            width: 45%;
+            margin-right: 2rem;
+            margin-bottom: 1rem;
+          }
 
-  /* Images */
-  .article-style-studio-culture__image {
-    margin-bottom: 1rem;
-  }
+          &.right {
+            float: right;
+            width: 45%;
+            margin-left: 2rem;
+            margin-bottom: 1rem;
+          }
 
-  .article-style-studio-culture__image--left {
-    float: left;
-    width: 45%;
-    margin-right: 2rem;
-    margin-bottom: 1rem;
-  }
+          &.full {
+            width: 100%;
+            margin-bottom: 1.5rem;
+          }
 
-  .article-style-studio-culture__image--right {
-    float: right;
-    width: 45%;
-    margin-left: 2rem;
-    margin-bottom: 1rem;
-  }
+          img {
+            width: 100%;
+            height: auto;
+            display: block;
+          }
 
-  .article-style-studio-culture__image--full {
-    width: 100%;
-    margin-bottom: 1.5rem;
-  }
+          > .caption {
+            font-family: "DM Sans", sans-serif;
+            font-weight: 400;
+            font-size: 0.8rem;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            color: inherit;
+            opacity: 0.65;
+            margin-top: 0.5rem;
+          }
+        }
 
-  .article-style-studio-culture__image img {
-    width: 100%;
-    height: auto;
-    display: block;
-  }
+        > .clearfix::after {
+          content: "";
+          display: table;
+          clear: both;
+        }
+      }
 
-  .article-style-studio-culture__caption {
-    font-family: "DM Sans", sans-serif;
-    font-weight: 400;
-    font-size: 0.8rem;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    color: inherit;
-    opacity: 0.65;
-    margin-top: 0.5rem;
-  }
+      &.slate > .body {
+        color: var(--color-studio-blue);
+      }
 
-  .article-style-studio-culture__clearfix::after {
-    content: "";
-    display: table;
-    clear: both;
+      &.blue > .body {
+        color: var(--color-white);
+      }
+    }
   }
 }
 
