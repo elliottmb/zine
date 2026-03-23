@@ -10,7 +10,7 @@ finding design inspiration grounded in print history.
 
 ---
 
-## 1. Geometric (`article-style-geometric`)
+## 1. Geometric (`zine-geometric`)
 
 **Inspiration:** The cover of _The Fundamentals of Creative Design_ (2003, AVA Publishing) by Gavin Ambrose and Paul
 Harris — a design textbook with a boldly structured cover that practices what it preaches: flat color field, clean
@@ -31,7 +31,7 @@ ambiguity.
 
 ---
 
-## 2. Typographic (`article-style-typographic`)
+## 2. Typographic (`zine-typographic`)
 
 **Inspiration:** _The Fundamentals of Creative Design_ (2003, AVA Publishing) combined with the _Penrose Annual_ (1962,
 Lund Humphries), edited by R. Herbert Spencer — an annual survey of graphic arts with articles by Hermann Zapf on
@@ -52,7 +52,7 @@ mirrors content.
 
 ---
 
-## 3. Collage (`article-style-collage`)
+## 3. Collage (`zine-collage`)
 
 **Inspiration:** _The Fundamentals of Creative Design_ (2003, AVA Publishing) combined with the _Penrose Annual_ (1962,
 Lund Humphries) — the latter being an annual whose 31 articles span "the long frontiers where questions of printing and
@@ -74,7 +74,7 @@ running simultaneously.
 
 ---
 
-## 4. Minimal Dark (`article-style-minimal-dark`)
+## 4. Minimal Dark (`zine-minimal-dark`)
 
 **Inspiration:** _The Fundamentals of Creative Design_ (2003, AVA Publishing) by Gavin Ambrose and Paul Harris — the
 same source as Acid Bright, but from the opposite end. Where that style breaks every rule about colour restraint,
@@ -94,7 +94,7 @@ considered and the design should not distract.
 
 ---
 
-## 5. Acid Bright (`article-style-acid-bright`)
+## 5. Acid Bright (`zine-acid-bright`)
 
 **Inspiration:** _The Fundamentals of Creative Design_ (2003, AVA Publishing) by Gavin Ambrose and Paul Harris — a
 design textbook that covers layout, typography, colour usage, and image through "examples that challenge and break these
@@ -114,7 +114,7 @@ standard serif for body text.
 
 ---
 
-## 6. Magenta Experimental (`article-style-magenta-exp`)
+## 6. Magenta Experimental (`zine-magenta-exp`)
 
 **Inspiration:** Experimental design publications of the 1990s — Emigre, Ray Gun — where the page was a site of graphic
 investigation rather than a neutral delivery mechanism.
@@ -132,7 +132,7 @@ formality.
 
 ---
 
-## 7. Swiss Minimal (`article-style-swiss-minimal`)
+## 7. Swiss Minimal (`zine-swiss-minimal`)
 
 **Inspiration:** _Unit Design: Ronald Clyne_ (2010, Unit Editions, London) — U:D/R01, the first in Unit Editions' series
 of papers devoted to graphic design and visual culture, edited by Tony Brook and Adrian Shaughnessy and designed by
@@ -154,7 +154,7 @@ cold, reliable).
 
 ---
 
-## 8. Sunset Warm (`article-style-sunset`)
+## 8. Sunset Warm (`zine-sunset`)
 
 **Inspiration:** American editorial photography books and West Coast design publications from the 1970s — warm, tactile,
 with a sense that the designer handled the materials themselves.
@@ -172,7 +172,7 @@ approachability), Crimson Text for body (legible, literary).
 
 ---
 
-## 9. European Editorial (`article-style-european-editorial`)
+## 9. European Editorial (`zine-european-editorial`)
 
 **Inspiration:** A spread from _Back Cover_ (2010, Éditions B42, Paris), edited by Alexandre Dimos — an independent
 French magazine on graphic design, typography, critical essays, and experimental texts. Contributors include Richard
@@ -195,7 +195,7 @@ holding two ideas in tension.
 
 ---
 
-## 10. Split Editorial (`article-style-split-editorial`)
+## 10. Split Editorial (`zine-split-editorial`)
 
 **Inspiration:** _Designing Names & Companies_ (1994, Danish Design Centre) — a guide to corporate naming by Jens
 Bernsen, with a preface by Wally Olins. The book's interior spreads are structurally rigorous typographic layouts where
@@ -218,7 +218,7 @@ journalism with clear structural divisions.
 
 ---
 
-## 11–13. Designer Brief (`article-style-designer-brief` / `-barbie` / `-ocean`)
+## 11–13. Designer Brief (`zine-designer-brief` / `-barbie` / `-ocean`)
 
 **Inspiration:** _No Brief: Graphic Designers' Personal Projects_ (2002, RotoVision) edited by John O'Reilly — a survey
 of work designers undertake when creating their own brief, "either for self-promotion or to explore an interesting form
@@ -244,7 +244,7 @@ presentation. The spine structure works particularly well for regular columns or
 
 ---
 
-## 14. Wilde Plakken (`article-style-wilde-plakken`)
+## 14. Wilde Plakken (`zine-wilde-plakken`)
 
 **Inspiration:** _Wild Plakken_ (1993, De Balie, Amsterdam) — the retrospective catalog for a major exhibition of the
 groundbreaking Amsterdam graphic design collective of the same name, founded in 1977 by Lies Ros, Frank Beekers, and Rob
@@ -268,7 +268,7 @@ feel like equals in a non-hierarchical conversation.
 
 ---
 
-## 15. Music Bold (`article-style-music-bold`)
+## 15. Music Bold (`zine-music-bold`)
 
 **Inspiration:** The cover of _Puzzlegrams_ (1990, Barrie & Jenkins) — a collection of classic puzzles revisualized and
 redesigned by Pentagram, edited by David Hillman. A companion to _Pentagames_ (the Pentagram style's source), published
@@ -291,7 +291,7 @@ rather than an article. Intentionally light on prose.
 
 ---
 
-## 16. Trademarks (`article-style-trademarks`)
+## 16. Trademarks (`zine-trademarks`)
 
 **Inspiration:** _TM: Trademarks Designed by Chermayeff & Geismar_ (2000, Lars Müller Publishers) — a 288-page monograph
 collecting over 200 trademarks from the 40-year history of Chermayeff & Geismar Inc., the firm responsible for the NBC
@@ -314,7 +314,7 @@ collection of things worth seeking out. Intentionally minimal prose.
 
 ---
 
-## 17–18. Pentagram (`article-style-pentagram` / `-inverted`)
+## 17–18. Pentagram (`zine-pentagram` / `-inverted`)
 
 **Inspiration:** _Pentagames_ (1990, Barrie & Jenkins), a collection of games designed by Pentagram and edited by David
 Hillman. Its preface reads: _"The art of winning is thinking. It doesn't matter where you are: you can think, or you can
@@ -341,7 +341,7 @@ color-block format works well for listicles or multi-part features.
 
 ---
 
-## 19. Thirty Centuries (`article-style-thirty-centuries`)
+## 19. Thirty Centuries (`zine-thirty-centuries`)
 
 **Inspiration:** _Thirty Centuries of Graphic Design_ (1987, Watson Guptill, New York) by James Craig and Bruce Barton —
 the first book to survey graphic design in the full context of human history, from prehistoric pictographs to
@@ -369,7 +369,7 @@ essays with formal ambitions. The most prose-dense style in the library — it e
 
 ---
 
-## 20. Programme (`article-style-programme`)
+## 20. Programme (`zine-programme`)
 
 **Inspiration:** _National Theatre Posters: A Design History_ (2017, Unit Editions, London) by Rick Poynor — a
 comprehensive survey of the National Theatre's poster tradition across more than 50 years, designed and published by
@@ -394,7 +394,7 @@ portraits, and archival images equally well.
 
 ---
 
-## 21. Liberation (`article-style-liberation`)
+## 21. Liberation (`zine-liberation`)
 
 **Inspiration:** _Suffragettes to She-Devils: Women's Liberation and Beyond_ (1997, Phaidon Press) by Liz McQuiston — a
 survey of feminist graphic design from the militant suffragette campaigns of the early twentieth century through Women's
@@ -422,8 +422,8 @@ background.
 - **`--pink`**: For personal, essayistic, or reflective content. The softness invites vulnerability.
 - **`--white`**: For image-led content or visual archives. Neutral ground lets images speak.
 
-**Image support:** All three sections support `__image--left`, `__image--right`, and `__image--full` floating layouts
-with `__caption` below, plus `__clearfix` to close floated content.
+**Image support:** All three sections support `.image.left`, `.image.right`, and `.image.full` floating layouts with
+`.caption` below, plus `.clearfix` to close floated content.
 
 **Best used for:** Political and cultural criticism, feminist writing, social history, visual essays, any article that
 benefits from distinct rhetorical registers within a single piece. The section system rewards writers who think
@@ -431,7 +431,7 @@ structurally.
 
 ---
 
-## 22. Studio Culture (`article-style-studio-culture`)
+## 22. Studio Culture (`zine-studio-culture`)
 
 **Inspiration:** _Studio Culture Now_ (2020, Unit Editions, London), edited by Mark Sinclair — 492 pages of in-depth
 interviews with leading design studios about getting jobs, working with clients, balancing creativity with

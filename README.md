@@ -44,16 +44,16 @@ Open `demo/index.html` in your browser to see all components and article styles 
 ### Basic Article Template
 
 ```html
-<div class="article-style-geometric">
-  <div class="article-style-geometric__header">Your Headline</div>
-  <div class="article-style-geometric__subheader">Subtitle or tagline</div>
-  <div class="article-style-geometric__content">
-    <div class="article-style-geometric__text">
+<article class="zine-geometric">
+  <header>Your Headline</header>
+  <div class="subheader">Subtitle or tagline</div>
+  <div class="content">
+    <div class="text">
       <p>Your article content here...</p>
     </div>
-    <div class="article-style-geometric__image-box">IMAGE</div>
+    <div class="image-box">IMAGE</div>
   </div>
-</div>
+</article>
 ```
 
 ### Pull Quotes
@@ -67,30 +67,30 @@ Open `demo/index.html` in your browser to see all components and article styles 
 
 ### All 22 Article Styles
 
-- `article-style-geometric` - Red + white, stark contrast
-- `article-style-typographic` - Yellow, experimental type
-- `article-style-collage` - Green gradient, asymmetrical
-- `article-style-minimal-dark` - Black, elegant serif
-- `article-style-acid-bright` - Neon yellow, high contrast
-- `article-style-magenta-exp` - Magenta, playful
-- `article-style-swiss-minimal` - Stone + teal, structured editorial
-- `article-style-sunset` - Warm orange + cream, vintage
-- `article-style-european-editorial` - Zinc-800 + cream, two-column
-- `article-style-split-editorial` - Zinc-700/white split, clip-path header
-- `article-style-designer-brief` - Yellow with red tag, image-heavy
-- `article-style-designer-brief-barbie` - Hot pink + seafoam, playful
-- `article-style-designer-brief-ocean` - Cyan + lime green, vibrant
-- `article-style-wilde-plakken` - Mixed layout grid, electric blue on black
-- `article-style-music-bold` - Deep blue with red accents, minimal text, image showcase
-- `article-style-trademarks` - Deep purple, album art grid, Monoton + Audiowide
-- `article-style-pentagram` - Black + yellow color-block grid
-- `article-style-pentagram-inverted` - Yellow + black inversion
-- `article-style-thirty-centuries` - White editorial, drop cap, full typographic hierarchy
-- `article-style-programme` - Zinc-800 header, Anton title, float image prose
-- `article-style-liberation` - Yellow/pink/white section system, feminist editorial
-- `article-style-studio-culture` - Deep navy, DM Sans, three section variants
+- `zine-geometric` - Red + white, stark contrast
+- `zine-typographic` - Yellow, experimental type
+- `zine-collage` - Green gradient, asymmetrical
+- `zine-minimal-dark` - Black, elegant serif
+- `zine-acid-bright` - Neon yellow, high contrast
+- `zine-magenta-exp` - Magenta, playful
+- `zine-swiss-minimal` - Stone + teal, structured editorial
+- `zine-sunset` - Warm orange + cream, vintage
+- `zine-european-editorial` - Zinc-800 + cream, two-column
+- `zine-split-editorial` - Zinc-700/white split, clip-path header
+- `zine-designer-brief` - Yellow with red tag, image-heavy
+- `zine-designer-brief-barbie` - Hot pink + seafoam, playful
+- `zine-designer-brief-ocean` - Cyan + lime green, vibrant
+- `zine-wilde-plakken` - Mixed layout grid, electric blue on black
+- `zine-music-bold` - Deep blue with red accents, minimal text, image showcase
+- `zine-trademarks` - Deep purple, album art grid, Monoton + Audiowide
+- `zine-pentagram` - Black + yellow color-block grid
+- `zine-pentagram-inverted` - Yellow + black inversion
+- `zine-thirty-centuries` - White editorial, drop cap, full typographic hierarchy
+- `zine-programme` - Zinc-800 header, Anton title, float image prose
+- `zine-liberation` - Yellow/pink/white section system, feminist editorial
+- `zine-studio-culture` - Deep navy, DM Sans, three section variants
 
-All styles use BEM naming (`article-style-NAME__element`) for clear composition.
+All styles use `zine-NAME` on an `<article>` tag, with short nested class names scoped by CSS nesting.
 
 ## Structure
 
@@ -165,7 +165,7 @@ customize any component directly in HTML:
 
 ```html
 <!-- rounded-lg overrides the component's default corners -->
-<div class="article-style-pentagram rounded-lg">...</div>
+<article class="zine-pentagram rounded-lg">...</article>
 ```
 
 ### Tailwind Utilities Over Inline Styles
@@ -199,7 +199,7 @@ includes:
 Example:
 
 ```css
-.article-style-geometric {
+article.zine-geometric {
   background-color: var(--color-red-600); /* Uses Tailwind's color system */
   color: var(--color-white);
   padding: 3rem;
@@ -214,17 +214,30 @@ Available Tailwind v4 variables:
 - `--radius-*` - Border radius tokens
 - `--shadow-*` - Box shadow values
 
-### BEM Naming Convention
+### Naming Convention
 
-All component classes follow BEM (Block, Element, Modifier):
+All component classes use `zine-NAME` on an `<article>` tag. Child elements use short class names scoped via CSS nesting
+— no long prefixes needed:
 
+```html
+<article class="zine-geometric">
+  <header>...</header>
+  <section class="alt">...</section>
+</article>
 ```
-.article-style-geometric           /* Block */
-.article-style-geometric__header   /* Element */
-.article-style-geometric__header--alt /* Modifier (if needed) */
+
+```css
+article.zine-geometric {
+  > header { ... }
+  > section {
+    &.alt { ... }
+    > .title { ... }
+  }
+}
 ```
 
-This makes components easy to customize and compose. Edit `tailwind.config.js` to change the color palette:
+The `article` tag itself acts as the namespace, so inner classes like `.title` are collision-safe without prefixing.
+Edit `tailwind.config.js` to change the color palette:
 
 ```javascript
 colors: {
@@ -258,15 +271,20 @@ Add to `src/styles.css` inside the existing `@layer components` block:
 
 ```css
 @layer components {
-  .article-style-custom {
-    background-color: #yourcolor;
+  article.zine-custom {
+    background-color: var(--color-red-600);
     padding: 3rem;
-  }
 
-  .article-style-custom__header {
-    font-family: "Your Font", serif;
-    font-size: 3.75rem;
-    /* ... */
+    > header {
+      font-family: "Your Font", serif;
+      font-size: 3.75rem;
+    }
+
+    > section {
+      padding: 2rem;
+      > .title { ... }
+      > .body { ... }
+    }
   }
 }
 ```

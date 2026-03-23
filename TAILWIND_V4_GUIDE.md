@@ -12,10 +12,15 @@ All custom CSS in this project follows Tailwind's layer system so specificity is
 
 ```css
 @layer components {
-  .article-style-geometric {
+  article.zine-geometric {
     background-color: var(--color-red-600);
     color: var(--color-white);
     padding: 3rem;
+
+    > header {
+      font-family: "Bebas Neue", sans-serif;
+      font-size: 3.75rem;
+    }
   }
 }
 ```
@@ -24,7 +29,7 @@ This ensures Tailwind utility classes always override component defaults:
 
 ```html
 <!-- bg-blue-600 wins over the component's background — works because of @layer components -->
-<div class="article-style-geometric bg-blue-600">...</div>
+<article class="zine-geometric bg-blue-600">...</article>
 ```
 
 **`@utility`** — for single-purpose helpers (Tailwind v4 syntax):
@@ -153,14 +158,14 @@ Tailwind v4 automatically generates these from your config:
 ### Example 2: Article Style
 
 ```css
-.article-style-geometric {
+article.zine-geometric {
   background-color: var(--color-red-600); /* Dynamic - change in config */
   color: var(--color-white); /* Always in sync */
   padding: 3rem;
-}
 
-.article-style-geometric__header {
-  color: var(--color-white); /* Inherits or reuses */
+  > header {
+    color: var(--color-white); /* Inherits or reuses */
+  }
 }
 ```
 
@@ -209,15 +214,15 @@ var(--color-myBrand-900)
 ### Create a Component Using Variables
 
 ```css
-.my-new-article {
+article.zine-custom {
   background-color: var(--color-myBrand-50);
   border: 2px solid var(--color-myBrand-500);
-}
 
-.my-new-article__header {
-  color: var(--color-myBrand-900);
-  font-family: var(--font-garamond); /* Font variables too! */
-  font-size: 2rem;
+  > header {
+    color: var(--color-myBrand-900);
+    font-family: var(--font-garamond); /* Font variables too! */
+    font-size: 2rem;
+  }
 }
 ```
 

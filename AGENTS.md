@@ -133,12 +133,12 @@ like it should be fine in theory.
 
 ```css
 /* ❌ Bad: Same color as background */
-.article-style-magenta-exp__byline {
+article.zine-magenta-exp > header > .byline {
   color: #ff00ff; /* Same as background */
 }
 
 /* ✅ Good: High contrast */
-.article-style-magenta-exp__byline {
+article.zine-magenta-exp > header > .byline {
   color: var(--color-white); /* Clear against magenta */
 }
 ```
@@ -165,7 +165,7 @@ font.
 
 ```css
 /* ✅ Good: Bold font for bold statement */
-.article-style-music-bold__header {
+article.zine-music-bold > header {
   font-family: "Erica One", sans-serif;
   font-size: 7.5rem;
   font-weight: 900;
@@ -227,7 +227,7 @@ an existing site). See `TAILWIND_V4_GUIDE.md` for full details.
 
 ```css
 /* ❌ Bad — second declaration silently overrides the first */
-.article-style-liberation__section-title {
+article.zine-liberation > section.yellow > .title {
   color: var(--color-liberation-purple);
   color: var(--color-white); /* leftover from previous value */
 }
@@ -254,21 +254,22 @@ Follow Tailwind's layer system for all custom CSS in `src/styles.css`:
 
 ### `@layer components` — Article & Component Classes
 
-All `.article-style-*`, `.pullquote-*`, and any other multi-property component classes belong inside
-`@layer components`. This is critical: it means Tailwind utility classes **always win**, so you can override any
-component property directly in HTML.
+All `article.zine-*`, `.pullquote-*`, and any other multi-property component classes belong inside `@layer components`.
+This is critical: it means Tailwind utility classes **always win**, so you can override any component property directly
+in HTML.
 
 ```css
 /* ✅ Correct */
 @layer components {
-  .article-style-geometric {
+  article.zine-geometric {
     background-color: var(--color-red-600);
     color: var(--color-white);
     padding: 3rem;
-  }
-  .article-style-geometric__header {
-    font-family: "Bebas Neue", sans-serif;
-    font-size: 3.75rem;
+
+    > header {
+      font-family: "Bebas Neue", sans-serif;
+      font-size: 3.75rem;
+    }
   }
 }
 ```
@@ -277,7 +278,7 @@ Now utility overrides work:
 
 ```html
 <!-- rounded-lg overrides the component's default shape -->
-<div class="article-style-pentagram rounded-lg">...</div>
+<article class="zine-pentagram rounded-lg">...</article>
 ```
 
 ### `@utility` — Custom Utility Classes
@@ -457,32 +458,57 @@ This preserves all built-in colors and adds custom ones, avoiding duplication an
 
 ## Article Style Architecture
 
-### BEM Naming
+### Naming & Nesting Convention
 
-All components use Block-Element naming to prevent CSS conflicts:
+All article components use `zine-NAME` on an `<article>` tag. Child elements use short class names scoped via CSS
+nesting — no long prefixes needed. The `article` tag itself acts as the namespace.
 
 ```css
-.article-style-geometric {
+article.zine-geometric {
   /* Block */
 }
-.article-style-geometric__header {
-  /* Element */
+
+article.zine-geometric > header {
+  /* Direct child header */
 }
-.article-style-geometric__content {
-  /* Element */
+
+article.zine-geometric > section {
+  /* Direct child section */
+}
+
+article.zine-geometric > section > .title {
+  /* Nested element */
+}
+
+article.zine-geometric > section.alt {
+  /* Section modifier */
 }
 ```
 
-This allows 8 distinct styles to coexist on the same page without conflicts. Each article is completely isolated.
+HTML usage:
 
-**Takeaway:** BEM naming is essential for multi-style component libraries. It scales better than utility-only approach.
+```html
+<article class="zine-geometric">
+  <header>Headline</header>
+  <section>
+    <div class="title">Section Title</div>
+    <div class="body">Content...</div>
+  </section>
+  <section class="alt">
+    <div class="title">Alt Section</div>
+  </section>
+</article>
+```
+
+This pattern keeps HTML readable, CSS scoped, and avoids long BEM-style prefixes. Each article is completely isolated
+because selectors are qualified with both the tag type (`article`) and the unique `zine-NAME` class.
 
 ## Renaming Article Styles
 
-When renaming a style (e.g. `article-style-peacock` → `article-style-swiss-minimal`), update all four of these:
+When renaming a style (e.g. `zine-peacock` → `zine-swiss-minimal`), update all four of these:
 
-1. `src/styles.css` — the class definitions
-2. `demo/index.html` — all usages
+1. `src/styles.css` — the class definition (`article.zine-old` → `article.zine-new`)
+2. `demo/index.html` — all usages (`class="zine-old"` → `class="zine-new"`)
 3. `STYLES.md` — the style entry heading and any references
 4. `README.md` — the style list
 
@@ -490,24 +516,23 @@ The color palette name (e.g. `--color-peacock-*`) is independent of the style na
 
 ## Float-Based Image Layout Pattern
 
-Both `article-style-programme`, `article-style-liberation`, and `article-style-studio-culture` use CSS floats for inline
-images. The correct pattern:
+`zine-programme`, `zine-liberation`, and `zine-studio-culture` use CSS floats for inline images. The correct pattern:
 
 ```html
 <!-- Float image left with prose wrapping right -->
-<div class="...__image ...__image--left">
+<div class="image left">
   <img src="..." alt="..." />
-  <div class="...__caption">Caption text</div>
+  <div class="caption">Caption text</div>
 </div>
 <p>Prose flows to the right of the image...</p>
 <p>More prose...</p>
-<div class="...__clearfix"></div>
+<div class="clearfix"></div>
 <!-- REQUIRED: resets float before the next float -->
 
 <!-- Then float another image right -->
-<div class="...__image ...__image--right">...</div>
+<div class="image right">...</div>
 <p>Prose flows to the left...</p>
-<div class="...__clearfix"></div>
+<div class="clearfix"></div>
 ```
 
 **Common mistake:** Placing two floated images (left + right) consecutively before the prose — the paragraph wedges
