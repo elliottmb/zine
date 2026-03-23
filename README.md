@@ -47,7 +47,7 @@ Open `demo/index.html` in your browser to see all components and article styles 
 <article class="zine-geometric">
   <header>
     <h1>Your Headline</h1>
-    <h2 class="subheader">Subtitle or tagline</h2>
+    <h2>Subtitle or tagline</h2>
   </header>
   <div class="content">
     <div class="text">
@@ -225,7 +225,7 @@ All component classes use `zine-NAME` on an `<article>` tag. Child elements use 
 <article class="zine-geometric">
   <header>
     <h1>Headline</h1>
-    <h2 class="subheader">Subtitle</h2>
+    <h2>Subtitle</h2>
   </header>
   <section class="alt">
     <h1>Section Title</h1>
@@ -238,7 +238,7 @@ All component classes use `zine-NAME` on an `<article>` tag. Child elements use 
 article.zine-geometric {
   > header {
     > h1 { ... }
-    > .subheader { ... }
+    > h2 { ... }
   }
   > section {
     &.alt { ... }
@@ -292,7 +292,7 @@ Add to `src/styles.css` inside the existing `@layer components` block:
         font-family: "Your Font", serif;
         font-size: 3.75rem;
       }
-      > .subtitle { ... }
+      > h2 { ... }
     }
 
     > section {
@@ -310,7 +310,7 @@ HTML for the above:
 <article class="zine-custom">
   <header>
     <h1>Your Headline</h1>
-    <h2 class="subtitle">Your subtitle</h2>
+    <h2>Your subtitle</h2>
   </header>
   <section>
     <h1>Section Title</h1>

@@ -465,14 +465,14 @@ for heading roles. Other child elements use short classes scoped via CSS nesting
 
 **Heading hierarchy within articles:**
 
-| Context                                     | Tag                                                   |
-| ------------------------------------------- | ----------------------------------------------------- |
-| Main article heading (in `<header>`)        | `<h1>` — no class if sole h1                          |
-| Subtitle, eyebrow, tagline, label           | `<h2 class="subtitle">` etc. — keep class for styling |
-| Section title (direct child of `<section>`) | `<h1>` — no class, use tag selector in CSS            |
-| Sub-section headers, labels                 | `<h2 class="section-header">` etc.                    |
-| Grid/card/sidebar titles                    | `<h3 class="grid-title">` etc.                        |
-| Item names                                  | `<h4 class="item-name">` etc.                         |
+| Context                                     | Tag                                                                                               |
+| ------------------------------------------- | ------------------------------------------------------------------------------------------------- |
+| Main article heading (in `<header>`)        | `<h1>` — no class if sole h1                                                                      |
+| Subtitle, eyebrow, tagline, label           | `<h2>` (no class) or `<h2 class="eyebrow">` etc. — use a class only when disambiguation is needed |
+| Section title (direct child of `<section>`) | `<h1>` — no class, use tag selector in CSS                                                        |
+| Sub-section headers, labels                 | `<h2 class="section-header">` etc.                                                                |
+| Grid/card/sidebar titles                    | `<h3 class="grid-title">` etc.                                                                    |
+| Item names                                  | `<h4 class="item-name">` etc.                                                                     |
 
 ```css
 article.zine-geometric {
@@ -487,8 +487,8 @@ article.zine-geometric > header > h1 {
   /* Main heading — tag selector, no class */
 }
 
-article.zine-geometric > header > .subheader {
-  /* h2 with class — class selector still works on h2 */
+article.zine-geometric > header > h2 {
+  /* Subtitle — plain tag selector, no class needed */
 }
 
 article.zine-geometric > section {
@@ -510,7 +510,7 @@ HTML usage:
 <article class="zine-geometric">
   <header>
     <h1>Article Headline</h1>
-    <h2 class="subheader">Subtitle or tagline</h2>
+    <h2>Subtitle or tagline</h2>
   </header>
   <section>
     <h1>Section Title</h1>
