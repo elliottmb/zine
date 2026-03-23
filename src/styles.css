@@ -1352,15 +1352,6 @@
       }
     }
 
-    > .subtitle {
-      font-family: "Limelight", sans-serif;
-      font-size: 3rem;
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-      margin-bottom: 2rem;
-      color: var(--color-white);
-    }
-
     > .tagline {
       font-family: "IBM Plex Serif", serif;
       font-size: 0.9rem;
@@ -1896,8 +1887,7 @@
         margin-bottom: 2rem;
       }
 
-      > .subtitle {
-        font-family: "EB Garamond", serif;
+      > h2 {
         font-size: 1.25rem;
         font-style: italic;
         color: var(--color-zinc-300);
@@ -2003,7 +1993,7 @@
         margin-bottom: 1.5rem;
       }
 
-      > .subtitle {
+      > h2 {
         font-family: "IBM Plex Serif", serif;
         font-size: 1.1rem;
         color: var(--color-liberation-purple);
@@ -2155,7 +2145,7 @@
           padding-top: 2rem;
         }
 
-        > .subtitle {
+        > h2 {
           font-family: "DM Sans", sans-serif;
           font-weight: 500;
           font-size: 1.25rem;
