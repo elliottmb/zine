@@ -162,7 +162,7 @@
         letter-spacing: 0.02em;
       }
 
-      > .subtitle {
+      > h2 {
         font-size: 1.25rem;
         font-family: serif;
         margin-top: 0.5rem;
@@ -215,7 +215,7 @@
         letter-spacing: -0.05em;
       }
 
-      > .subtitle {
+      > h2 {
         font-family: monospace;
         font-size: 0.75rem;
         text-transform: uppercase;
@@ -401,7 +401,7 @@
         max-width: 50rem;
       }
 
-      > .subtitle {
+      > h2 {
         font-family: "Space Mono", monospace;
         font-size: 0.75rem;
         text-transform: uppercase;
@@ -479,7 +479,7 @@
         color: var(--color-purple-900);
       }
 
-      > .subtitle {
+      > h2 {
         font-family: "Bebas Neue", sans-serif;
         font-size: 1.5rem;
         text-transform: uppercase;
