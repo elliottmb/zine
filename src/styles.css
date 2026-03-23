@@ -700,7 +700,7 @@
         font-weight: bold;
       }
 
-      > header > .subtitle {
+      > header > h2 {
         font-family: "Fredoka", sans-serif;
         font-size: 0.875rem;
         text-transform: uppercase;
@@ -792,7 +792,7 @@
         color: var(--color-gray-900);
       }
 
-      > header > .subtitle {
+      > header > h2 {
         font-family: "EB Garamond", serif;
         font-size: 1.125rem;
         font-style: italic;
@@ -1020,7 +1020,7 @@
         color: var(--color-black);
       }
 
-      > header > .subtitle {
+      > header > h2 {
         font-family: "IBM Plex Serif", serif;
         font-size: 1.5rem;
         font-weight: bold;
@@ -1107,7 +1107,7 @@
         color: var(--color-black);
       }
 
-      > header > .subtitle {
+      > header > h2 {
         font-family: "IBM Plex Serif", serif;
         font-size: 1.5rem;
         font-weight: bold;
