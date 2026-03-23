@@ -45,8 +45,10 @@ Open `demo/index.html` in your browser to see all components and article styles 
 
 ```html
 <article class="zine-geometric">
-  <header>Your Headline</header>
-  <div class="subheader">Subtitle or tagline</div>
+  <header>
+    <h1>Your Headline</h1>
+    <h2 class="subheader">Subtitle or tagline</h2>
+  </header>
   <div class="content">
     <div class="text">
       <p>Your article content here...</p>
@@ -221,23 +223,33 @@ All component classes use `zine-NAME` on an `<article>` tag. Child elements use 
 
 ```html
 <article class="zine-geometric">
-  <header>...</header>
-  <section class="alt">...</section>
+  <header>
+    <h1>Headline</h1>
+    <h2 class="subheader">Subtitle</h2>
+  </header>
+  <section class="alt">
+    <h1>Section Title</h1>
+    <div class="body">...</div>
+  </section>
 </article>
 ```
 
 ```css
 article.zine-geometric {
-  > header { ... }
+  > header {
+    > h1 { ... }
+    > .subheader { ... }
+  }
   > section {
     &.alt { ... }
-    > .title { ... }
+    > h1 { ... }
+    > .body { ... }
   }
 }
 ```
 
-The `article` tag itself acts as the namespace, so inner classes like `.title` are collision-safe without prefixing.
-Edit `tailwind.config.js` to change the color palette:
+The `article` tag is the namespace, semantic heading tags (`h1`–`h4`) replace class-named divs for heading roles, and
+short classes handle everything else. Edit `tailwind.config.js` to change the color palette:
 
 ```javascript
 colors: {
@@ -276,17 +288,35 @@ Add to `src/styles.css` inside the existing `@layer components` block:
     padding: 3rem;
 
     > header {
-      font-family: "Your Font", serif;
-      font-size: 3.75rem;
+      > h1 {
+        font-family: "Your Font", serif;
+        font-size: 3.75rem;
+      }
+      > .subtitle { ... }
     }
 
     > section {
       padding: 2rem;
-      > .title { ... }
+      > h1 { ... }
       > .body { ... }
     }
   }
 }
+```
+
+HTML for the above:
+
+```html
+<article class="zine-custom">
+  <header>
+    <h1>Your Headline</h1>
+    <h2 class="subtitle">Your subtitle</h2>
+  </header>
+  <section>
+    <h1>Section Title</h1>
+    <div class="body"><p>Content...</p></div>
+  </section>
+</article>
 ```
 
 ### Styling in HTML: Tailwind Utilities First

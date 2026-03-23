@@ -460,8 +460,19 @@ This preserves all built-in colors and adds custom ones, avoiding duplication an
 
 ### Naming & Nesting Convention
 
-All article components use `zine-NAME` on an `<article>` tag. Child elements use short class names scoped via CSS
-nesting — no long prefixes needed. The `article` tag itself acts as the namespace.
+All article components use `zine-NAME` on an `<article>` tag. Semantic heading tags (`h1`–`h4`) replace class-named divs
+for heading roles. Other child elements use short classes scoped via CSS nesting. The `article` tag is the namespace.
+
+**Heading hierarchy within articles:**
+
+| Context                                     | Tag                                                   |
+| ------------------------------------------- | ----------------------------------------------------- |
+| Main article heading (in `<header>`)        | `<h1>` — no class if sole h1                          |
+| Subtitle, eyebrow, tagline, label           | `<h2 class="subtitle">` etc. — keep class for styling |
+| Section title (direct child of `<section>`) | `<h1>` — no class, use tag selector in CSS            |
+| Sub-section headers, labels                 | `<h2 class="section-header">` etc.                    |
+| Grid/card/sidebar titles                    | `<h3 class="grid-title">` etc.                        |
+| Item names                                  | `<h4 class="item-name">` etc.                         |
 
 ```css
 article.zine-geometric {
@@ -472,12 +483,20 @@ article.zine-geometric > header {
   /* Direct child header */
 }
 
+article.zine-geometric > header > h1 {
+  /* Main heading — tag selector, no class */
+}
+
+article.zine-geometric > header > .subheader {
+  /* h2 with class — class selector still works on h2 */
+}
+
 article.zine-geometric > section {
   /* Direct child section */
 }
 
-article.zine-geometric > section > .title {
-  /* Nested element */
+article.zine-geometric > section > h1 {
+  /* Section title — tag selector, no class */
 }
 
 article.zine-geometric > section.alt {
@@ -489,19 +508,22 @@ HTML usage:
 
 ```html
 <article class="zine-geometric">
-  <header>Headline</header>
+  <header>
+    <h1>Article Headline</h1>
+    <h2 class="subheader">Subtitle or tagline</h2>
+  </header>
   <section>
-    <div class="title">Section Title</div>
+    <h1>Section Title</h1>
     <div class="body">Content...</div>
   </section>
   <section class="alt">
-    <div class="title">Alt Section</div>
+    <h1>Alt Section Title</h1>
   </section>
 </article>
 ```
 
-This pattern keeps HTML readable, CSS scoped, and avoids long BEM-style prefixes. Each article is completely isolated
-because selectors are qualified with both the tag type (`article`) and the unique `zine-NAME` class.
+This pattern keeps HTML readable, semantically meaningful, and CSS scoped. Each article is completely isolated because
+selectors are qualified with both the tag type (`article`) and the unique `zine-NAME` class.
 
 ## Renaming Article Styles
 
